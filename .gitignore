@@ -1,0 +1,18 @@
+# Datenbanken (zu gross, liegen in WSM_FORENSIK)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Binaer/Temporaer
+*.pyc
+__pycache__/
+*.tmp
+*.bak
+
+# OS
+Thumbs.db
+.DS_Store
+
+# PDFs und grosse Quelldateien (bei Bedarf einzeln tracken)
+QUELLEN/*.pdf

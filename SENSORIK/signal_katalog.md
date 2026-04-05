@@ -196,9 +196,25 @@ Einzelne Signale koennen harmlos sein. Diese Kombinationen sind es NICHT:
 | H-09 | SumUp/PayPal als Rechnungsweg bei Bau-Sub | ANOMALIE | SF | — | → Firmen-Pruefung, Buchfuehrungs-Check | msg_emails absender LIKE '%sumup%' OR '%paypal%' | PayPal 15x in DB, kein SumUp. VALIDIERT S6 (schwach) |
 | H-10 | Gleicher Versicherungs-Regulierer auf mehreren FALL-Projekten | ANOMALIE | VB | — | → Alle Projekte dieses Regulierers, Korrelation mit Betrugs-Subs | soll_ist: versicherung + kategorie | SV Sparkassen 61.5%, Mannheimer 43.8% FALL-Rate. Aber Duplikat-Problem + kleine N. NICHT DISKRIMINIEREND S6 |
 | H-11 | WeTransfer/Cloud-Transfer mit Firmen-Email | ALARM | KE | — | → Transfer-Inhalt, Empfaenger, Timing | msg_emails absender LIKE '%wetransfer%' | 8 Emails, Bierau→KFA WeTransfer-Forward, filip.zadar572 Transfer. VALIDIERT S6 |
+| H-12 | Sub-Benennung im Schadensbericht | ANOMALIE | AU,KB | S | → Cross-Projekt: Wird derselbe Sub in mehreren Berichten benannt? → Margen-Pruefung: Was verdient WSM auf diesen Projekten? → Lahntal/Cluster-Check | Bericht-DOCX: Regex "beauftragt\|Fachunternehmen\|Angebotserstellung.*GmbH" | 0182-2024: "Fuer die Angebotserstellung haben wir die Fa. Oeko-Bauzentrum Junker beauftragt" — Sub wird VOR Angebotserstellung im Bericht festgelegt. OFFEN (LV_S7, validierbar nach Bericht-Extraktion) |
+
+## Kategorie 10: Bericht-Signale (LV_S7)
+
+> Berichte (Schadensberichte DOCX) sind PRIMAERQUELLEN. Sie enthalten Weichenstellungen
+> die in der DB nicht abgebildet sind: Wer wird empfohlen, was wird als erforderlich
+> deklariert, welche Massnahmen werden vorgeschlagen. Diese Signale erkennen forensisch
+> relevante Muster in den Berichts-Texten.
+
+| # | Signal | Stufe | Schema | SPQQD | Folgekette | Erkennungsmethode | WSM-Beispiel |
+|---|--------|-------|--------|-------|------------|-------------------|--------------|
+| B-01 | Sub-Beauftragung im Bericht vor Angebotsphase | ANOMALIE | AU | S | → Welcher Sub? Cross-Projekt-Haeufigkeit? → WSM-Marge auf diesem Projekt? → Cluster-Check (Lahntal etc.) | Bericht-DOCX: "beauftragt" + Firmenname | 0182-2024: Oekozentrum Junker im Bericht benannt, dann 82% des Budgets erhalten |
+| B-02 | Bericht empfiehlt Fachunternehmen-Pruefung (Holzbalken, Statik, Fachwerk) | SIGNAL | AU | S | → Wurde ein Fachunternehmen beauftragt? → Welches? → Immer dasselbe? | Bericht-DOCX: "Fachunternehmen" + "pruefen/pruefung" | 0016-2024 + 0182-2024: Fachwerkpruefung empfohlen → Oekozentrum beauftragt |
+| B-03 | Bericht-Schadenshoehe "nicht einschaetzbar" bei offensichtlich grossem Schaden | SIGNAL | VB | — | → Angebots-Summe pruefen. Verhaeltnis Schadenshoehe-Einschaetzung vs. tatsaechliche Abrechnung | Bericht-DOCX: "nicht einschaetzbar" | 0230-2024: 3 Etagen Fachwerk, "nicht einschaetzbar", dann 42K W-Angebot |
+| B-04 | Berichtsdatum leer (Platzhalter "am " ohne Datum) | SIGNAL | RE | — | → Rapport-Datum pruefen. Wer hat wann tatsaechlich besichtigt? | Bericht-DOCX: "am " + Leerzeichen statt Datum | Alle 5 Oeko-Berichte: Beauftragungsdatum und OT-Datum = Platzhalter |
 
 ## Offene Signal-Luecken (zu fuellen)
 
+- ~~Bericht-basierte Signale~~ → Kategorie 10 (4 Signale, B-01 bis B-04, LV_S7)
 - Wasserschaden-spezifische Signale (Trocknungsdauer, Feuchtewerte)
 - ~~Rapport-basierte Signale~~ → Kategorie 7 (9 Signale, erledigt v0.2)
 - ~~Kommunikations-Signale~~ → teilweise erledigt (H-07, H-08 aus Handoffs v0.4)

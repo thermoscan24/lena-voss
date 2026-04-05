@@ -94,6 +94,8 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | H-10 verworfen | Versicherungs-Haeufung nicht diskriminierend, proportional zum Marktanteil | 04 | 2026-04-05 |
 | lena_scanner.py | Kombi-Scoring Tool (5 Signale), v1.0 in TRAINING/wsm_akte/ | 04 | 2026-04-05 |
 | Caspari-Langschwanz | 15+ Score-3-Projekte ohne FALL-Kat, identisches Muster, ~5K EUR | 04 | 2026-04-05 |
+| FALL-011_LANG | 15 Score-3 als eigene Kategorie (nicht FALL-011, nicht ignoriert). Stuetzt Systematik-Nachweis | 04 | 2026-04-05 |
+| Git-Branching | Session-Branch lv_sN, Merge nach master bei Session-Ende. Im lena-Skill verankert | 04 | 2026-04-05 |
 
 ---
 
@@ -107,14 +109,13 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | LV_S4 | 2026-04-05 | 04 | Signal-Katalog v0.2→v0.3: IACRC-Methodik (SPQQD, Predication Gate, 10-Schritte), Schema-Zuordnung (7 Schemata), Folgeketten (alle 66 Signale verknuepft), BF-Rename (13 Kollisionen gefixt), Gate korrigiert (Option C: 2 unique+ALARM), 4 Schema-SOPs (KB/AU/RE/SF), 3 Benford-Signale, 6 Gemini-Quellen destilliert (Agentic AI, SOP, Benford, Interview, Kalibrierung), WISSEN 6→9 Dateien, Verweis-Audit 156/156 sauber |
 | LV_S5 | 2026-04-05 | 04 | Backtesting: 652 Projekte, Kombi-Score 4=90.9%, 3 Korrekturen, 11 H-Signale, Katalog v0.4 (80). Terminal: Charakter v0.3 (Transparenz, Herkunft, Erscheinungsbild), Manus-Integration (Taskplan, 2 Recherchen B+/C+), Landing Page v1, Cross-Projekt 12 Agents (B#61 gesichert, Oekozentrum Junker 26K Anomalien, Gutachten v3, stabilizer.py, CLAUDE.md v3.3, session-greeting), 8 Entscheidungen |
 | LV_S6 | 2026-04-05 | 04 | Signal-Validierung: H-01 VALIDIERT (Lift 2.5x, 79.5% FALL, Caspari 30/31), BEN VERWORFEN (nicht diskriminierend), H-03 VALIDIERT (Lift 2.1x, Caspari-Steuerung), H-05/07/11 VALIDIERT, H-10 VERWORFEN, H-02/04/06 nicht validierbar. Kombi-Scoring: 19 Score-3 UNBEKANNTE = Caspari-Langerschwanz. lena_scanner.py v1.0 erstellt |
+| LV_S7 | 2026-04-05 | 04 | Git-Branching (lv_s7, Skill), FALL-011_LANG (15 Prj), B#225-227 NEU, H-02 bauseits verworfen, Bericht-Extraktor v1.0 (513 Berichte, bericht_extrakte Tabelle), Kategorie 10 (B-01..B-04), Handoff-Destillation S86-S126 (91 Funde), Fliesen Schmidt S.4-8, Oekozentrum Tiefenanalyse (Berichte = Primaerquellen) |
 
 ## Naechster Schritt
 
-1. **Score-3 UNBEKANNTE als FALL-011 pruefen** — 15 Projekte mit identischem Caspari-Muster, Mirko-Entscheidung
-2. **Manus v2 auswerten** — WSM Wettbewerber, Handlanger Recht, Landing Page v2
-3. **Oekozentrum Junker vertiefen** — 11K RE 0016-2024, Angebots-Nr 2024-00497
-4. **Fliesen Schmidt Schlussrechnung Seite 4-8**
-5. **Email-Tonfall-Analyse** — Caspari↔Fliesen Schmidt, Caspari↔Gade
-6. **Lena-wsm-ermittler Merge planen** — lena_scanner.py als Basis
-7. **Fruehphase-Handoffs (S86-S126)** — weitere Destillation
-8. **H-02 Gade-PDF-Parsing** — bauseits-Signal validierbar machen
+1. **B-01 validieren** — Lift berechnen, False Positives bereinigen, gegen FALL-Projekte testen
+2. **Oekozentrum Kernfragen** — Wer hat 0230-2024 Rueckbau gemacht? Verbindung Habener? W-Phase 42K?
+3. **H-Signale S86-S126** — 20 SENSORIK-Funde aus Handoff-Destillation in Katalog uebernehmen
+4. **Manus v2 auswerten** — WSM Wettbewerber, Handlanger Recht, Landing Page v2
+5. **Lena-wsm-ermittler Merge planen** — lena_scanner.py + bericht_extraktor als Basis
+6. **lena_scanner.py v2** — Bericht-Signale (B-01..B-04) integrieren

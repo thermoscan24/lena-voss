@@ -202,3 +202,28 @@ Gegenbefund: Fenner-Emails sind WSM-Kontrolle (Stunden hinterfragen, Rapporte an
 **Oekozentrum-Junker-Korrektur:** "Oeko-Junker" → "Oekozentrum Junker" in 10 Dateien (Lena + WSM) korrigiert.
 Diese Projekte sind der "lange Schwanz" des Caspari-Schemas — zu klein um einzeln aufzufallen,
 aber systematisch gleich strukturiert. Empfehlung: Als FALL-011-Erweiterung diskutieren (mit Mirko).
+
+### LV_S7 — 2026-04-05
+
+**Git-Branching + FALL-011_LANG**
+
+Git-Repo existierte bereits. Branch `lv_s7` erstellt, lena-Skill mit Branch-Logik (Start/Ende) aktualisiert. 15 Score-3 UNBEKANNTE als FALL-011_LANG kategorisiert (Mirko-Entscheidung: eigene Kategorie, nicht FALL-011).
+
+**H-08 RE-Diktat + Email-Tonfall**
+
+116 unique Emails WSM→Sub mit "Rechnung"+"Stunden" ausgewertet. B#225 NEU: Caspari→Schulz Sonntagsstunden-Diktat. B#145 bestaetigt. Email-Tonfall: Caspari durchgehend informell mit Fliesen Schmidt und Gade. B#226 NEU: Caspari fordert Gade auf "versicherungstechnische Bearbeitung in den Preisen einkalkulieren".
+
+**H-02 Gade-PDFs + Oekozentrum Junker**
+
+136 Gade-Positionen geparst (0201+0202), "bauseits" nicht diskriminierend (nur 2x Stromverbrauch). H-02 ZURUECKGESTELLT. Oekozentrum Cross-Projekt: 5 Projekte, 26.467 EUR, Marge 3,9-40%. Aber: WSM-Schadensberichte (DOCX) zeigen die wahre Geschichte — 0182-2024 benennt Oekozentrum DIREKT im Bericht als Fachunternehmen. B#227 NEU (VERDACHT).
+
+**Bericht-Extraktor v1.0 (Hauptarbeit)**
+
+Erkenntnis der Session: Berichte sind PRIMAERQUELLEN. Enthalten Weichenstellungen (Sub-Beauftragung, Fachunternehmen-Empfehlung) die in der DB nicht abgebildet sind. `bericht_extraktor.py` gebaut: Liest DOCX, extrahiert 19 forensische Felder, 4 neue Signale (Kategorie 10: B-01..B-04). 513 Berichte verarbeitet, 0 Fehler, neue DB-Tabelle `bericht_extrakte`. B-01 (Sub benannt): 51 Treffer. B-04 (Platzhalter-Datum): 497/513 = Template-Problem.
+
+**Parallel-Agents**
+
+- Handoff-Destillation S86-S126: 91 Funde (WISSEN 36, SENSORIK 20, METHODIK 21, TRAINING 14)
+- Fliesen Schmidt Schlussrechnung S.4-8: 10 forensische Auffaelligkeiten, 40K Anzahlung ohne Leistungserbringung
+
+**Lena-Selbsteinschaetzung:** 60-70% bereit. Zahlen-Sensorik funktioniert, Quellen-Sensorik (Berichte, Rapporte) ist der Engpass. Noch 2-3 Sessions fuer Validierung + Rapport-Integration.

@@ -70,6 +70,32 @@
 **Ergebnis:** WISSEN/wasserschaden_fachtechnik.md + WISSEN/versicherungsregulierung.md + 5 W-Signale (Kat.11)
 **Gezielt 01-03:** Musterbewertung, StA-Beweispaket, Gegenprobe — herausragende Ergebnisse
 
+## Runde 6b (LV_S9, 2026-04-05) — ABGESCHLOSSEN
+
+Notebook: Dasselbe wie R6. Keine neue Quelle (SVBS-URL tot).
+
+**Ergebnis:** WISSEN/abrechnungslogik_trocknung.md — VdS-Dokumentationspflichten (Checkliste), Geraete-Benchmarks (Trotec: m2/Geraet, kWh/Typ), Qualitaetsmerkmale. KEINE EUR-Preise in Quellen (branchenueblich).
+
+## Runde 7 (LV_S9, 2026-04-05) — ABGESCHLOSSEN
+
+| # | Anzeigename in NBL | URL | Lauf |
+|---|---------------------|-----|------|
+| 31 | BSI DER.2.2 IT-Forensik | https://www.bsi.bund.de/.../DER_2_2_Vorsorge_fuer_die_IT_Forensik_2023.pdf | 7 |
+| 32 | COSO Fraud Deterrence | https://www.coso.org/frauddeterrence | 7 |
+| 33 | ACFE Fraud Risk Tools | https://www.acfe.com/fraud-resources/fraud-risk-tools---coso | 7 |
+| 34 | ACFE Fraud Tree | https://www.acfe.com/-/media/files/acfe/pdfs/fraud-tree.ashx | 7 |
+| 35 | TI Construction | https://knowledgehub.transparency.org/tag/construction-sector | 7 |
+| 36 | KPMG KI Betrugsmuster | https://kpmg.com/de/de/home/themen/2024/08/ki-basierte-betrugsmuster.html | 7 |
+| 37 | ResearchGate Benford | https://www.researchgate.net/publication/241401706 | 7 |
+| 38 | dejure §299 StGB | https://dejure.org/gesetze/StGB/299.html | 7 |
+| 39 | dejure §263 StGB | https://dejure.org/dienste/lex/StGB/263/1.html | 7 |
+| 40 | GeschGehG §23 | https://www.gesetze-im-internet.de/geschgehg/__23.html | 7 |
+| 41 | RA Plutte GeschGehG | https://www.ra-plutte.de/.../grosser-rechtsueberblick-geschaeftsgeheimnisgesetz/ | 7 |
+| 42 | RA Erhard §299 | https://rechtsanwalt-erhard.de/korruption-bestechlichkeit-bestechung-299-stgb/ | 7 |
+| 43 | Dr. Datenschutz | https://www.dr-datenschutz.de/.../geschaeftsgeheimnisse/ | 7 |
+
+**Ergebnis:** WISSEN/compliance_frameworks.md (COSO↔Lena, ACFE↔Schema, TI) + WISSEN/rechtliche_einordnung.md (§263, §266, §299, GeschGehG auf WSM gemappt)
+
 ## Noch nicht geladen (16 Quellen)
 
 | Kat | Anzeigename | URL | Prio |

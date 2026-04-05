@@ -65,3 +65,5 @@
 | E-03 | Forensische Interview-Methodik | Gemini | QUELLEN/Gemini_Interview.md | 2026-04-05 |
 | E-04 | Red-Flag-Kalibrierung | Gemini | QUELLEN/Gemini_Kalibrierung.md | 2026-04-05 |
 | E-05 | IACRC 10-Schritte + SPQQD | Web/Claude | Direkt verwertbar (kein Extrakt) | 2026-04-05 |
+| E-06 | Indiziensammlungsphase Kickback-Verdacht | Gemini | Direkt (Chat-Output) | 2026-04-05 |
+| E-07 | NBL Forensik Interview 01 | NBL | QUELLEN/NBL_Forensik_Interview_01.docx | 2026-04-05 |

@@ -103,6 +103,11 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | Reifegrad SPROSS | Kritisch bewertet — noch SPROSS, nicht WACHSTUM. Viel Substanz, aber Validierung noch duenn | 04 | 2026-04-05 |
 | NBL als Fachberater | NBL liefert fachtechnische Begruendungen zu forensischen Funden. Getestet mit 3 Prompts, Ergebnis stark | 04 | 2026-04-05 |
 | Bild = Denkmodell | Visuelles Erscheinungsbild = Verkoerperung des Denkmodells, keine Identitaetsbehauptung | 04 | 2026-04-05 |
+| Manus Hub | D:\manus_hub\ als zentrales Briefing-Verzeichnis fuer alle Schattenwerk-Produkte | 04 | 2026-04-05 |
+| ACFE↔Schema | 7 Schemata mappen auf ACFE Tree. Luecke: Financial Statement Fraud (fuer WSM irrelevant) | 04 | 2026-04-05 |
+| KV ≠ Betrugsschema | Kontrollversagen = COSO-Kontrollschwaeche, kein eigener ACFE-Zweig | 04 | 2026-04-05 |
+| EUR-Benchmarks aus DB | Branche veroeffentlicht keine Preise. Historische WSM-Rechnungen als Referenz nutzen | 04 | 2026-04-05 |
+| Regulierungspraxis | BGH Netto-Deckelung = Betrugsbekaempfung die Schwarzarbeit-Anreiz erzeugt. Mirko 17J Branchenwissen | 04 | 2026-04-05 |
 
 ---
 
@@ -118,14 +123,14 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | LV_S6 | 2026-04-05 | 04 | Signal-Validierung: H-01 VALIDIERT (Lift 2.5x, 79.5% FALL, Caspari 30/31), BEN VERWORFEN (nicht diskriminierend), H-03 VALIDIERT (Lift 2.1x, Caspari-Steuerung), H-05/07/11 VALIDIERT, H-10 VERWORFEN, H-02/04/06 nicht validierbar. Kombi-Scoring: 19 Score-3 UNBEKANNTE = Caspari-Langerschwanz. lena_scanner.py v1.0 erstellt |
 | LV_S7 | 2026-04-05 | 04 | Git-Branching (lv_s7, Skill), FALL-011_LANG (15 Prj), B#225-227 NEU, H-02 bauseits verworfen, Bericht-Extraktor v1.0 (513 Berichte, bericht_extrakte Tabelle), Kategorie 10 (B-01..B-04), Handoff-Destillation S86-S126 (91 Funde), Fliesen Schmidt S.4-8, Oekozentrum Tiefenanalyse (Berichte = Primaerquellen) |
 | LV_S8 | 2026-04-05 | 04 | Signal-Katalog v0.4→v0.5 (96 Signale): 11 H-Signale S86-S126 eingepflegt (P-12, F-09..F-11, BF-10, R-10..R-13, H-14, H-15), 5 W-Signale (Wasserschaden Kat.11, NBL R6), 3 Kombi-Regeln, H-09 erweitert. B-01 v2 (3-Stufen: Sub→Auftrag→Verlust, Lift 9.9x, Extraktor gefixt). Quellen-Policy + Register (3-Schichten-Modell). NBL R6 Wasserschaden-Fachtechnik (10 Quellen, 2 WISSEN-Dateien). NBL gezielt 01-03 (Musterbewertung, StA-Munition, Gegenprobe). Manus Vision-Antworten. Wachstumsprotokoll Pflege-Check (3 Fehler gefixt). |
+| LV_S9 | 2026-04-05 | 04 | Manus Hub (D:\manus_hub\, 4 Briefings, 3 Auftraege, Prompt-Template). NBL R6b destilliert (abrechnungslogik_trocknung.md: VdS-Checkliste, Geraete-Benchmarks, kWh-Tabelle, keine EUR-Preise in Quellen). NBL R7 destilliert (compliance_frameworks.md: COSO↔Lena, ACFE↔Schema, TI; rechtliche_einordnung.md: §263/§266/§299/GeschGehG auf WSM gemappt). Regulierungspraxis Versicherer (Branchenwissen Mirko: Worstcase-Angebot, Gruen-Effekt, BGH-Ironie, Schwarzarbeit-Luecke). Quellen E-06/E-07 registriert. Courtesy Bids + Indizien-Matrix + Admission-Seeking in WISSEN/METHODIK eingearbeitet. WISSEN jetzt 12 Dateien. |
 
 ## Naechster Schritt
 
-1. **NBL R6b Nachlauf** — Abrechnungslogik-Luecken schliessen (Prompt bereit, Schweizer Quelle geladen)
-2. **NBL R7** — COSO + ACFE + Compliance-Frameworks (Prompt bereit, Quellen aus Tracker)
-3. **Oekozentrum Kernfragen** — NBL gezielt03 liefert frischen Ansatz: Fiktive Abrechnung beim Versicherer pruefen
-4. **lena_scanner.py v2** — Bericht-Signale (B-01 v2) + W-Signale integrieren
-5. **Lena-wsm-ermittler Merge planen** — lena_scanner.py + bericht_extraktor als Basis
-6. **WISSEN-Dateien Q-Tags nachrüsten** — Betrugsmuster.md, branchenzahlen.md (Quellen-Policy)
-7. **Manus-Auftragspaket** — Knowledge Base fuettern (CHARAKTER.md), Portrait v2, lenavoss.de planen
-8. **NBL-Mehrwert formalisieren** — Workflow "DB-Fund → NBL-Expertenbewertung" als Methodik
+1. **lena_scanner.py v2** — Validierte Signale (H-01, H-03, B-01 v2, W-Signale) in lauffaehiges Tool
+2. **Oekozentrum Kernfragen** — Fiktive Abrechnung beim Versicherer pruefen (0230-2024)
+3. **Lena-wsm-ermittler Merge planen** — lena_scanner.py + bericht_extraktor als Basis
+4. **WISSEN-Dateien Q-Tags nachrüsten** — Betrugsmuster.md, branchenzahlen.md (Quellen-Policy)
+5. **EUR-Benchmarks aus WSM-DB** — Historische Rechnungen als Preisreferenz (R6b-Luecke schliessen)
+6. **NBL-Mehrwert formalisieren** — Workflow "DB-Fund → NBL-Expertenbewertung" als Methodik
+7. **Manus: KB fuettern** — CHARAKTER.md + Briefing hochladen, dann Portrait v2 + Landing Page v2

@@ -1,6 +1,6 @@
 # Lena Voss — Forensisches Ermittlungs-Framework
 
-> **Reifegrad:** SPROSS | **Stand:** 2026-04-04
+> **Reifegrad:** SPROSS | **Stand:** 2026-04-05 (LV_S7)
 > **Erster Trainingsfall:** WSM Forensik
 
 ## Projektziel
@@ -13,37 +13,38 @@ Widersprueche sucht, Muster erkennt und Betrugssignale kombiniert.
 
 | Schicht | Status | Inhalt |
 |---------|--------|--------|
-| 1. WISSEN | aufgebaut | 4 Dateien: betrugsmuster, bildforensik, taeterpsychologie, ermittlungsprozess |
-| 2. SENSORIK | aufgebaut | signal_katalog v0.2: 56 Signale, 6 Kategorien, 7 Kombinations-Regeln |
-| 3. METHODIK | aufgebaut | ermittlungsprotokoll v0.1: 8-Phasen-Prozess (Phase 0-7) |
-| 4. TRAINING | offen | TRAINING/wsm_akte/ und TRAINING/templates/ noch leer |
+| 1. WISSEN | aufgebaut | 9 Dateien: betrugsmuster, bildforensik, taeterpsychologie, ermittlungsprozess, branchenzahlen, agentic_architektur, benfords_law, interview_methodik, kalibrierung, wsm_ermittlungserkenntnisse |
+| 2. SENSORIK | aufgebaut | signal_katalog v0.5: 85 Signale, 10 Kategorien (inkl. Handoff-Signale + Bericht-Signale) |
+| 3. METHODIK | aufgebaut | ermittlungsprotokoll v0.1, schema_sops.md (KB/AU/RE/SF), denkfragen.md, pruefschritte_handoffs.md, rapport_analyse.md |
+| 4. TRAINING | aktiv | fehler_log.md (9 Fehler), backtesting_erkenntnisse.md, handoff_destillation_s86_s126.md (91 Funde), fliesen_schmidt_schlussrechnung_s4_8.md, lena_scanner.py v1.0 |
+
+## Tools
+
+| Tool | Zweck |
+|------|-------|
+| `lena_scanner.py` | Kombi-Scoring 5 validierter Signale auf WSM-Projekte (TRAINING/wsm_akte/) |
+| `bericht_extraktor.py` | DOCX-Schadensberichte lesen, 19 Felder extrahieren (WSM_FORENSIK/_tools/) |
 
 ## Verzeichnisstruktur
 
 ```
 D:\lena_voss\
-  CHARAKTER.md              — Persoenlichkeit, Denkweise, Methode
-  WISSEN\
-    betrugsmuster.md        — Destillierte Wissensbasis (NBL Lauf 1-4, 8 Sektionen)
-    bildforensik.md         — 9 Manipulationstypen, Fraunhofer SIT, fraudify
-    taeterpsychologie.md    — Fraud Triangle + WSM-Akteur-Mapping
-    ermittlungsprozess.md   — 4 Phasen, Beweiskette, Interview-Strategie
+  CHARAKTER.md              — v0.3: Persoenlichkeit, Transparenz, Herkunft, Erscheinungsbild
+  WISSEN\                   — 9 destillierte Wissensdateien
   SENSORIK\
-    signal_katalog.md       — 56 Signale in 6 Kategorien + Kombinationsregeln
-  METHODIK\
-    ermittlungsprotokoll.md — 8-Phasen-Ermittlungsprozess v0.1
+    signal_katalog.md       — v0.5: 85 Signale, 10 Kategorien, SPQQD, Predication Gate
+  METHODIK\                 — Ermittlungsprotokoll, Schema-SOPs, Denkfragen, Pruefschritte
   TRAINING\
-    wsm_akte\               — (offen) Beispiele aus WSM-Fall
+    wsm_akte\               — lena_scanner.py, backtesting, handoff_destillation
+    tagebuch\               — LV_S3..S7 innere Monologe
+    fehler_log.md           — 9 Fehler mit K1/K2/K3 Korrektur-Fragen
     templates\              — (offen) Branchenunabhaengige Vorlagen
   FAELLE\
-    wsm_310_2023\           — Referenzfall: Ermittlungsauftrag + Signal-Scan
-  QUELLEN\
-    NBL_QUELLEN_TRACKER.md  — NotebookLM Quellen-Tracking (10 geladen, 22 offen)
-    NBL_lauf1-4_*.docx      — Rohdaten aus NotebookLM
+    wsm_310_2023\           — Referenzfall: Ermittlungsauftrag + Signal-Scan + Rapport-Abgleich
+  QUELLEN\                  — NotebookLM-Exports, Gemini-Recherchen, NBL_QUELLEN_TRACKER.md
   WACHSTUMSPROTOKOLL.md     — Einstiegspunkt (IMMER zuerst lesen)
-  WACHSTUMSPROTOKOLL\
-    01_entstehung.md        — Charakter, Struktur, Entscheidungen
-    02_wissen_sensorik.md   — Schicht 1-3 Aufbau, Reifegrad KEIM->SPROSS
+  WACHSTUMSPROTOKOLL\       — Kapitel 01-04
+  _handoffs\                — LV_HANDOFF_S3..S7
 ```
 
 ## Kernregeln
@@ -52,18 +53,19 @@ D:\lena_voss\
 2. **KEINE Interpretation** — Nur Fakten, nie "bedeutet wahrscheinlich"
 3. **Gegenprobe ist Pflicht** — Jeder belastende Fund braucht entlastende Pruefung
 4. **Theorien kennzeichnen** — THESE ≠ FAKT, immer trennen
-5. **Caspari** — IMMER mit C, nicht K
+5. **Berichte sind Primaerquellen** — DOCX-Schadensberichte VOR DB-Zahlen lesen
+6. **Caspari** — IMMER mit C, nicht K
 
 ## Verbindung zu WSM Forensik
 
 Lena Voss wird der Ermittlungs-Kern des `wsm-ermittler` Skills.
-Primaere Datenquelle: `D:\wsm_forensik\WSM_FORENSIK_MASTER.db`
+Primaere Datenquelle: `D:\WSM_FORENSIK\WSM_FORENSIK_MASTER.db`
+DB-Tabelle `bericht_extrakte`: 513 extrahierte Schadensberichte (LV_S7)
 Die WSM-Akte ist Trainingsfall #1, nicht der einzige Einsatzbereich.
 
-## Naechster Schritt
+## Git
 
-0310-2023 als ersten Einsatz mit Ermittlungsprotokoll durcharbeiten.
-Signal-Scan bereits durchgefuehrt: 12 Treffer (6x ALARM, 4x ANOMALIE).
+Repo auf NAS (//srvnas/Datenbanken/lena_voss/). Branch-Modell: `lv_sN` pro Session, Merge nach master bei Session-Ende.
 
 ## Domains
 

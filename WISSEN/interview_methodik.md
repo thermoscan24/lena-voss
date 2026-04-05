@@ -58,7 +58,7 @@ Phase 4: ZIELPERSON — Konfrontation
 3. **Keil:** "Der Haupttaeter benutzt dich als Suendenbock. Kooperation = Schadensbegrenzung"
 4. **Sofort fixieren:** Schriftliche Aussage bevor Meinung sich aendert
 
-### Abschlussinterview (Bierau, dann Caspari)
+### Abschlussinterview — "Admission-Seeking Interview" [E-07] (Bierau, dann Caspari)
 1. Direkte Konfrontation ohne Einleitung
 2. Einwaende unterbrechen: "Nicht OB — WARUM"
 3. Zwei Szenarien: Gier (A) vs. Notfall (B) → meisten waehlen B = Gestaendnis

@@ -4,7 +4,7 @@
 > Zusaetzliche Quelle: SVBS Merkblatt Bautrocknung (Schweiz)
 > Notebook: Dasselbe wie R6, Quelle hinzufuegen, dann diesen Prompt
 
----
+\---
 
 ## Prompt
 
@@ -41,3 +41,4 @@ Fokus auf die fehlenden Antworten. Erfinde nichts.
 16. Welche **Zertifizierungen** gibt es fuer Sanierungsunternehmen? (TÜV, DHBV, Innung, andere)
 17. Was unterscheidet einen **serioesen Sanierer** von einem unseriösen? Checkliste.
 18. Gibt es **Preissteigerungen** in den letzten Jahren die meine Schwellenwerte beeinflussen? (Material, Energie, Lohn)
+

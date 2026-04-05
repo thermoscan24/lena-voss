@@ -34,6 +34,7 @@
 1. Manipulation Vergabeprozess
 2. Systematische Umgehung Wettbewerb
 3. Vergabe an immer denselben Sole-Source-Anbieter
+4. **Courtesy Bids (Scheinangebote):** Konkurrenzangebote werden nur pro forma eingeholt um den favorisierten Lieferanten zu legitimieren. Erkennbar an: identische Formatierung, unrealistisch hohe Alternativ-Preise, zeitgleiches Eintreffen aller Angebote [E-06]
 
 ### 1.4 Change Order Fraud
 

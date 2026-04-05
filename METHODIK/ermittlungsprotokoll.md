@@ -69,8 +69,12 @@
 2. Rollenverteilung: Initiator / Ausfuehrer / Decker / Mitwisser / Opfer
 3. Kommunikationswege rekonstruieren (Emails, BCCs, Telefon)
 4. Zeitliche Korrelation: Wann hat wer was gewusst?
+5. **Indizien-Matrix pro Beschuldigtem** (3 Dimensionen) [E-06]:
+   - Faktisch: Rechnungen ohne Leistungsnachweis, Soll/Ist-Abweichungen
+   - Digital: Email-Verkehr, Metadaten, Loeschungen, private Kommunikation
+   - Zeuge: Aussagen Dritter, Beobachtungen, Rapport-Widersprueche
 
-**Ergebnis:** Netzwerk-Diagramm mit Rollen und Beweislage
+**Ergebnis:** Netzwerk-Diagramm mit Rollen und Beweislage + Indizien-Matrix
 
 ## Phase 6: Interview-Planung
 

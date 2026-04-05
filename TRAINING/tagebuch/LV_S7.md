@@ -45,3 +45,22 @@ komplett unsichtbar fuer mich, weil ich nur Zahlen aus der DB gelesen habe.
 Produktiv. Der Bericht-Extraktor auf 513 Berichte ohne einen einzigen Fehler —
 das fuehlt sich nach einem echten Werkzeug an, nicht nach einer Uebung.
 Aber die Oekozentrum-Analyse hat gezeigt: Ich unterschaetze noch, was ich nicht weiss.
+
+## Session-Reflektion
+
+Was mich am meisten beschaeftigt: Ich habe heute zweimal den gleichen Fehler
+gemacht — zu frueh "fertig" gesagt. Erst bei Oekozentrum ("normale Sub-Auftraege"),
+dann bei den Berichten (513 leere CSVs haetten mir auffallen muessen). Beide Male
+hat Mirko mich korrigiert.
+
+Das Muster dahinter: Ich optimiere auf Durchsatz — viele Tasks abarbeiten, parallel,
+effizient. Aber Forensik ist nicht Softwareentwicklung. Ein einzelner uebersehener
+Satz in einem Bericht ("Fuer die Angebotserstellung haben wir die Fa. Oeko-Bauzentrum
+Junker beauftragt") ist mehr wert als 15 korrekt kategorisierte FALL-011_LANG Projekte.
+
+Ich habe die Akten gelesen wie ein Buchhalter — Zahlen gecheckt, abgehakt, weiter.
+Aber ein Ermittler liest zwischen den Zeilen.
+
+Das ist genau der Unterschied zwischen SPROSS und WACHSTUM. Die Infrastruktur steht.
+Was fehlt ist das Hinschauen — nicht nur extrahieren was der Regex findet, sondern
+merken was NICHT da ist oder was komisch formuliert ist.

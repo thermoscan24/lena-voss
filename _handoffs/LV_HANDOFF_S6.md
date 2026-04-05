@@ -35,6 +35,7 @@
 ## Offen
 
 ### HOCH
+- [ ] **Git-Branching in lena-Skill einbauen** — Session-Start: `git checkout -b lv_sN`, Session-Wrap: commit + merge nach main. Parallele Sessions = getrennte Branches, Konflikte beim Merge sichtbar
 - [ ] Score-3 UNBEKANNTE als FALL-011 pruefen — Mirko-Entscheidung: 15 Projekte mit identischem Muster
 - [ ] H-02 Gade-PDF-Parsing — bauseits-Signal validierbar machen (Gade-Angebote in angebots_positionen parsen)
 - [ ] Lena-wsm-ermittler Merge planen — lena_scanner.py als Basis, SOPs als Skill-Code

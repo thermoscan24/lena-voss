@@ -1,7 +1,7 @@
 # Kapitel 04: Lena wird lebendig
 
 > **Datum:** 2026-04-05 | **Session:** LV_S4
-> **Reifegrad vorher:** SPROSS | **Reifegrad nachher:** —
+> **Reifegrad vorher:** SPROSS | **Reifegrad nachher:** SPROSS
 
 ---
 
@@ -227,3 +227,39 @@ Erkenntnis der Session: Berichte sind PRIMAERQUELLEN. Enthalten Weichenstellunge
 - Fliesen Schmidt Schlussrechnung S.4-8: 10 forensische Auffaelligkeiten, 40K Anzahlung ohne Leistungserbringung
 
 **Lena-Selbsteinschaetzung:** 60-70% bereit. Zahlen-Sensorik funktioniert, Quellen-Sensorik (Berichte, Rapporte) ist der Engpass. Noch 2-3 Sessions fuer Validierung + Rapport-Integration.
+
+### LV_S8 — 2026-04-05
+
+**Signal-Katalog v0.4 → v0.5 (Hauptarbeit)**
+
+11 neue Signale aus Handoff-Destillation S86-S126 eingepflegt (P-12, F-09..F-11, BF-10, R-10..R-13, H-14, H-15). 8 Duplikate erkannt und rausgefiltert. H-09 um SumUp-Privatmail-Kette erweitert statt neues Signal. 3 neue Kombinationsregeln (Phantom-Triade, Verlust-FALL, Schwarzarbeit-Gradient). Katalog jetzt bei 96 aktiven Signalen.
+
+5 Wasserschaden-spezifische Signale (W-01..W-05) aus NBL R6 als neue Kategorie 11. Erstmals Branchenwissen formalisiert: VdS-Regeltrocknungszeiten als Schwellenwerte, Strom-Geraete-Mismatch, Feuchtemessungs-Manipulation, Regulierer-Routing, IoT-Logs.
+
+**B-01 v2 (3-Stufen-Signal)**
+
+B-01 komplett ueberarbeitet. Altes Signal (Sub im Bericht = ANOMALIE) war zu breit — Lift nur 1.7x, viel Textmuell. Neues 3-Stufen-Modell: Stufe 1 (Sub benannt) → Stufe 2 (Sub bekommt Auftrag, Fuzzy-Match gegen lieferantenrechnungen) → Stufe 3 (+ WSM-Verlust = ALARM). Extraktor-Fix: Rechtsform-Pflicht in allen Patterns, 4 statt 14 Textmuell-Eintraege bereinigt. Sauber-Filter: Fenner, Bajramaj. Ergebnis: Stufe 3 Lift = 9.9x (2/2 FALL, N=2).
+
+**Quellen-Policy + Register**
+
+Formalisiert: 3-Schichten-Modell (Original→Extrakt→Wissen). Jeder Fakt braucht [Q-NN] Verweis. NBL-Extrakte = Arbeitsmaterial, nicht zitierfaehig. Register mit Q-01..Q-28 + E-01..E-05 angelegt.
+
+**NBL R6: Wasserschaden-Fachtechnik**
+
+10 Quellen geladen (VdS 3150, WTA 6-16, Trotec, Bitkom, GDV etc.). 30-Fragen-Prompt, Ergebnis: Block 1+3+4 gut (Technik, Regulierung, Manipulation), Block 2 duenn (Abrechnungslogik). Nachlauf-Prompt R6b bereit. 2 WISSEN-Dateien destilliert: wasserschaden_fachtechnik.md + versicherungsregulierung.md.
+
+**NBL gezielt: Forensische Fachbewertung (Durchbruch)**
+
+3 Live-Prompts mit echten WSM-Daten ins R6-Notebook. Ergebnis herausragend — NBL liefert verwertbare Expertenbewertungen:
+- Gezielt01: Alle 3 Muster als "massives Red Flag" bewertet, mit Normen-Verweisen
+- Gezielt02: 4-Stufen-Beweispaket fuer StA (Strom-Tacho, Protokoll, Wirtschaftlichkeit, IoT)
+- Gezielt03: Sub im Bericht benennen = "absolut unueblich, Verstoss gegen VdS". Neuer Ansatz: Fiktive Abrechnung beim Versicherer pruefen (0230-2024)
+
+Erkenntnis: NBL als forensischer Fachberater ist ein valider Use Case. Lena findet Muster in der DB, NBL liefert die branchentechnische Begruendung.
+
+**Weiteres**
+
+- Manus Vision-Antworten formatiert (7 Fragen zu Lenas Erscheinungsbild/Interaktion)
+- Wachstumsprotokoll Pflege-Check: 3 Fehler gefunden und gefixt (Kapitel-05-Phantom, Signal-Zahlen, Reifegrad-Header)
+- Reifegrad bleibt SPROSS (kritisch bewertet, bewusste Entscheidung)
+- 8 neue Entscheidungen im Register

@@ -48,6 +48,28 @@
 | E-04 | Gemini_Kalibrierung.md | Gemini | 2026-04-05 | Red-Flag-Kalibrierung: SNR statt FPR, Bayes-Faktor pro Signal, Scoring-Modell, Backtesting. **→ WISSEN/kalibrierung.md** |
 | E-02 | — (Web-Recherche Claude) | IACRC | 2026-04-05 | 10-Schritte-Methodik, Proaktive Erkennung, SPQQD-Kickback-Modell, 11 Ermittlungsschritte Kickbacks. **Direkt verwertbar fuer Signal-Katalog Schema-Zuordnung** |
 
+## Runde 6 (LV_S8, 2026-04-05) — ABGESCHLOSSEN
+
+| # | Anzeigename in NBL | URL | Lauf |
+|---|---------------------|-----|------|
+| 17 | VdS 3150 Entwurf 2024 | https://vds.de/fileadmin/publikationen/konsultation/gdv/3150/3150_Entwurf.pdf | 6 |
+| 18 | WTA 6-16 Kurzfassung | https://www.wta-international.org/fileadmin/user_upload/Geschaeftsstelle/Schriften/Kurzfassungen/6-16-19.pdf | 6 |
+| 19 | WTA Weber-Vortrag Trocknung | https://www.wta-international.org/fileadmin/user_upload/WTA-D/Vortraege/01_Vortrag_Weber_Juergen.pdf | 6 |
+| 20 | ~~Trotec Geraetekatalog 2024~~ | PDF-Download von Seite (Original-URL nicht ladbar) | 6 |
+| 21 | ~~Siegmann Preisinformation~~ | Server nicht erreichbar | ~~6~~ |
+| 22 | anwalt.de Trocknungsphase | https://www.anwalt.de/rechtstipps/der-wasserschaden-in-der-gebaeudeversicherung-teil-iii-die-trocknungsphase_149736.html | 6 |
+| 23 | GTG Stromverbrauch Trocknung | https://www.gtggmbh.de/die-genaue-abrechnung-des-stromverbrauchs-bei-einer-trocknung/ | 6 |
+| 24 | Bitkom KI-Betrugserkennung | https://www.bitkom.org/sites/default/files/2020-08/200817_sof9_versicherungsbetrug.pdf | 6 |
+| 25 | GDV Versicherungsbetrug | https://www.gdv.de/gdv/themen/schaden-unfall/versicherungsbetrug | 6 |
+| 26 | Schadenshilfe SV-Verfahren | https://deutsche-schadenshilfe.de/schadensratgeber/sachverstaendigenverfahren-ablauf/ | 6 |
+| 27 | Versicherungsbote Allianz WS-Betrug | https://www.versicherungsbote.de/id/4844719/Allianz-Versicherung-Wasserschaden-Betrugsverdacht/ | 6 |
+| 28 | AVW VdS 3150 Volltext | https://avw-gruppe.de/fileadmin/avw/Dateien/Pdfs/VdS-Richtlinien_zur_Leitungswasserschaden-Sanierung.pdf | 6 |
+| 29 | SVBS Merkblatt Bautrocknung (Schweiz) | https://www.svbs.ch/files/merkblaetter/2023_Merkblatt_Bautrocknung.pdf | 6 |
+| 30 | baunetzwissen Bautrocknung | https://www.baunetzwissen.de/gebaeudetechnik/fachwissen/lueftung/bautrocknung-und-entfeuchtung-155062 | 6 |
+
+**Ergebnis:** WISSEN/wasserschaden_fachtechnik.md + WISSEN/versicherungsregulierung.md + 5 W-Signale (Kat.11)
+**Gezielt 01-03:** Musterbewertung, StA-Beweispaket, Gegenprobe — herausragende Ergebnisse
+
 ## Noch nicht geladen (16 Quellen)
 
 | Kat | Anzeigename | URL | Prio |

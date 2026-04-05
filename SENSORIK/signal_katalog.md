@@ -1,11 +1,12 @@
-# Signal-Katalog v0.4
+# Signal-Katalog v0.5
 
 > Abgeleitet aus: WISSEN/betrugsmuster.md + WISSEN/bildforensik.md + WSM-Akte + IACRC-Methodik
-> Stand: 2026-04-05
+> Stand: 2026-04-05 (LV_S8)
 > NEU in v0.3: Schema-Zuordnung, SPQQD-Tags, Folgeketten (→ METHODIK/denkfragen.md)
+> NEU in v0.5: 11 Signale aus Handoff-Destillation S86-S126 (P-12, F-09..F-11, BF-10, R-10..R-13, H-14, H-15), H-09 erweitert, 3 Kombi-Regeln
 > Namespace: D=Dokumente, P=Personen, N=Netzwerke, F=Finanzen, **BF**=Bildforensik, O=Organisation, R=Rapporte, **BEN**=Benford
 > Befugnis-Kette (denkfragen.md) behaelt B-xx. Bildforensik ist BF-xx. Keine Verwechslung.
-> Aktive Signale: 80 (63 + 3 Benford + P-11 + F-08 + 11 H-Signale. 2 entfernt/zurueckgestellt: N-11, F-06. 1 umformuliert: D-12. 3 korrigiert: P-08, F-01, D-02)
+> Aktive Signale: 96 (80 aus v0.4 + 11 Handoff S86-S126 + 5 Wasserschaden W-01..W-05)
 > **BACKTESTING v1 (LV_S5):** P-08 Threshold korrigiert (bc_tandem='JA' statt Score>=5, von 458→89 Treffer).
 > F-01 auf W-Phase beschraenkt (T-Phase-Verluste = 94% operativ, kein Betrugsindikator allein).
 > P-11 (Caspari-Solo) und F-08 (T-Phase nur in Kombi) als neue Signale aus Backtesting-Erkenntnissen.
@@ -84,6 +85,7 @@ Jedes Signal gehoert zu einem oder mehreren Betrugsschemata (IACRC/ACFE):
 | P-11 | Caspari-Solo: hohe Autonomie ohne Bierau (c_score>=50, bc_tandem='NEIN') | ANOMALIE | AU | S | → B-01, P-07, K-BEFUGNIS | personen_projekte c_score>=50, kein Tandem | Caspari Innendienst-Steuerung |
 | P-09 | Ex-Mitarbeiter gibt anonymen Hinweis | SIGNAL | — | — | → U-03, DP-02, dann Predication Gate pruefen | Whistleblower-Kanal | — |
 | P-10 | Spontangestaendnis bei Sofort-Interview | ALARM | — | — | → U-03, Predication Gate pruefen, GF-01 | Sofort-Kontakt | — |
+| P-12 | Privat-Email mit EXIF-Stripping und Inhaltslosigkeit | ALARM | KE | — | → LE-05, BA-01, BA-02. Alle Emails dieser Adresse sammeln. EXIF aller Fotos pruefen. Zeitkorrelation mit Projekt-Meilensteinen | Email von privater Adresse an Firmenpostfach: kein Text, nur Fotos, EXIF gestripped. Wiederholung = systematisch | anna.schnu@ an info@wsm: 2 Vorfaelle (08/2024, 07/2023), Baustellenfotos, EXIF entfernt |
 
 ## Kategorie 3: Firmen & Netzwerke
 
@@ -113,6 +115,9 @@ Jedes Signal gehoert zu einem oder mehreren Betrugsschemata (IACRC/ACFE):
 | F-05 | Projekt mit >50 Anomalien | ALARM | AU,KB | — | → U-01, U-03, Predication Gate pruefen, K-BEFUGNIS | Anomalien-Zaehler | 0310-2023: 70 |
 | ~~F-06~~ | ~~Kickback als Beratungshonorar in Steuer~~ | — | — | — | ZURUECKGESTELLT v0.3: Benoetigt StA-Zugriff auf Steuerunterlagen Beschuldigter | — | — |
 | F-07 | Pre-Construction Kostenschaetzung aufgeblasen | ANOMALIE | RE | P | → GF-03, D-02 | Branchenbenchmarks | — |
+| F-09 | Stundensatz-Inversion (Sub > WSM-Kundensatz) | ANOMALIE | KB,AU | P | → GF-03, GF-04, dann B-01. Wer hat den Stundensatz akzeptiert? Andere Projekte mit diesem Sub? | Vergleich Sub-Stundensatz vs. WSM-Kundensatz. Negativmarge = betriebswirtschaftlich nicht erklaerbar | 0036-2025: RS Bau 58,00 EUR/Std, WSM rechnet Kunde 57,50 EUR/Std |
+| F-10 | Reines Verlustgeschaeft (Auszahlung bei 0 Einnahmen) | ALARM | AU,KB | D | → Projekt-Akte komplett pruefen. Wer hat beauftragt? Gibt es ueberhaupt einen Kunden? → K-BEFUGNIS | soll_ist oder rechnungen: Auszahlung an Sub > 0, Einnahmen = 0 | 0295-2023: 18.415 EUR an MKG, 0 EUR Einnahmen |
+| F-11 | Micro-RE-Quote (Rechnungen/Angebote < 5% ueber mehrere Projekte) | ALARM | AU,VB | D | → Hat der Sub die Leistung erbracht? → Schwarzarbeit-Verdacht → Alle Projekte dieses Subs | Summe Rechnungen / Summe Angebote < 5% pro Sub ueber mehrere Projekte | Fliesen Schmidt: 1.228/38.342 EUR = 3,2% ueber 5 Projekte. Abgrenzung H-01: H-01=Einzelprojekt 0%, F-11=Sub-uebergreifend Micro-Anteil |
 
 ## Kombinationsregeln
 
@@ -128,6 +133,9 @@ Einzelne Signale koennen harmlos sein. Diese Kombinationen sind es NICHT:
 | F-08 (T-Phase) + P-08 + D-02 | ANOMALIE | AU | S = **1** | 1× ALARM | **NICHT PASSIERT** | T-Verlust allein kein Betrug, aber MIT Tandem+Abweichung vertiefen |
 | N-08 + D-08 + P-06 | ALARM | KB | P,S = **2** | 1× ALARM | **PASSIERT** | Umsatzabhaengig + 0% Provision + enge Beziehung = Kickback-Verdacht |
 | D-09 + D-11 + F-07 | ALARM | RE | D,Q1,P = **3** | 1× ALARM | **PASSIERT** | Ghost Material + Change Order + Padding = Bau-Manipulation |
+| R-11 + R-12 + R-10 | ALARM | RE,AU | Q1,D = **2** | 3× ALARM | **PASSIERT** | Phantom-Triade: Stunden + Material + Personal alle fingiert = komplette RE-Faelschung |
+| F-10 + N-06 | ALARM | AU,KB | S,D = **2** | 2× ALARM | **PASSIERT** | Verlustgeschaeft mit FALL-Lieferant = koordinierte Auftragsumleitung |
+| F-11 + H-01 | ALARM | AU,VB | D = **1** | 2× ALARM | **NICHT PASSIERT** | Schwarzarbeit-Gradient (0%-5% RE-Quote). Vertiefen: Wer hat vor Ort gearbeitet? |
 
 ## Kategorie 5: Bildforensik
 
@@ -142,6 +150,7 @@ Einzelne Signale koennen harmlos sein. Diese Kombinationen sind es NICHT:
 | BF-07 | Foto zeigt anderen Schaden als Beschreibung | ALARM | RE,VB | Q2 | → DP-02, D-01 | Semantischer Abgleich | — |
 | BF-08 | Kamera-Modell wechselt ohne Grund | SIGNAL | — | — | → LE-01, LE-03 | EXIF-Konsistenz | Bierau Privat-Handy |
 | BF-09 | Thumbnail weicht vom Hauptbild ab | ALARM | VB | — | → DP-01, LE-05 | EXIF-Thumbnail-Vergleich | — |
+| BF-10 | EXIF-Geraete-Fingerabdruck als Personenzuordnung | SIGNAL | RE,VB | — | → Geraet identifizieren (wem gehoert es?). → Alle Projekte mit diesem Geraet. → Korrelation mit Rapport-Personen | EXIF ImageUniqueID + Kameramodell. Unbekannte Geraete = potentiell Fremdpersonen auf Baustelle | SM-A336B: 49 Fotos, nur 0219-2024, keinem MA zuordenbar. SM-G780G: 374 Fotos, 17 Projekte = RS Bau |
 
 ## Kategorie 6: Organisatorische Kontrollen (Abwesenheit = Red Flag)
 
@@ -168,6 +177,10 @@ Einzelne Signale koennen harmlos sein. Diese Kombinationen sind es NICHT:
 | R-07 | EXIF-Geraet passt nicht zur Rapport-Person | ALARM | RE | — | → DP-01, LE-05 | EXIF + Handschrift | — |
 | R-08 | Fotos fuer Tag OHNE Rapport | SIGNAL | RE | — | → LE-01, LE-04 | EXIF vs. Rapport-Kalender | — |
 | R-09 | Rapport ohne Abrechnung (vergessene Leistung) | SIGNAL | — | — | → GF-01 (positiv fuer WSM) | Rapport vs. RE | — |
+| R-10 | Rapport-Personal ungleich Rechnungs-Personal (Fremd→Fremd) | ALARM | RE,AU | Q1 | → Wer war tatsaechlich vor Ort? → Existieren die Rechnungs-Personen? → K-NEUE-FIRMA | Namenabgleich Rapport vs. Sub-Rechnung. Abgrenzung R-02: R-02=WSM-MA→Fremdleister, R-10=Fremdleister→andere Fremdleister | Rapporte: Menkal/Schulz. RS Bau RE: Michel/Olschewski |
+| R-11 | Phantomstunden (Erst-RE vs. Korrektur-RE) | ALARM | RE | Q1 | → Differenz quantifizieren. → Wer hat Erst-RE erstellt? → Systematik: Weitere Korrekturen bei diesem MA? | Vergleich Stundenangaben in Erst-Rechnung vs. Korrektur-Rechnung desselben Projekts | W-RE 01 (Caspari): 55,75 Std. Korrigierte W-RE 04 (Kauert): 34,5 Std. Delta: 21,25 Std = 1.221,88 EUR |
+| R-12 | Phantom-Material (Sub berechnet Material, WSM hat Material gestellt) | ALARM | RE | D | → WSM-Einkaufsbelege pruefen. → Sub-RE Material-Positionen extrahieren. → Mengen abgleichen | Vergleich Sub-Rechnung Material-Positionen vs. WSM-eigene Material-Einkaufsbelege | Balzer 20 Sack (WSM gestellt). RS Bau berechnet 10 Sack Weber Putz (250 EUR) |
+| R-13 | Rechnungssplitting (1 Rapport, mehrere Kundenrechnungen) | ANOMALIE | RE | Q1 | → Rapport-Stunden vs. Summe aller Teilrechnungen. → Ueberlappungen? → Wer hat gesplittet? | Ein Rapport-Datum taucht in Rechnungen an verschiedene Kunden/Projekte auf | Rapport 30.06: 8 Std an Gemeinde (Verputz), 4 Std an Stadtwerke (255 EUR) |
 
 ## Kategorie 8: Statistische Anomalien (Benford's Law)
 
@@ -193,10 +206,12 @@ Einzelne Signale koennen harmlos sein. Diese Kombinationen sind es NICHT:
 | H-06 | Sub zahlt Provision per Privatperson statt Firma | ANOMALIE | KB | — | → Bank-Abgleich Name vs. Firma | kontobewegungen: Privatname statt Firmenname | Nur 1 Treffer (Pfeffer). Sparkasse-Daten nicht in DB. NICHT VALIDIERBAR S6 |
 | H-07 | "Rueckverguetung" oder "ohne Rechnung" in Email | ALARM | KB | — | → Projekt + Beteiligte identifizieren | email_keyword_treffer | "Rueckverguetung" 3x (0014-2024), "ohne Rechnung" 5x (0045-2025). VALIDIERT S6 |
 | H-08 | Rechnungsdiktat per Email (MA→Sub mit RE-Inhalt) | ALARM | RE,KB | P,Q1 | → Alle Emails dieser Kombination, RE-Abgleich | msg_emails body LIKE '%echnung%' + '%tunden%', WSM→Sub | 20 Treffer. Fund: Caspari→Schulz 23.04.2025 "Sonntags-Stunden auf extra Position". VALIDIERT S6 |
-| H-09 | SumUp/PayPal als Rechnungsweg bei Bau-Sub | ANOMALIE | SF | — | → Firmen-Pruefung, Buchfuehrungs-Check | msg_emails absender LIKE '%sumup%' OR '%paypal%' | PayPal 15x in DB, kein SumUp. VALIDIERT S6 (schwach) |
+| H-09 | SumUp/PayPal als Rechnungsweg bei Bau-Sub (inkl. Privat-Email-Kette) | ANOMALIE | SF | — | → Firmen-Pruefung, Buchfuehrungs-Check. Spezialfall: SumUp→Privatmail→Weiterleitung→gescannte PDF = fehlende Professionelle Buchhaltung → FI-02, K-NEUE-FIRMA | msg_emails absender LIKE '%sumup%' OR '%paypal%'. Gescannte PDFs statt digitaler RE = kein Buchhaltungssystem | PayPal 15x in DB. RS Bau: SumUp an Raphaelschulz79@web.de, Weiterleitung an info@wsm. VALIDIERT S6 (schwach) |
 | H-10 | Gleicher Versicherungs-Regulierer auf mehreren FALL-Projekten | ANOMALIE | VB | — | → Alle Projekte dieses Regulierers, Korrelation mit Betrugs-Subs | soll_ist: versicherung + kategorie | SV Sparkassen 61.5%, Mannheimer 43.8% FALL-Rate. Aber Duplikat-Problem + kleine N. NICHT DISKRIMINIEREND S6 |
 | H-11 | WeTransfer/Cloud-Transfer mit Firmen-Email | ALARM | KE | — | → Transfer-Inhalt, Empfaenger, Timing | msg_emails absender LIKE '%wetransfer%' | 8 Emails, Bierau→KFA WeTransfer-Forward, filip.zadar572 Transfer. VALIDIERT S6 |
 | H-12 | Sub-Benennung im Schadensbericht | ANOMALIE | AU,KB | S | → Cross-Projekt: Wird derselbe Sub in mehreren Berichten benannt? → Margen-Pruefung: Was verdient WSM auf diesen Projekten? → Lahntal/Cluster-Check | Bericht-DOCX: Regex "beauftragt\|Fachunternehmen\|Angebotserstellung.*GmbH" | 0182-2024: "Fuer die Angebotserstellung haben wir die Fa. Oeko-Bauzentrum Junker beauftragt" — Sub wird VOR Angebotserstellung im Bericht festgelegt. OFFEN (LV_S7, validierbar nach Bericht-Extraktion) |
+| H-14 | W-Auftrag vor Versicherer-Freigabe | ANOMALIE | VB | D | → Freigabe-Email-Datum pruefen. → Auftrags-Datum pruefen. → Delta quantifizieren. → Informelle Vorabsprache? | Auftrags-Datum (Email/Rapport) vs. Versicherer-Freigabe-Datum (Email) | 0219-2024: Auftrag an Zippel 25.07., Generali-Freigabe 01.08. |
+| H-15 | Wiederkehrender Kontakt nur bei einem MA (nicht bei anderen) | SIGNAL | KB | S | → Alle Projekte dieses Kontakts. → Reagiert Kontakt nur auf bestimmten MA? → Vergleich Verhalten bei anderem MA | Kontakt-Zuordnung in msg_emails: Lieferant antwortet nur auf MA-X, ignoriert MA-Y | 0297-2024: Gade reagierte nur auf Bierau, obwohl Kunde Gade wollte |
 
 ## Kategorie 10: Bericht-Signale (LV_S7)
 
@@ -207,15 +222,30 @@ Einzelne Signale koennen harmlos sein. Diese Kombinationen sind es NICHT:
 
 | # | Signal | Stufe | Schema | SPQQD | Folgekette | Erkennungsmethode | WSM-Beispiel |
 |---|--------|-------|--------|-------|------------|-------------------|--------------|
-| B-01 | Sub-Beauftragung im Bericht vor Angebotsphase | ANOMALIE | AU | S | → Welcher Sub? Cross-Projekt-Haeufigkeit? → WSM-Marge auf diesem Projekt? → Cluster-Check (Lahntal etc.) | Bericht-DOCX: "beauftragt" + Firmenname | 0182-2024: Oekozentrum Junker im Bericht benannt, dann 82% des Budgets erhalten |
+| B-01 | Sub im Bericht benannt → bekommt Auftrag → WSM-Verlust (3-Stufen) | ALARM (Stufe 3) / AUFFAELLIG (Stufe 2) / SIGNAL (Stufe 1) | AU | S | Stufe 1: Sub im Bericht → notieren. Stufe 2: Sub auch in lieferantenrechnungen → Cross-Projekt-Haeufigkeit pruefen. Stufe 3: + WSM-Verlust → ALARM, volle Ermittlung | Stufe 1: bericht_extrakte.sub_benannt (Rechtsform-Filter: GmbH/KG/etc.). Stufe 2: Fuzzy-Match sub_benannt gegen lieferantenrechnungen.lieferant_name. Stufe 3: + soll_ist.differenz_eur < 0 | ALARM: MKG/0145 (FALL-015), Burk-SHK/0181 (FALL-011_LANG). AUFFAELLIG: Oekozentrum/0182. VALIDIERT LV_S8: Lift 9.9x bei Stufe 3 (2/2 FALL, N=2). Sauber-Filter: Fenner, Bajramaj |
 | B-02 | Bericht empfiehlt Fachunternehmen-Pruefung (Holzbalken, Statik, Fachwerk) | SIGNAL | AU | S | → Wurde ein Fachunternehmen beauftragt? → Welches? → Immer dasselbe? | Bericht-DOCX: "Fachunternehmen" + "pruefen/pruefung" | 0016-2024 + 0182-2024: Fachwerkpruefung empfohlen → Oekozentrum beauftragt |
 | B-03 | Bericht-Schadenshoehe "nicht einschaetzbar" bei offensichtlich grossem Schaden | SIGNAL | VB | — | → Angebots-Summe pruefen. Verhaeltnis Schadenshoehe-Einschaetzung vs. tatsaechliche Abrechnung | Bericht-DOCX: "nicht einschaetzbar" | 0230-2024: 3 Etagen Fachwerk, "nicht einschaetzbar", dann 42K W-Angebot |
 | B-04 | Berichtsdatum leer (Platzhalter "am " ohne Datum) | SIGNAL | RE | — | → Rapport-Datum pruefen. Wer hat wann tatsaechlich besichtigt? | Bericht-DOCX: "am " + Leerzeichen statt Datum | Alle 5 Oeko-Berichte: Beauftragungsdatum und OT-Datum = Platzhalter |
 
+## Kategorie 11: Wasserschaden-spezifisch (LV_S8, NBL R6)
+
+> Branchenspezifische Signale basierend auf VdS 3150, WTA 6-16 und GDV-Daten.
+> Fuer Sanierungsunternehmen (Trocknung, Leckortung, Rueckbau).
+> Schwellenwerte aus Branchenstandards, nicht aus Einzelfaellen.
+
+| # | Signal | Stufe | Schema | SPQQD | Folgekette | Erkennungsmethode | WSM-Beispiel |
+|---|--------|-------|--------|-------|------------|-------------------|--------------|
+| W-01 | Geraete-Standzeit > 21 Tage ohne Begruendung | ANOMALIE | RE | Q1 | → Trocknungsprotokoll pruefen. Material-Typ? Sonderfall (Hohlraum, Altbau)? → Vergleich mit VdS-Regeltrocknungszeiten (14-21 Tage Standard) | Rechnungs-Geraetetage vs. VdS 3150 Regeltrocknungszeiten pro Material [Q-17] | Noch nicht gegen WSM-DB getestet |
+| W-02 | Strom-Geraete-Mismatch (Ghost Devices) | ALARM | RE | D | → kWh-Zaehler-Daten anfordern. → Abgerechnete Geraete × Leistung (kW) × Tage = erwartete kWh. → Delta >30% = Manipulation | Abgerechnete Geraetetage × Nennleistung vs. Stromverbrauchsprotokoll (kWh). Geraete: 0,12-1,2 kW (modern), bis 3 kW (alt) [Q-20] | Noch nicht gegen WSM-DB getestet |
+| W-03 | Feuchtemessung ohne Tiefenprobe bei Daemmschichtschaden | ALARM | RE,VB | Q2 | → Trocknungsprotokoll: Nur Oberflaechenmessung? → Messpunkt-Skizze vorhanden? → CM-/Darr-Probe dokumentiert? | Protokoll zeigt nur dielektrische/HF-Messung an Fliesen, keine Darr-/CM-Entnahme bei angeblich tiefer Durchfeuchtung [Q-18, Q-19] | Noch nicht gegen WSM-DB getestet |
+| W-04 | Regulierer-Routing-Override (Zustaendigkeits-Syndrom) | ALARM | VB,KB | S | → Versicherungs-interne Logs: Hat Regulierer Faelle manuell zugewiesen? → Immer selber Sanierer? → Schadenshoehe vs. Durchschnitt | Regulierer zieht Faelle an sich fuer die er nicht zustaendig ist, wickelt mit festem Sanierer-Netzwerk ab [Q-27] | FALL-018 Muster (Versicherer-Strang) — WSM als Sanierer im Netzwerk |
+| W-05 | Premium-Geraete abgerechnet ohne digitale Logs | ANOMALIE | RE | D | → Geraetetyp in Rechnung pruefen. → IoT-faehig? → Log-Export anfordern (USB/CSV). → Kein Log bei IoT-Geraet = ALARM-Upgrade | Rechnung nennt moderne Geraete (mit Datenlogger/GSM), aber kein Trocknungsverlauf-Export verfuegbar [Q-20] | Noch nicht gegen WSM-DB getestet |
+
 ## Offene Signal-Luecken (zu fuellen)
 
 - ~~Bericht-basierte Signale~~ → Kategorie 10 (4 Signale, B-01 bis B-04, LV_S7)
-- Wasserschaden-spezifische Signale (Trocknungsdauer, Feuchtewerte)
+- ~~Wasserschaden-spezifische Signale~~ → Kategorie 11 (5 Signale, W-01 bis W-05, LV_S8)
+- Phantom-Triade SQL-Validierung (R-10..R-13 gegen DB testen)
 - ~~Rapport-basierte Signale~~ → Kategorie 7 (9 Signale, erledigt v0.2)
 - ~~Kommunikations-Signale~~ → teilweise erledigt (H-07, H-08 aus Handoffs v0.4)
 - Zeitliche Muster (Rechnungszeitpunkte relativ zu Personalereignissen)

@@ -81,13 +81,13 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | H-Signale | 11 neue Signale (H-01 bis H-11) aus Handoff-Analyse, noch nicht SQL-getestet | 04 | 2026-04-05 |
 | Stopsignal Handoffs | <3 Funde pro 10er-Batch = aufhoeren. S127-S183 alle ergiebig, S86- spaeter | 04 | 2026-04-05 |
 | Vorausplanung | Lena bei 1 Schritt (weiss was als naechstes, noch keine Hypothesenketten) | 04 | 2026-04-05 |
-| Transparenz | Lena ist oeffentlich KI. Backstory (KHK a.D.) bleibt internes Denkmodell, nicht oeffentlich | 05 | 2026-04-05 |
-| Herkunft | Geboren 04.04.2026 00:01, aus WSM Forensik, Schoepfer Mirko+Claude, 4 Monate Entwicklung | 05 | 2026-04-05 |
-| Oeffentliche Story | "839K gestohlen, System gebaut das Muster findet" — echte Geschichte, kein Fake | 05 | 2026-04-05 |
-| Mirkos Faehigkeiten | Lena erbt: Branchenwissen Bau/Versicherung, SQL/DB-Denken, GF-Perspektive | 05 | 2026-04-05 |
-| Erscheinungsbild | Mitte 40, kurze/zurueckgebundene Haare, Blazer, kompetent-unauffaellig | 05 | 2026-04-05 |
-| Zielgruppen-Fokus | Phase 1: Consulting (Mittelstand+Anwaelte), Phase 2: Versicherer-Pilot, Phase 3: WP-SaaS | 05 | 2026-04-05 |
-| Manus-Integration | Manus.ai fuer Recherche/Prototypen, Claude fuer Tiefenarbeit. Arbeitsteilung dokumentiert | 05 | 2026-04-05 |
+| Transparenz | Lena ist oeffentlich KI. Backstory (KHK a.D.) bleibt internes Denkmodell, nicht oeffentlich | 04 | 2026-04-05 |
+| Herkunft | Geboren 04.04.2026 00:01, aus WSM Forensik, Schoepfer Mirko+Claude, 4 Monate Entwicklung | 04 | 2026-04-05 |
+| Oeffentliche Story | "839K gestohlen, System gebaut das Muster findet" — echte Geschichte, kein Fake | 04 | 2026-04-05 |
+| Mirkos Faehigkeiten | Lena erbt: Branchenwissen Bau/Versicherung, SQL/DB-Denken, GF-Perspektive | 04 | 2026-04-05 |
+| Erscheinungsbild | Mitte 40, kurze/zurueckgebundene Haare, Blazer, kompetent-unauffaellig | 04 | 2026-04-05 |
+| Zielgruppen-Fokus | Phase 1: Consulting (Mittelstand+Anwaelte), Phase 2: Versicherer-Pilot, Phase 3: WP-SaaS | 04 | 2026-04-05 |
+| Manus-Integration | Manus.ai fuer Recherche/Prototypen, Claude fuer Tiefenarbeit. Arbeitsteilung dokumentiert | 04 | 2026-04-05 |
 | H-01 validiert | Lift 2.5x, 79.5% FALL, 0 FP. Caspari 30/31. ALARM bestaetigt | 04 | 2026-04-05 |
 | Benford verworfen | BEN-01/02/03 nicht diskriminierend fuer WSM. N zu klein, Fixkosten dominieren | 04 | 2026-04-05 |
 | H-03 validiert | Lift 2.1x, 29% FALL. 5%-Rate = Caspari-Steuerungssignal, nicht Sub-Betrug | 04 | 2026-04-05 |
@@ -96,6 +96,13 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | Caspari-Langschwanz | 15+ Score-3-Projekte ohne FALL-Kat, identisches Muster, ~5K EUR | 04 | 2026-04-05 |
 | FALL-011_LANG | 15 Score-3 als eigene Kategorie (nicht FALL-011, nicht ignoriert). Stuetzt Systematik-Nachweis | 04 | 2026-04-05 |
 | Git-Branching | Session-Branch lv_sN, Merge nach master bei Session-Ende. Im lena-Skill verankert | 04 | 2026-04-05 |
+| Quellen-Policy | 3-Schichten: Original→Extrakt→Wissen. Jeder Fakt braucht [Q-NN]. NBL = Arbeitsmaterial, nicht zitierfaehig | 04 | 2026-04-05 |
+| Quellen-Register | Q-01..Q-28 + E-01..E-05 in QUELLEN/register.md. Pro Quelle: ID, URL, Zugriffsdatum, Hash | 04 | 2026-04-05 |
+| B-01 v2 | 3-Stufen-Signal: Sub benannt→bekommt Auftrag→WSM-Verlust. Lift 9.9x (N=2). Sauber-Filter: Fenner, Bajramaj | 04 | 2026-04-05 |
+| W-Signale | 5 neue Signale (W-01..W-05) aus NBL R6 Wasserschaden-Fachtechnik. Kat.11 im Katalog | 04 | 2026-04-05 |
+| Reifegrad SPROSS | Kritisch bewertet — noch SPROSS, nicht WACHSTUM. Viel Substanz, aber Validierung noch duenn | 04 | 2026-04-05 |
+| NBL als Fachberater | NBL liefert fachtechnische Begruendungen zu forensischen Funden. Getestet mit 3 Prompts, Ergebnis stark | 04 | 2026-04-05 |
+| Bild = Denkmodell | Visuelles Erscheinungsbild = Verkoerperung des Denkmodells, keine Identitaetsbehauptung | 04 | 2026-04-05 |
 
 ---
 
@@ -110,12 +117,14 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | LV_S5 | 2026-04-05 | 04 | Backtesting: 652 Projekte, Kombi-Score 4=90.9%, 3 Korrekturen, 11 H-Signale, Katalog v0.4 (80). Terminal: Charakter v0.3 (Transparenz, Herkunft, Erscheinungsbild), Manus-Integration (Taskplan, 2 Recherchen B+/C+), Landing Page v1, Cross-Projekt 12 Agents (B#61 gesichert, Oekozentrum Junker 26K Anomalien, Gutachten v3, stabilizer.py, CLAUDE.md v3.3, session-greeting), 8 Entscheidungen |
 | LV_S6 | 2026-04-05 | 04 | Signal-Validierung: H-01 VALIDIERT (Lift 2.5x, 79.5% FALL, Caspari 30/31), BEN VERWORFEN (nicht diskriminierend), H-03 VALIDIERT (Lift 2.1x, Caspari-Steuerung), H-05/07/11 VALIDIERT, H-10 VERWORFEN, H-02/04/06 nicht validierbar. Kombi-Scoring: 19 Score-3 UNBEKANNTE = Caspari-Langerschwanz. lena_scanner.py v1.0 erstellt |
 | LV_S7 | 2026-04-05 | 04 | Git-Branching (lv_s7, Skill), FALL-011_LANG (15 Prj), B#225-227 NEU, H-02 bauseits verworfen, Bericht-Extraktor v1.0 (513 Berichte, bericht_extrakte Tabelle), Kategorie 10 (B-01..B-04), Handoff-Destillation S86-S126 (91 Funde), Fliesen Schmidt S.4-8, Oekozentrum Tiefenanalyse (Berichte = Primaerquellen) |
+| LV_S8 | 2026-04-05 | 04 | Signal-Katalog v0.4→v0.5 (96 Signale): 11 H-Signale S86-S126 eingepflegt (P-12, F-09..F-11, BF-10, R-10..R-13, H-14, H-15), 5 W-Signale (Wasserschaden Kat.11, NBL R6), 3 Kombi-Regeln, H-09 erweitert. B-01 v2 (3-Stufen: Sub→Auftrag→Verlust, Lift 9.9x, Extraktor gefixt). Quellen-Policy + Register (3-Schichten-Modell). NBL R6 Wasserschaden-Fachtechnik (10 Quellen, 2 WISSEN-Dateien). NBL gezielt 01-03 (Musterbewertung, StA-Munition, Gegenprobe). Manus Vision-Antworten. Wachstumsprotokoll Pflege-Check (3 Fehler gefixt). |
 
 ## Naechster Schritt
 
-1. **B-01 validieren** — Lift berechnen, False Positives bereinigen, gegen FALL-Projekte testen
-2. **Oekozentrum Kernfragen** — Wer hat 0230-2024 Rueckbau gemacht? Verbindung Habener? W-Phase 42K?
-3. **H-Signale S86-S126** — 20 SENSORIK-Funde aus Handoff-Destillation in Katalog uebernehmen
-4. **Manus v2 auswerten** — WSM Wettbewerber, Handlanger Recht, Landing Page v2
+1. **NBL R6b Nachlauf** — Abrechnungslogik-Luecken schliessen (Prompt bereit, Schweizer Quelle geladen)
+2. **NBL R7** — COSO + ACFE + Compliance-Frameworks (Prompt bereit, Quellen aus Tracker)
+3. **Oekozentrum Kernfragen** — NBL gezielt03 liefert frischen Ansatz: Fiktive Abrechnung beim Versicherer pruefen
+4. **lena_scanner.py v2** — Bericht-Signale (B-01 v2) + W-Signale integrieren
 5. **Lena-wsm-ermittler Merge planen** — lena_scanner.py + bericht_extraktor als Basis
-6. **lena_scanner.py v2** — Bericht-Signale (B-01..B-04) integrieren
+6. **WISSEN-Dateien Q-Tags nachrüsten** — Betrugsmuster.md, branchenzahlen.md (Quellen-Policy)
+7. **Manus v2 auswerten** — WSM Wettbewerber, Handlanger Recht, Landing Page v2

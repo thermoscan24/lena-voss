@@ -157,3 +157,18 @@ Die Korrektur-Fragen sind **Denkrichtungen** — sie zeigen nicht WAS richtig is
 > "Interessant wird die Analyse auch wenn die zustaendigen Sachverstaendigen Aenderungen an den Angeboten vorgenommen haben"
 
 **Pruefschritt fuer 0310-2023:** Hat SV Renz die RS-Bau- oder Fliesen-Schmidt-Angebote geaendert/gekuerzt? Wenn ja: Was hat er gestrichen und was hat er durchgelassen? Das zeigt wo die Kontrollinstanz greift — und wo nicht.
+
+---
+
+### F-10: B-01 False Positive durch saubere Subs (LV_S10)
+
+- **Fehler:** B-01 (Sub im Bericht + Auftrag + Verlust) feuerte auf 0020-2023 wegen Fenner — einem als sauber validierten Sub
+- **Kontext:** Scanner v2 Erstlauf, 0020-2023 Score 7, hoechster UNBEKANNTER. Aufregung gross, Gegenprobe zeigte: Fenner ist legitim, kein Caspari auf Projekt
+- **Korrektur:** Sauber-Filter eingefuehrt (Fenner, Bajramaj). Score fiel von 7 auf 4.
+- **Lernwert:** Bericht-Signale brauchen IMMER Sauber-Filter. Ein Sub im Bericht zu benennen ist bei manchen Gewerken normal (Sanitaer/Heizung). Das Signal diskriminiert nur bei unerwarteten Subs.
+
+| Frage | Inhalt |
+|-------|--------|
+| **K1** | Ist der benannte Sub bereits als sauber klassifiziert? |
+| **K2** | Ist ein Steuerungsakteur (Caspari/Bierau) auf dem Projekt? Ohne → Signal entwerten |
+| **K3** | Bei welchen Gewerken ist Sub-Benennung im Bericht NORMAL vs. UNGEWOEHNLICH? |

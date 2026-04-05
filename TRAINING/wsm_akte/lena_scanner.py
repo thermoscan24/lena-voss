@@ -159,6 +159,8 @@ def scan(db_path, min_score=3, nur_unbekannt=False, nur_alarm=False,
 
     # B-01s1: Sub im Bericht benannt (Stufe 1, ANOMALIE)
     # B-01: Sub benannt + bekommt Auftrag + Verlust (Stufe 3, ALARM)
+    # Sauber-Filter: Fenner, Bajramaj (validiert S6/S10, legitime Subs)
+    SAUBER_SUBS = {'fenner', 'bajramaj'}
     cur.execute('''
         SELECT projekt_nr, sub_benannt
         FROM bericht_extrakte
@@ -167,9 +169,13 @@ def scan(db_path, min_score=3, nur_unbekannt=False, nur_alarm=False,
     bericht_subs = defaultdict(set)
     for r in cur.fetchall():
         pnr = r['projekt_nr']
+        sub_name = r['sub_benannt']
+        # Sauber-Filter: wenn Sub-Name einen sauberen Sub enthaelt, skip
+        if any(s in sub_name.lower() for s in SAUBER_SUBS):
+            continue
         if pnr in projekte:
             _add_signal(projekte[pnr], 'B-01s1')
-            bericht_subs[pnr].add(r['sub_benannt'])
+            bericht_subs[pnr].add(sub_name)
 
     # B-01 Stufe 2+3: Sub aus Bericht bekommt auch Rechnung + WSM-Verlust
     if bericht_subs:

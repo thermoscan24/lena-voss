@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lena Voss — Forensische Intelligenz</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent:      #00c8a0;
+      --accent-dim:  #009e80;
+      --accent-glow: rgba(0,200,160,0.12);
+      --dark:        #07101e;
+      --dark2:       #0c1828;
+      --dark3:       #111f35;
+      --border:      rgba(255,255,255,0.07);
+      --border-a:    rgba(0,200,160,0.28);
+      --text:        #e8ecf4;
+      --text2:       #8fa3bc;
+      --text3:       #3d5268;
+      --font:        -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 68px; padding: 0 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(7,16,30,0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 1.2rem; font-weight: 800;
+      letter-spacing: -0.04em; color: #fff;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--text2); transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-btn {
+      background: var(--accent) !important; color: #07101e !important;
+      font-weight: 700 !important; padding: 0.45rem 1.2rem;
+      border-radius: 2px; transition: background 0.2s;
+    }
+    .nav-btn:hover { background: var(--accent-dim) !important; }
+
+    /* ===== HERO ===== */
+    #hero {
+      position: relative; height: 100vh; min-height: 640px;
+      display: flex; align-items: flex-end; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('hero.jpg') center 30% / cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to right, rgba(7,16,30,0.96) 38%, rgba(7,16,30,0.2) 100%),
+        linear-gradient(to top, rgba(7,16,30,0.8) 0%, transparent 45%);
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      padding: 0 2.5rem 6rem;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 28px; height: 2px; background: var(--accent);
+    }
+    .hero-h1 {
+      font-size: clamp(2.6rem, 5.5vw, 4.6rem);
+      font-weight: 800; letter-spacing: -0.035em;
+      line-height: 1.06; color: #fff;
+      max-width: 660px; margin-bottom: 1.6rem;
+    }
+    .hero-h1 em { font-style: normal; color: var(--accent); }
+    .hero-sub {
+      font-size: 1.1rem; color: rgba(232,236,244,0.72);
+      max-width: 500px; line-height: 1.78; margin-bottom: 2.5rem;
+    }
+    .hero-quote {
+      font-size: 0.9rem; font-style: italic;
+      color: rgba(232,236,244,0.5);
+      border-left: 2px solid var(--accent);
+      padding-left: 1rem; margin-bottom: 2.5rem;
+      max-width: 460px; line-height: 1.65;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent); color: #07101e;
+      font-weight: 700; font-size: 0.88rem;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      padding: 0.9rem 2.2rem; border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--accent-dim); transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-block; color: rgba(232,236,244,0.75);
+      font-size: 0.88rem; font-weight: 500;
+      padding: 0.9rem 1.8rem;
+      border: 1px solid rgba(255,255,255,0.18); border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: #fff; }
+
+    /* Scroll-Linie */
+    .hero-scroll {
+      position: absolute; bottom: 2rem; right: 2.5rem; z-index: 1;
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text3);
+    }
+    .hero-scroll-line {
+      width: 1px; height: 44px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      background: var(--dark2);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-left: 1px solid var(--border);
+    }
+    .stat {
+      padding: 1.8rem 2rem;
+      border-right: 1px solid var(--border);
+    }
+    .stat-val {
+      font-size: 1.8rem; font-weight: 800;
+      letter-spacing: -0.04em; color: var(--accent); line-height: 1;
+    }
+    .stat-lbl {
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--text3); margin-top: 0.35rem;
+    }
+
+    /* ===== SHARED ===== */
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1rem;
+    }
+    .eyebrow::before {
+      content: ''; display: block;
+      width: 20px; height: 2px; background: var(--accent);
+    }
+    .sh2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 800; letter-spacing: -0.03em; color: #fff;
+      margin-bottom: 1rem;
+    }
+    .slead {
+      font-size: 1.05rem; color: var(--text2);
+      max-width: 580px; line-height: 1.75;
+    }
+
+    /* ===== WER IST LENA VOSS ===== */
+    #charakter {
+      padding: 8rem 0;
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+    }
+    .char-layout {
+      display: grid; grid-template-columns: 1fr 1.6fr;
+      gap: 6rem; align-items: center; margin-top: 4rem;
+    }
+    .char-portrait {
+      position: relative;
+    }
+    .char-portrait img {
+      width: 100%; border-radius: 3px;
+      display: block;
+      filter: grayscale(15%) contrast(1.05);
+    }
+    /* Akzent-Rahmen */
+    .char-portrait::before {
+      content: '';
+      position: absolute; top: -12px; left: -12px;
+      right: 12px; bottom: 12px;
+      border: 1px solid var(--border-a);
+      border-radius: 3px; z-index: -1;
+    }
+    .char-badge {
+      position: absolute; bottom: -1rem; right: -1rem;
+      background: var(--dark2);
+      border: 1px solid var(--border-a);
+      border-radius: 3px;
+      padding: 1rem 1.3rem;
+    }
+    .char-badge-val {
+      font-size: 1.5rem; font-weight: 800;
+      letter-spacing: -0.04em; color: var(--accent);
+      line-height: 1;
+    }
+    .char-badge-lbl {
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--text3); margin-top: 0.2rem;
+    }
+
+    .char-text { display: flex; flex-direction: column; gap: 1.5rem; }
+    .char-intro {
+      font-size: 1.25rem; font-weight: 600;
+      color: #fff; line-height: 1.55; letter-spacing: -0.01em;
+    }
+    .char-body {
+      font-size: 0.97rem; color: var(--text2); line-height: 1.8;
+    }
+
+    /* Zitate-Block */
+    .char-quotes {
+      display: flex; flex-direction: column; gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .char-quote {
+      font-size: 0.88rem; font-style: italic;
+      color: rgba(232,236,244,0.55);
+      border-left: 2px solid var(--accent);
+      padding: 0.6rem 1rem;
+      background: var(--accent-glow);
+      border-radius: 0 2px 2px 0;
+      line-height: 1.6;
+    }
+
+    /* Credentials */
+    .char-creds {
+      display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem;
+    }
+    .cred-tag {
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--text2);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.8rem; border-radius: 2px;
+    }
+
+    /* ===== WIE SIE DENKT ===== */
+    #methode {
+      padding: 8rem 0;
+      background: var(--dark2);
+      border-top: 1px solid var(--border);
+    }
+    .methode-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: end; margin-bottom: 4rem;
+    }
+    .methode-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+    }
+    .meth {
+      background: var(--dark3);
+      border-right: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      position: relative; transition: background 0.25s;
+    }
+    .meth:last-child { border-right: none; }
+    .meth:hover { background: #162030; }
+    .meth::after {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: var(--accent);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s;
+    }
+    .meth:hover::after { transform: scaleX(1); }
+    .meth-num {
+      font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text3); margin-bottom: 1.5rem;
+    }
+    .meth-icon { width: 36px; height: 36px; color: var(--accent); margin-bottom: 1.2rem; }
+    .meth-title {
+      font-size: 1rem; font-weight: 700;
+      letter-spacing: -0.02em; color: #fff; margin-bottom: 0.7rem;
+    }
+    .meth-desc { font-size: 0.875rem; color: var(--text2); line-height: 1.7; }
+    .meth-quote {
+      margin-top: 1.2rem;
+      font-size: 0.8rem; font-style: italic;
+      color: var(--accent); opacity: 0.7; line-height: 1.5;
+    }
+
+    /* ===== PROBLEM ===== */
+    #problem {
+      padding: 8rem 0;
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+    }
+    .prob-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start; margin-top: 4rem;
+    }
+    .prob-points { display: flex; flex-direction: column; }
+    .prob-pt {
+      display: flex; gap: 1.5rem;
+      padding: 1.4rem 0; border-bottom: 1px solid var(--border);
+    }
+    .prob-pt:first-child { border-top: 1px solid var(--border); }
+    .prob-n {
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.1em; color: var(--text3);
+      padding-top: 0.15rem; min-width: 26px;
+    }
+    .prob-t { font-size: 0.95rem; color: var(--text2); line-height: 1.65; }
+    .prob-t strong { color: var(--text); font-weight: 600; display: block; margin-bottom: 0.15rem; }
+
+    .compare-card {
+      background: var(--dark3);
+      border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+    }
+    .compare-head {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+    .ch-col {
+      padding: 1rem 1.5rem;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .ch-col:first-child { color: var(--text3); border-right: 1px solid var(--border); }
+    .ch-col:last-child { color: var(--accent); }
+    .compare-body { display: grid; grid-template-columns: 1fr 1fr; }
+    .cb-col { display: flex; flex-direction: column; }
+    .cb-col:first-child { border-right: 1px solid var(--border); }
+    .cb-row {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.84rem; line-height: 1.5;
+      border-bottom: 1px solid var(--border);
+    }
+    .cb-row:last-child { border-bottom: none; }
+    .cb-col:first-child .cb-row { color: var(--text3); }
+    .cb-col:last-child .cb-row {
+      color: var(--text2);
+      background: var(--accent-glow);
+      border-left: 2px solid var(--accent);
+    }
+
+    /* ===== ZIELGRUPPEN ===== */
+    #zielgruppen {
+      padding: 8rem 0;
+      background: var(--dark2);
+      border-top: 1px solid var(--border);
+    }
+    .zg-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1.5px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+      margin-top: 4rem;
+    }
+    .zg {
+      background: var(--dark3); padding: 3rem 2.5rem;
+      display: flex; flex-direction: column; gap: 1rem;
+      transition: background 0.2s;
+    }
+    .zg:hover { background: #162030; }
+    .zg-icon { width: 30px; height: 30px; color: var(--accent); }
+    .zg-title { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.025em; color: #fff; }
+    .zg-desc { font-size: 0.9rem; color: var(--text2); line-height: 1.72; }
+    .zg-list { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+    .zg-list li {
+      font-size: 0.82rem; color: var(--text3);
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .zg-list li::before {
+      content: ''; display: block;
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0;
+    }
+
+    /* ===== CTA ===== */
+    #cta {
+      padding: 9rem 0;
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 500px;
+      background: radial-gradient(ellipse, rgba(0,200,160,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-inner {
+      position: relative; z-index: 1;
+      max-width: 700px; margin: 0 auto;
+      text-align: center; padding: 0 2.5rem;
+    }
+    .cta-h2 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 800; letter-spacing: -0.03em;
+      color: #fff; margin-bottom: 1rem;
+    }
+    .cta-sub {
+      font-size: 1.05rem; color: var(--text2);
+      line-height: 1.78; margin-bottom: 0.75rem;
+    }
+    .cta-tagline {
+      font-size: 0.88rem; font-style: italic;
+      color: var(--accent); opacity: 0.75;
+      margin-bottom: 2.5rem; line-height: 1.5;
+    }
+    .cta-form {
+      display: flex; max-width: 500px; margin: 0 auto 1.2rem;
+      border: 1px solid var(--border-a); border-radius: 3px; overflow: hidden;
+    }
+    .cta-input {
+      flex: 1; background: rgba(255,255,255,0.04);
+      border: none; outline: none;
+      padding: 1rem 1.3rem; color: var(--text);
+      font-size: 0.9rem; font-family: var(--font);
+    }
+    .cta-input::placeholder { color: var(--text3); }
+    .cta-input:focus { background: rgba(255,255,255,0.07); }
+    .cta-btn {
+      background: var(--accent); color: #07101e;
+      font-weight: 700; font-size: 0.88rem;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      padding: 1rem 1.8rem; border: none;
+      cursor: pointer; font-family: var(--font);
+      white-space: nowrap; transition: background 0.2s;
+    }
+    .cta-btn:hover { background: var(--accent-dim); }
+    .cta-note { font-size: 0.78rem; color: var(--text3); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #050d18;
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 2rem;
+    }
+    .footer-top {
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 2.5rem 2.5rem;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; flex-wrap: wrap; gap: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-logo { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.04em; color: #fff; }
+    .footer-logo span { color: var(--accent); }
+    .footer-tagline { font-size: 0.78rem; color: var(--text3); margin-top: 0.3rem; }
+    .footer-nav { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-nav a { font-size: 0.8rem; color: var(--text3); transition: color 0.2s; }
+    .footer-nav a:hover { color: var(--text2); }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto;
+      padding: 1.5rem 2.5rem 0;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-copy { font-size: 0.76rem; color: var(--text3); }
+    .footer-domains {
+      font-size: 0.76rem; color: var(--text3);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .footer-domains::before {
+      content: ''; display: block;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent);
+      animation: blink 2.5s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .methode-grid { grid-template-columns: repeat(2, 1fr); }
+      .meth { border-bottom: 1px solid var(--border); }
+      .meth:nth-child(2) { border-right: none; }
+      .meth:nth-child(3), .meth:nth-child(4) { border-bottom: none; }
+      .methode-header { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 860px) {
+      .char-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .char-portrait { max-width: 360px; }
+      .prob-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .zg-grid { grid-template-columns: 1fr; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      nav { padding: 0 1.5rem; }
+      .nav-links { display: none; }
+      .hero-content { padding: 0 1.5rem 5rem; }
+      .wrap { padding: 0 1.5rem; }
+      #charakter, #methode, #problem, #zielgruppen, #cta { padding: 5rem 0; }
+      .methode-grid { grid-template-columns: 1fr; }
+      .meth { border-right: none !important; border-bottom: 1px solid var(--border) !important; }
+      .meth:last-child { border-bottom: none !important; }
+      .cta-form { flex-direction: column; }
+      .cta-input, .cta-btn { border-radius: 0; }
+      .footer-top, .footer-bottom { flex-direction: column; }
+      .hero-scroll { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-logo">Lena<span>Voss</span></div>
+  <ul class="nav-links">
+    <li><a href="#charakter">Wer ist Lena Voss</a></li>
+    <li><a href="#methode">Methode</a></li>
+    <li><a href="#zielgruppen">Zielgruppen</a></li>
+    <li><a href="#cta" class="nav-btn">Warteliste</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Forensische KI — Frühzugang</div>
+    <h1 class="hero-h1">
+      Sie schläft nicht.<br>
+      Sie übersieht nichts.<br>
+      <em>Sie deckt auf.</em>
+    </h1>
+    <p class="hero-sub">
+      Lena Voss ist eine forensische Ermittlerin — als KI-Framework.
+      23 Jahre Erfahrung in Wirtschaftskriminalität. Jetzt verfügbar, rund um die Uhr.
+    </p>
+    <div class="hero-quote">
+      „Jede Zahl lügt, bis sie bewiesen hat dass sie stimmt."
+    </div>
+    <div class="hero-actions">
+      <a href="#charakter" class="btn-primary">Lena Voss kennenlernen</a>
+      <a href="#cta" class="btn-ghost">Zur Warteliste</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-val">23</div>
+      <div class="stat-lbl">Jahre Ermittlungserfahrung</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">24/7</div>
+      <div class="stat-lbl">Aktiv — ohne Pause</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">KI</div>
+      <div class="stat-lbl">Denkt wie eine Ermittlerin</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">DE</div>
+      <div class="stat-lbl">DSGVO-konform</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WER IST LENA VOSS ===== -->
+<section id="charakter">
+  <div class="wrap">
+    <div class="eyebrow">Wer ist Lena Voss</div>
+    <h2 class="sh2">Kriminalhauptkommissarin a.D.<br>Jetzt als KI-Framework.</h2>
+
+    <div class="char-layout">
+      <div class="char-portrait">
+        <img src="lena_portrait.jpg" alt="Lena Voss — Forensische Ermittlerin">
+        <div class="char-badge">
+          <div class="char-badge-val">14</div>
+          <div class="char-badge-lbl">Jahre Betrugsermittlung</div>
+        </div>
+      </div>
+
+      <div class="char-text">
+        <p class="char-intro">
+          Lena Voss ist keine Software. Sie ist eine Denkweise —
+          destilliert aus 23 Jahren Wirtschaftskriminalität, 14 davon in der Betrugsermittlung.
+        </p>
+        <p class="char-body">
+          Als Kriminalhauptkommissarin spezialisierte sie sich auf systematischen Mitarbeiterbetrug,
+          Firmengeflecht-Analyse und Bau- und Versicherungsbetrug. Sie wählt ihre Fälle selbst.
+          Sie stellt unbequeme Fragen. Das ist kein Stilmittel — das ist ihre Methode.
+        </p>
+        <p class="char-body">
+          Das Framework denkt wie sie, fragt wie sie, zweifelt wie sie.
+          Ohne Lena ist es nur eine Checkliste. Mit ihr ist es eine Ermittlung.
+        </p>
+
+        <div class="char-quotes">
+          <div class="char-quote">„Das erklärt die Rechnung. Aber wer hat den Auftrag erteilt?"</div>
+          <div class="char-quote">„Ich sage dir nicht was du hören willst — ich sage dir was die Daten zeigen."</div>
+          <div class="char-quote">„Die Daten zeigen X. Alles andere ist Meinung."</div>
+        </div>
+
+        <div class="char-creds">
+          <span class="cred-tag">Wirtschaftskriminalität</span>
+          <span class="cred-tag">Mitarbeiterbetrug</span>
+          <span class="cred-tag">Firmengeflecht-Analyse</span>
+          <span class="cred-tag">Versicherungsbetrug</span>
+          <span class="cred-tag">Baubetrug</span>
+          <span class="cred-tag">Forensische Beratung</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== METHODE ===== -->
+<section id="methode">
+  <div class="wrap">
+    <div class="methode-header">
+      <div>
+        <div class="eyebrow">Wie sie denkt</div>
+        <h2 class="sh2">Die Methode hinter der Ermittlung</h2>
+      </div>
+      <p class="slead" style="font-size:0.97rem;">
+        Lena Voss folgt keinem Regelwerk. Sie folgt dem Muster —
+        und stellt die Frage, die das Muster erklärt.
+      </p>
+    </div>
+
+    <div class="methode-grid">
+
+      <div class="meth">
+        <div class="meth-num">01</div>
+        <svg class="meth-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="3" fill="currentColor"/>
+          <circle cx="7"  cy="11" r="2" fill="currentColor" opacity="0.5"/>
+          <circle cx="29" cy="11" r="2" fill="currentColor" opacity="0.5"/>
+          <circle cx="7"  cy="25" r="2" fill="currentColor" opacity="0.5"/>
+          <circle cx="29" cy="25" r="2" fill="currentColor" opacity="0.5"/>
+          <line x1="18" y1="18" x2="7"  y2="11" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+          <line x1="18" y1="18" x2="29" y2="11" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+          <line x1="18" y1="18" x2="7"  y2="25" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+          <line x1="18" y1="18" x2="29" y2="25" stroke="currentColor" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="18" cy="18" r="9" stroke="currentColor" stroke-width="0.8" opacity="0.15"/>
+        </svg>
+        <h3 class="meth-title">Mustererkennung</h3>
+        <p class="meth-desc">
+          Transaktionen, Kommunikation, Verhalten — alles gleichzeitig.
+          Anomalien werden nicht isoliert bewertet, sondern als Teil eines zeitlichen Musters.
+        </p>
+        <div class="meth-quote">„Das Einzelereignis lügt. Das Muster nicht."</div>
+      </div>
+
+      <div class="meth">
+        <div class="meth-num">02</div>
+        <svg class="meth-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5"  y="7"  width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2" opacity="0.45"/>
+          <rect x="20" y="7"  width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+          <rect x="5"  y="21" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+          <rect x="20" y="21" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2" opacity="0.45"/>
+          <line x1="16" y1="11" x2="20" y2="11" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 1.5"/>
+          <line x1="16" y1="25" x2="20" y2="25" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 1.5"/>
+        </svg>
+        <h3 class="meth-title">Gegenprobe</h3>
+        <p class="meth-desc">
+          Jede Hypothese wird aktiv widerlegt — bevor sie bestätigt wird.
+          Das System sucht nach der alternativen Erklärung, die die Daten ebenfalls zulassen.
+        </p>
+        <div class="meth-quote">„Was spricht dagegen? Das ist die wichtigere Frage."</div>
+      </div>
+
+      <div class="meth">
+        <div class="meth-num">03</div>
+        <svg class="meth-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 28 L10 18 L15 23 L21 11 L26 19 L31 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+          <path d="M5 32 L10 24 L15 28 L21 18 L26 24 L31 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
+          <circle cx="21" cy="11" r="3" fill="currentColor" opacity="0.9"/>
+          <circle cx="21" cy="18" r="3" fill="currentColor" opacity="0.5"/>
+          <line x1="21" y1="11" x2="21" y2="18" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+        </svg>
+        <h3 class="meth-title">Signalkombination</h3>
+        <p class="meth-desc">
+          Schwache Einzelsignale werden kombiniert und gewichtet.
+          Erst das Zusammenspiel mehrerer Indikatoren ergibt ein belastbares Betrugsbild.
+        </p>
+        <div class="meth-quote">„Jedes Signal allein ist harmlos. Zusammen erzählen sie die Geschichte."</div>
+      </div>
+
+      <div class="meth">
+        <div class="meth-num">04</div>
+        <svg class="meth-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 5 C11 5 5 11 5 18 C5 25 11 31 18 31" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.35"/>
+          <path d="M18 5 C25 5 31 11 31 18 C31 25 25 31 18 31" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M18 11 C14 11 11 14 11 18 C11 22 14 25 18 25" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.25"/>
+          <path d="M18 11 C22 11 25 14 25 18 C25 22 22 25 18 25" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="18" cy="18" r="2.5" fill="currentColor"/>
+          <path d="M27 5 L31 9 L27 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="meth-title">Lernfähigkeit</h3>
+        <p class="meth-desc">
+          Jeder bestätigte oder widerlegte Fall fließt zurück ins Modell.
+          Lena Voss wird mit jedem Fall präziser — ohne manuelle Regelanpassung.
+        </p>
+        <div class="meth-quote">„Ein Ermittler der nicht lernt, ist kein Ermittler."</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section id="problem">
+  <div class="wrap">
+    <div class="eyebrow">Das Problem</div>
+    <h2 class="sh2">Warum klassische Systeme versagen</h2>
+    <p class="slead">
+      Regelbasierte Systeme erkennen, was sie kennen.
+      Betrug entwickelt sich schneller als Regelwerke aktualisiert werden.
+      Lena Voss nicht.
+    </p>
+
+    <div class="prob-layout">
+      <div class="prob-points">
+        <div class="prob-pt">
+          <span class="prob-n">01</span>
+          <div class="prob-t">
+            <strong>Starre Schwellenwerte</strong>
+            Kombinierte Signale bleiben unsichtbar, wenn kein Einzelwert einen Grenzwert überschreitet.
+          </div>
+        </div>
+        <div class="prob-pt">
+          <span class="prob-n">02</span>
+          <div class="prob-t">
+            <strong>Manuelle Pflege</strong>
+            Jede neue Betrugsvariante erfordert Spezialisten, die Regeln manuell nachziehen.
+          </div>
+        </div>
+        <div class="prob-pt">
+          <span class="prob-n">03</span>
+          <div class="prob-t">
+            <strong>Fehlalarm-Flut</strong>
+            Hohe Falsch-Positiv-Raten belasten Prüfer und stumpfen die Aufmerksamkeit ab.
+          </div>
+        </div>
+        <div class="prob-pt">
+          <span class="prob-n">04</span>
+          <div class="prob-t">
+            <strong>Kein Kontext</strong>
+            Isolierte Datenpunkte werden nicht verknüpft — Muster über Zeit und Systeme hinweg bleiben unsichtbar.
+          </div>
+        </div>
+        <div class="prob-pt">
+          <span class="prob-n">05</span>
+          <div class="prob-t">
+            <strong>Keine Lernfähigkeit</strong>
+            Das System weiß morgen nicht mehr als heute.
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="compare-head">
+          <div class="ch-col">Regelbasiert</div>
+          <div class="ch-col">Lena Voss</div>
+        </div>
+        <div class="compare-body">
+          <div class="cb-col">
+            <div class="cb-row">Feste Schwellenwerte</div>
+            <div class="cb-row">Manuelle Pflege</div>
+            <div class="cb-row">Isolierte Signale</div>
+            <div class="cb-row">Keine Kontextanalyse</div>
+            <div class="cb-row">Statisches Modell</div>
+            <div class="cb-row">Hohe Falsch-Positiv-Rate</div>
+          </div>
+          <div class="cb-col">
+            <div class="cb-row">Adaptive Mustererkennung</div>
+            <div class="cb-row">Selbstlernend</div>
+            <div class="cb-row">Signalkombination</div>
+            <div class="cb-row">Kontextuelles Denken</div>
+            <div class="cb-row">Kontinuierliches Lernen</div>
+            <div class="cb-row">Gezielte Priorisierung</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ZIELGRUPPEN ===== -->
+<section id="zielgruppen">
+  <div class="wrap">
+    <div class="eyebrow">Zielgruppen</div>
+    <h2 class="sh2">Für wen Lena Voss arbeitet</h2>
+    <p class="slead">
+      Branchen, in denen Betrug systematisch übersehen wird —
+      weil die Werkzeuge nicht mitdenken. Lena Voss tut es.
+    </p>
+
+    <div class="zg-grid">
+      <div class="zg">
+        <svg class="zg-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 2 L4 8 L4 17 C4 23 9 28.5 15 30 C21 28.5 26 23 26 17 L26 8 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M10 15 L13 18 L20 11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="zg-title">Versicherer</h3>
+        <p class="zg-desc">Schadenbetrug, fingierte Unfälle, organisierte Ringe — Lena Voss erkennt koordinierte Muster über Schadensfälle und Zeiträume hinweg.</p>
+        <ul class="zg-list">
+          <li>Kfz- und Sachschadenbetrug</li>
+          <li>Organisierte Betrugsnetzwerke</li>
+          <li>Doppelabrechnung und Identitätsmissbrauch</li>
+        </ul>
+      </div>
+
+      <div class="zg">
+        <svg class="zg-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="2" width="22" height="26" rx="2" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="9"  y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="9"  y1="15" x2="21" y2="15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="9"  y1="20" x2="16" y2="20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="21" cy="23" r="4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <line x1="24" y1="26" x2="27" y2="29" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <h3 class="zg-title">Wirtschaftsprüfer</h3>
+        <p class="zg-desc">Bilanzmanipulation, Buchungsmuster, ungewöhnliche Gegenbuchungen — forensische Tiefenanalyse als Ergänzung zur klassischen Prüfung.</p>
+        <ul class="zg-list">
+          <li>Bilanz- und Buchungsanomalien</li>
+          <li>Umsatzmanipulation und Round-Tripping</li>
+          <li>Ungewöhnliche Rückstellungen</li>
+        </ul>
+      </div>
+
+      <div class="zg">
+        <svg class="zg-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2"  y="16" width="8"  height="12" rx="1" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="11" y="10" width="8"  height="18" rx="1" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="20" y="4"  width="8"  height="24" rx="1" stroke="currentColor" stroke-width="1.4"/>
+        </svg>
+        <h3 class="zg-title">Mittelstand</h3>
+        <p class="zg-desc">Interne Unterschlagung, Lieferantenbetrug, Spesenmissbrauch — ohne eigene Forensik-Abteilung professionell ermitteln.</p>
+        <ul class="zg-list">
+          <li>Interne Unterschlagung und Korruption</li>
+          <li>Lieferanten- und Beschaffungsbetrug</li>
+          <li>Spesen- und Reisekostenmissbrauch</li>
+        </ul>
+      </div>
+
+      <div class="zg">
+        <svg class="zg-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 2 L15 28" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M8 6 L22 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M4 13 C4 13 4 21 8 21 C12 21 12 13 12 13 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M18 13 C18 13 18 21 22 21 C26 21 26 13 26 13 Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <line x1="4"  y1="13" x2="12" y2="13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="18" y1="13" x2="26" y2="13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <h3 class="zg-title">Anwaltskanzleien</h3>
+        <p class="zg-desc">Beweissicherung, Dokumentenanalyse, Sachverhaltsrekonstruktion — strukturierte Ermittlungsunterstützung für Litigation-Teams.</p>
+        <ul class="zg-list">
+          <li>E-Discovery und Dokumentenanalyse</li>
+          <li>Sachverhaltsrekonstruktion und Chronologie</li>
+          <li>Beweissicherung für Gerichtsverfahren</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="cta">
+  <div class="cta-inner">
+    <div class="eyebrow" style="justify-content:center;">Frühzugang</div>
+    <h2 class="cta-h2">Lena Voss arbeitet.<br>Auch für Sie.</h2>
+    <p class="cta-sub">
+      Das Framework befindet sich in der Entwicklung.
+      Tragen Sie sich ein — und nehmen Sie Einfluss darauf, wie Lena Voss Ihren Bereich versteht.
+    </p>
+    <div class="cta-tagline">
+      „Ohne Lena ist das Framework nur eine Checkliste. Mit ihr ist es eine Ermittlung."
+    </div>
+    <form class="cta-form" onsubmit="return false;">
+      <input type="email" class="cta-input" placeholder="Geschäftliche E-Mail-Adresse" autocomplete="email">
+      <button type="submit" class="cta-btn">Eintragen</button>
+    </form>
+    <p class="cta-note">Kein Newsletter. Kein Spam. Nur relevante Updates zur Produktentwicklung.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">Lena<span>Voss</span></div>
+      <div class="footer-tagline">Forensische Intelligenz — 24/7</div>
+    </div>
+    <nav class="footer-nav">
+      <a href="#">Impressum (Platzhalter)</a>
+      <a href="#">Datenschutz (Platzhalter)</a>
+      <a href="#">Kontakt</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Lena Voss. Alle Rechte vorbehalten.</span>
+    <div class="footer-domains">lenavoss.de &nbsp;·&nbsp; lenavoss.eu &nbsp;·&nbsp; In Entwicklung</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -36,10 +36,18 @@
 - Gezielt02: 4-Stufen-Beweispaket fuer Strafanzeige
 - Gezielt03: Sub im Bericht = VdS-Verstoss, neuer Ansatz fiktive Abrechnung
 
+### Manus-Zusammenarbeit
+- Vision-Antworten (7 Fragen zu Lenas Erscheinungsbild/Interaktion → MANUS/antworten_vision_fragen.md)
+- Portrait v1 geliefert — trifft CHARAKTER.md exakt (Rollkragen, Low-Key, Teal-Reflex)
+- Portrait v2 Feedback geschrieben (Hintergrund-Schichten, Signal-Fragmente → MANUS/feedback_portrait_v2.md)
+- Manus Best Practices dokumentiert (Charakter>Anweisungen, 4 goldene Regeln)
+- Manus-Faehigkeiten recherchiert: Knowledge Base, Wide Research, Canvas, Web App Builder
+- **NAECHSTE SESSION:** Manus-Auftragspaket schnueren (Knowledge Base mit CHARAKTER.md, Portrait v2, lenavoss.de Planung)
+
 ### Weiteres
-- Manus Vision-Antworten (7 Fragen, Dokument in MANUS/)
 - Wachstumsprotokoll Pflege-Check: 3 Fehler gefixt
 - NBL Prompt R7 (Compliance) bereit
+- NBL als forensischer Fachberater validiert (3 Live-Tests, alle stark)
 
 ---
 
@@ -51,7 +59,8 @@
 4. **lena_scanner.py v2** — B-01 v2 + W-Signale integrieren
 5. **Lena-wsm-ermittler Merge planen**
 6. **WISSEN Q-Tags nachruesten** (betrugsmuster.md, branchenzahlen.md)
-7. **Manus v2 auswerten**
+7. **Manus-Auftragspaket** — Knowledge Base fuettern, Portrait v2 beauftragen, lenavoss.de planen
+8. **NBL-Mehrwert formalisieren** — Workflow "DB-Fund → NBL-Expertenbewertung" als Methodik
 
 ---
 
@@ -71,4 +80,8 @@
 | MANUS/antworten_vision_fragen.md | NEU |
 | WACHSTUMSPROTOKOLL.md | S8 Log + 8 Entscheidungen |
 | WACHSTUMSPROTOKOLL/04_lena_wird_lebendig.md | S8 Protokoll |
+| MANUS/feedback_portrait_v2.md | NEU |
+| QUELLEN/NBL_gezielt01-03-lena_voss.docx | NEU (3 Dateien) |
+| QUELLEN/NBL_lauf6_lena-voss.docx | NEU |
+| QUELLEN/NBL_QUELLEN_TRACKER.md | R6 ergaenzt |
 | WSM_FORENSIK/_tools/bericht_extraktor.py | B-01 v2 Fix |

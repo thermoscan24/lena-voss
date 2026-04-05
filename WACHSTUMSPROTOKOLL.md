@@ -127,4 +127,5 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 4. **lena_scanner.py v2** — Bericht-Signale (B-01 v2) + W-Signale integrieren
 5. **Lena-wsm-ermittler Merge planen** — lena_scanner.py + bericht_extraktor als Basis
 6. **WISSEN-Dateien Q-Tags nachrüsten** — Betrugsmuster.md, branchenzahlen.md (Quellen-Policy)
-7. **Manus v2 auswerten** — WSM Wettbewerber, Handlanger Recht, Landing Page v2
+7. **Manus-Auftragspaket** — Knowledge Base fuettern (CHARAKTER.md), Portrait v2, lenavoss.de planen
+8. **NBL-Mehrwert formalisieren** — Workflow "DB-Fund → NBL-Expertenbewertung" als Methodik

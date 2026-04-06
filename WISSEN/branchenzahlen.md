@@ -1,25 +1,25 @@
 # Branchenzahlen Wirtschaftskriminalitaet — Destillierte Wissensbasis
 
-> Quellen: NotebookLM Lauf 5 (BKA, KPMG, PwC GECS, IW-Report, MAAX, GDV)
-> Stand: 2026-04-05
+> Quellen: NotebookLM Lauf 5 — [Q-11] BKA, [Q-12] KPMG, [Q-13] PwC GECS, [Q-14] IW-Report, [Q-15] MAAX, [Q-04]/[Q-16] GDV
+> Stand: 2026-04-06 (Q-Tags nachgeruestet LV_S12)
 
 ## 1. Deutschland Gesamtbild
 
 | Kennzahl | Wert | Quelle |
 |----------|------|--------|
-| Polizeilich erfasster Schaden 2024 | **2,76 Mrd EUR** | BKA Lagebild 2024 |
-| Anstieg Faelle 2024 | **+57,6%** auf 61.358 Delikte | BKA |
-| Anstieg allgemeiner Betrug | +116,7% | BKA |
-| Anteil interne Taeter | **>50%** der Faelle | KPMG |
-| Dunkelfeld Umsatzverluste | 4,7% Schwarzarbeit, 6,2% Korruption, 7,1% Kartelle | IW Koeln |
+| Polizeilich erfasster Schaden 2024 | **2,76 Mrd EUR** | [Q-11] BKA Lagebild 2024 |
+| Anstieg Faelle 2024 | **+57,6%** auf 61.358 Delikte | [Q-11] |
+| Anstieg allgemeiner Betrug | +116,7% | [Q-11] |
+| Anteil interne Taeter | **>50%** der Faelle | [Q-12] KPMG |
+| Dunkelfeld Umsatzverluste | 4,7% Schwarzarbeit, 6,2% Korruption, 7,1% Kartelle | [Q-14] IW Koeln |
 
 ## 2. Aufdeckung
 
 | Aufdeckungsweg | Anteil | Quelle |
 |----------------|--------|--------|
-| Hinweise eigenes Personal | **52%** | KPMG |
-| Zufall | **50%** | IW Koeln |
-| Interne Revision / Ermittlung | 41% | IW Koeln |
+| Hinweise eigenes Personal | **52%** | [Q-12] KPMG |
+| Zufall | **50%** | [Q-14] IW Koeln |
+| Interne Revision / Ermittlung | 41% | [Q-14] IW Koeln |
 | Systemkontrollen | Rest | — |
 
 **WSM-Einordnung:** Kein Whistleblower-System (O-04). Aufdeckung durch GF (Kauert) nach Gesundheitsphase = Zufall/Eigeninitiative. Passt zum statistischen Bild.
@@ -28,8 +28,8 @@
 
 | Kennzahl | Wert | Quelle |
 |----------|------|--------|
-| Auffaellige Schadenmeldungen | **10%** | GDV |
-| Jaehrlicher Schaden Schaden-/Unfallversicherung | **>6 Mrd EUR** | GDV |
+| Auffaellige Schadenmeldungen | **10%** | [Q-04]/[Q-16] GDV |
+| Jaehrlicher Schaden Schaden-/Unfallversicherung | **>6 Mrd EUR** | [Q-04]/[Q-16] GDV |
 
 ### GDV-Betrugskategorien
 
@@ -46,8 +46,8 @@
 
 | Art | Anteil | Quelle |
 |-----|--------|--------|
-| Diebstahl und Unterschlagung | 39% | IW Koeln |
-| Betrug und Untreue | 36% | IW Koeln |
+| Diebstahl und Unterschlagung | 39% | [Q-14] IW Koeln |
+| Betrug und Untreue | 36% | [Q-14] IW Koeln |
 
 Bau-/Handwerk-spezifische Daten: **NICHT verfuegbar** in diesen Quellen.
 
@@ -88,11 +88,11 @@ Bau-/Handwerk-spezifische Daten: **NICHT verfuegbar** in diesen Quellen.
 
 | Luecke | Anteil betroffener Unternehmen | Quelle |
 |--------|-------------------------------|--------|
-| Kein Lieferanten-Risiko-Scoring | **42%** | PwC GECS |
-| Keine Datenanalytik bei Beschaffungsbetrug | **20%** | PwC GECS |
-| Kein Third-Party-Risk-Management | 42% | PwC GECS |
-| Keine Root-Cause-Analyse nach Aufdeckung | Haeufig | KPMG |
-| Mittelstand: "familiaeres Klima" statt Kontrolle | Weit verbreitet | KPMG |
+| Kein Lieferanten-Risiko-Scoring | **42%** | [Q-13] PwC GECS |
+| Keine Datenanalytik bei Beschaffungsbetrug | **20%** | [Q-13] PwC GECS |
+| Kein Third-Party-Risk-Management | 42% | [Q-13] PwC GECS |
+| Keine Root-Cause-Analyse nach Aufdeckung | Haeufig | [Q-12] KPMG |
+| Mittelstand: "familiaeres Klima" statt Kontrolle | Weit verbreitet | [Q-12] KPMG |
 
 **Lenas Positionierung:** Genau in der 42%-Luecke. Lieferanten-Risiko-Scoring + Netzwerk-Analyse + Signal-basierte Fruehwarnung = was der Markt nicht hat.
 

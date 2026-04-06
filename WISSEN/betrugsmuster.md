@@ -1,6 +1,7 @@
 # Betrugsmuster — Destillierte Wissensbasis
 
-> Quellen: NotebookLM Lauf 1+2 (32 Quelldokumente, ACFE 2024, BKA 2024, KPMG, PwC, GDV, BSI, DoD, etc.)
+> Quellen: NotebookLM Lauf 1+2 — [Q-01] ACFE 2024, [Q-11] BKA 2024, [Q-12] KPMG, [Q-13] PwC, [Q-04]/[Q-16] GDV, [Q-02] BSI, [Q-03] DoD, [Q-06..Q-10] R2
+> Stand: 2026-04-06 (Q-Tags LV_S12)
 
 ---
 

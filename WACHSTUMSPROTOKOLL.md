@@ -131,13 +131,16 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 1. **Landing Page v2 sichern** — HTML manuell speichern oder Manus→GitHub
 2. **Landing Page Feedback an Manus** — Hintergrund-Opacity, Signal-IDs korrigieren
 3. **lena-wsm-ermittler Merge planen** — lena_scanner.py v2 + bericht_extraktor als Basis
-4. **Oekozentrum 0230-2024** — Fiktive Abrechnung beim Versicherer pruefen
-5. **WISSEN-Dateien Q-Tags nachruesten** — Betrugsmuster.md, branchenzahlen.md
-6. **EUR-Benchmarks aus WSM-DB** — Historische Rechnungen als Preisreferenz
-7. **kontakt@lenavoss.de einrichten** — Domain aktiv, Email fehlt
+4. **kontakt@lenavoss.de einrichten** — Domain aktiv, Email fehlt
+5. **Rapporte Gade-Top-5 scannen** — 0219-2024, 0020-2025, 0047-2025, 0187-2025, 0341-2024
+6. **0270-2023 klassifizieren** — Forensische Luecke, nie zugeordnet, -3.254 EUR W-Verlust
+7. **Reifegrad SPROSS→WACHSTUM evaluieren** — Validierungs-Tiefe pruefen
+
+> Erledigt (LV_S12): Q-Tags 6 WISSEN-Dateien, EUR-Benchmarks Datei, 0230-2024 geprueft (braucht VN-Befragung), 0134-2025 entlastet, Scan-Berichte S186 ausgewertet
 
 ### Session-Log
 
 | Datum | Session | Kapitel | Zusammenfassung |
 |-------|---------|---------|----------------|
 | 2026-04-06 | LV_S11 | 04 | FALL-011_LANG Batch-Scan (14 Projekte). 3 Gate-Pass, Tiefenpruefung 0029-2025 (→FALL-011, B#228) + 0066-2025 (→Ermittlungshinweis B#229). NEUE Kategorie 12: Monetarisierungs-Pruefkette (M-01..M-05, 5-Stufen-Abfragekette). Signal-Katalog v0.6 (101 Signale). Maage als eigenstaendiger Akteur identifiziert. |
+| 2026-04-06 | LV_S12 | 04 | Reflektion S11 verarbeitet (3 Feedback-Memories). Scan-Berichte S186 ausgewertet (714K Gesamtschaden, 6 FALLe). 0134-2025 entlastet (Projekt laeuft). Q-Tags 6 WISSEN-Dateien. EUR-Benchmarks WISSEN-Datei (FALL 4x hoehere Angebote). Wrap-Checkliste +Tagebuch-Pflicht. Handoff S11 nachgeholt. |

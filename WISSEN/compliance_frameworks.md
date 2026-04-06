@@ -1,8 +1,8 @@
 # Compliance-Frameworks — COSO, ACFE, TI Mapping
 
-> Quelle: NBL R7 (COSO, ACFE Tree+Tools, TI Construction) [R7 Block 1+2]
+> Quelle: NBL R7 — COSO (Standard), [Q-01] ACFE Tree+Tools, TI Construction [R7 Block 1+2]
 > Zweck: Lenas System in internationale Standards einordnen
-> Stand: 2026-04-05 (LV_S9)
+> Stand: 2026-04-06 (Q-Tags LV_S12)
 
 ---
 
@@ -29,9 +29,9 @@
 ## 2. ACFE Fraud Tree
 
 Drei Hauptaeste:
-1. **Corruption** (48% der Faelle): Bribery, Conflicts of Interest, Economic Extortion, Illegal Gratuities
-2. **Asset Misappropriation** (89%): Cash, Non-Cash, Billing Schemes, Shell Companies
-3. **Financial Statement Fraud** (5%): Overstatement, Understatement
+1. **Corruption** (48% der Faelle) [Q-01]: Bribery, Conflicts of Interest, Economic Extortion, Illegal Gratuities
+2. **Asset Misappropriation** (89%) [Q-01]: Cash, Non-Cash, Billing Schemes, Shell Companies
+3. **Financial Statement Fraud** (5%) [Q-01]: Overstatement, Understatement
 
 ### ACFE ↔ Lena Schema Mapping
 

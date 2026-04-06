@@ -1,7 +1,7 @@
 # Ermittlungsprozess — Destillierte Wissensbasis
 
-> Quellen: NotebookLM Lauf 4 (IIA 2024, Greene Forensic, NA Forensics, Talk About Fraud)
-> Stand: 2026-04-04
+> Quellen: NotebookLM Lauf 4 — [Q-09] IIA 2024, [Q-08] Greene Forensic, [Q-06] NA Forensics, [Q-07] Talk About Fraud
+> Stand: 2026-04-06 (Q-Tags LV_S12)
 
 ## 1. Phasen einer Betrugsermittlung
 

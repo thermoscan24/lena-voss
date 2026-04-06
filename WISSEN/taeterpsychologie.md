@@ -1,7 +1,7 @@
 # Taeterpsychologie — Destillierte Wissensbasis
 
-> Quellen: NotebookLM Lauf 3 (IIA, Greene Forensic), WSM-Akte Abgleich
-> Stand: 2026-04-04
+> Quellen: NotebookLM Lauf 3 — [Q-09] IIA, [Q-08] Greene Forensic, WSM-Akte Abgleich
+> Stand: 2026-04-06 (Q-Tags LV_S12)
 
 ## 1. Fraud Triangle (Betrugsdreieck)
 

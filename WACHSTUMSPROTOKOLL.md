@@ -135,3 +135,9 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 5. **WISSEN-Dateien Q-Tags nachruesten** — Betrugsmuster.md, branchenzahlen.md
 6. **EUR-Benchmarks aus WSM-DB** — Historische Rechnungen als Preisreferenz
 7. **kontakt@lenavoss.de einrichten** — Domain aktiv, Email fehlt
+
+### Session-Log
+
+| Datum | Session | Kapitel | Zusammenfassung |
+|-------|---------|---------|----------------|
+| 2026-04-06 | LV_S11 | 04 | FALL-011_LANG Batch-Scan (14 Projekte). 3 Gate-Pass, Tiefenpruefung 0029-2025 (→FALL-011, B#228) + 0066-2025 (→Ermittlungshinweis B#229). NEUE Kategorie 12: Monetarisierungs-Pruefkette (M-01..M-05, 5-Stufen-Abfragekette). Signal-Katalog v0.6 (101 Signale). Maage als eigenstaendiger Akteur identifiziert. |

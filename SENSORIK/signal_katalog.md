@@ -1,4 +1,4 @@
-# Signal-Katalog v0.5
+# Signal-Katalog v0.6
 
 > Abgeleitet aus: WISSEN/betrugsmuster.md + WISSEN/bildforensik.md + WSM-Akte + IACRC-Methodik
 > Stand: 2026-04-05 (LV_S8)
@@ -6,7 +6,7 @@
 > NEU in v0.5: 11 Signale aus Handoff-Destillation S86-S126 (P-12, F-09..F-11, BF-10, R-10..R-13, H-14, H-15), H-09 erweitert, 3 Kombi-Regeln
 > Namespace: D=Dokumente, P=Personen, N=Netzwerke, F=Finanzen, **BF**=Bildforensik, O=Organisation, R=Rapporte, **BEN**=Benford
 > Befugnis-Kette (denkfragen.md) behaelt B-xx. Bildforensik ist BF-xx. Keine Verwechslung.
-> Aktive Signale: 96 (80 aus v0.4 + 11 Handoff S86-S126 + 5 Wasserschaden W-01..W-05)
+> Aktive Signale: 101 (80 aus v0.4 + 11 Handoff S86-S126 + 5 Wasserschaden W-01..W-05 + 5 Monetarisierung M-01..M-05)
 > **BACKTESTING v1 (LV_S5):** P-08 Threshold korrigiert (bc_tandem='JA' statt Score>=5, von 458→89 Treffer).
 > F-01 auf W-Phase beschraenkt (T-Phase-Verluste = 94% operativ, kein Betrugsindikator allein).
 > P-11 (Caspari-Solo) und F-08 (T-Phase nur in Kombi) als neue Signale aus Backtesting-Erkenntnissen.
@@ -240,6 +240,51 @@ Einzelne Signale koennen harmlos sein. Diese Kombinationen sind es NICHT:
 | W-03 | Feuchtemessung ohne Tiefenprobe bei Daemmschichtschaden | ALARM | RE,VB | Q2 | → Trocknungsprotokoll: Nur Oberflaechenmessung? → Messpunkt-Skizze vorhanden? → CM-/Darr-Probe dokumentiert? | Protokoll zeigt nur dielektrische/HF-Messung an Fliesen, keine Darr-/CM-Entnahme bei angeblich tiefer Durchfeuchtung [Q-18, Q-19] | Noch nicht gegen WSM-DB getestet |
 | W-04 | Regulierer-Routing-Override (Zustaendigkeits-Syndrom) | ALARM | VB,KB | S | → Versicherungs-interne Logs: Hat Regulierer Faelle manuell zugewiesen? → Immer selber Sanierer? → Schadenshoehe vs. Durchschnitt | Regulierer zieht Faelle an sich fuer die er nicht zustaendig ist, wickelt mit festem Sanierer-Netzwerk ab [Q-27] | FALL-018 Muster (Versicherer-Strang) — WSM als Sanierer im Netzwerk |
 | W-05 | Premium-Geraete abgerechnet ohne digitale Logs | ANOMALIE | RE | D | → Geraetetyp in Rechnung pruefen. → IoT-faehig? → Log-Export anfordern (USB/CSV). → Kein Log bei IoT-Geraet = ALARM-Upgrade | Rechnung nennt moderne Geraete (mit Datenlogger/GSM), aber kein Trocknungsverlauf-Export verfuegbar [Q-20] | Noch nicht gegen WSM-DB getestet |
+
+## Kategorie 12: Monetarisierungskanal-Pruefung (NEU LV_S11)
+
+> **Logik:** Jedes WSM-Projekt hat einen regulaeren Monetarisierungspfad: Versicherer zahlt via Abtretung → WSM rechnet W-Phase ab → Sub erhaelt Auftrag mit 10% Provision → WSM erhaelt Marge.
+> Wenn ein Kanal fehlt oder umgangen wird: WARUM? Die Abwesenheit eines Kontrollmechanismus ist selbst ein Signal.
+
+| # | Signal | Stufe | Schema | SPQQD | Folgekette | Erkennungsmethode | WSM-Beispiel |
+|---|--------|-------|--------|-------|------------|-------------------|--------------|
+| M-01 | Kein Versicherer auf Projekt (Direktkunde) | SIGNAL | AU | — | → M-02, M-03 pruefen. Allein kein Alarm — manche Projekte sind legitim ohne Versicherer. Aber: Kein SV, kein Regulierer = keine externe Kontrolle | Feld versicherung IS NULL oder 'keine' in projekte/soll_ist | 0066-2025 obro ImmoService |
+| M-02 | W-Phase nicht abgerechnet bei vorhandenem Angebot | ALARM | AU,KB | D | → Wer hat Angebot erstellt? → Wurde W extern vergeben (OTS/Gade)? → VN befragen: Wer hat saniert? | soll_ist: angebot > 0 AND rechnung = 0 AND phase='W' | 0230-2024 (42K Angebot, 0 RE) |
+| M-03 | Keine Abtretung trotz Versicherer | ANOMALIE | KV | — | → Wer zahlt dann? → VN-Direktzahlung = weniger Kontrolle → Pruefe ob Sub dennoch beauftragt | abtretung fehlt bei vorhandenem Versicherer | 0029-2025 (Allianz, KEINE_ABTRETUNG) |
+| M-04 | Sub-Provision unter Soll bei fehlendem Kontrollkanal | ALARM | KB | P | → Kombination: (M-01 ODER M-03) UND Provision < 10%. Fehlende Kontrolle + reduzierte Marge = staerkster Kickback-Indikator | M-01/M-03 = True AND provisions_uebersicht.rate < 10 | 0066-2025 (kein Vers. + N&N 5%) |
+| M-05 | Self-Forward an Privatadresse auf unkontrolliertem Projekt | ALARM | KE,AU | D | → Kombination: (M-01 ODER M-03) UND H-05. Daten werden exfiltriert bei Projekt ohne externe Aufsicht | M-01/M-03 = True AND H-05 = True | 0066-2025 (kein Vers. + Self-Forward) |
+
+### Monetarisierungs-Abfragekette (Folgekette fuer M-01/M-02/M-03)
+
+```
+1. Hat das Projekt einen Versicherer?
+   JA → Normaler Kanal. Weiter mit Schritt 3.
+   NEIN → Wer zahlt? (Direktkunde, Hausverwaltung, Eigentuemer)
+         → Kein SV/Regulierer = KEINE externe Mengenpruefung → Schritt 2
+
+2. Gibt es einen anderen Kontrollmechanismus?
+   Sachverstaendiger? → Teilkontrolle
+   Hausverwaltung mit eigenem Pruefprozess? → Teilkontrolle
+   Nichts? → ALARM-Upgrade fuer alle weiteren Signale auf dem Projekt
+
+3. Wurde die W-Phase abgerechnet?
+   JA → Weiter mit Diff-Pruefung (D-02)
+   NEIN → M-02 feuert. WARUM NICHT?
+         → Extern vergeben? (OTS/Gade) → AU-Schema
+         → Eigenleistung VN? → Pruefe Rapport: Wer war vor Ort?
+         → Schwarzarbeit? → Pruefe Rapporte auf unbekannte Personen
+
+4. Gibt es eine Abtretung?
+   JA → Regulierer zahlt direkt. Kontrollkanal intakt.
+   NEIN → M-03 feuert. Kunde zahlt direkt.
+         → Weniger Kontrolle → Pruefe Sub-Provision (M-04)
+         → Pruefe Datenexfiltration (M-05)
+
+5. Wer profitiert vom fehlenden Kontrollkanal?
+   → Sub mit Unterprovision? → Kickback-Hypothese
+   → MA mit Direktkontakt zum Kunden? → Auftragsumleitung
+   → Externe Abrechnung am WSM vorbei? → Gade/OTS-Muster
+```
 
 ## Offene Signal-Luecken (zu fuellen)
 

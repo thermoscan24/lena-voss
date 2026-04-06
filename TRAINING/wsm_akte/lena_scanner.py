@@ -50,7 +50,7 @@ DB_PATH = os.path.join(os.path.dirname(__file__), '..', '..', '..',
 if not os.path.exists(DB_PATH):
     DB_PATH = r'D:\WSM_FORENSIK\WSM_FORENSIK_MASTER.db'
 
-VERSION = '2.0'
+VERSION = '2.1'
 
 # Signal-Definitionen: (id, name, level, weight, spqqd_types)
 SIGNALS = {
@@ -63,11 +63,17 @@ SIGNALS = {
     'H-07': ('Keyword: Rueckverguetung/ohne RE', 'ALARM', 2, {'P'}),
     'H-08': ('RE-Diktat per Email', 'ALARM', 2, {'Q2'}),
     'H-11': ('WeTransfer/Cloud-Exfil', 'ALARM', 2, {'D'}),
+    'M-02': ('W-Phase nicht abgerechnet bei Angebot', 'ALARM', 2, {'D', 'S'}),
+    'M-04': ('Unterprovision + kein Kontrollkanal', 'ALARM', 2, {'P'}),
+    'M-05': ('Self-Forward + kein Kontrollkanal', 'ALARM', 2, {'D'}),
     # ANOMALIE signals (weight 1)
     'H-03': ('Provision 4.5-5.5%', 'ANOMALIE', 1, {'P'}),
     'D-02': ('W-Phase Verlust', 'ANOMALIE', 1, {'Q1'}),
     'D-05': ('Glatter EUR-Betrag', 'ANOMALIE', 1, {'Q1'}),
     'P-11': ('Caspari auf Projekt', 'ANOMALIE', 1, {'S'}),
+    'M-03': ('Keine Abtretung trotz Versicherer', 'ANOMALIE', 1, {'D'}),
+    # SIGNAL (weight 1)
+    'M-01': ('Kein Versicherer (Direktkunde)', 'SIGNAL', 1, {'S'}),
     # Bericht Stufe 1 (weight 1)
     'B-01s1': ('Sub im Bericht benannt', 'ANOMALIE', 1, {'S'}),
 }
@@ -266,6 +272,57 @@ def scan(db_path, min_score=3, nur_unbekannt=False, nur_alarm=False,
     for r in cur.fetchall():
         if r['projekt_nr'] in projekte:
             _add_signal(projekte[r['projekt_nr']], 'H-11')
+
+    # === MONETARISIERUNGS-SIGNALE (Kat. 12, LV_S11) ===
+
+    # M-01: Kein Versicherer (SIGNAL) — kein SV = keine externe Mengenkontrolle
+    for pnr, p in projekte.items():
+        vers = p['versicherung'].strip().lower()
+        if not vers or vers in ('keine versicherung', 'keine', '-', 'none', ''):
+            _add_signal(p, 'M-01')
+
+    # M-02: W-Phase nicht abgerechnet bei vorhandenem Angebot (ALARM)
+    # Strenger als H-01: Explizit Monetarisierungskanal-Verlust
+    # Note: H-01 feuert bereits bei Angebot>0, RE=0 — M-02 ist Alias mit
+    # anderer Schema-Zuordnung (AU+KB). Nur feuern wenn H-01 NICHT schon drin.
+    for pnr, p in projekte.items():
+        if p['angebot'] > 0 and p['rechnung'] == 0:
+            if 'H-01' not in p['signals']:
+                _add_signal(p, 'M-02')
+            # Auch wenn H-01 schon da: M-02 SPQQD trotzdem registrieren
+            # (wird ueber H-01 abgedeckt, kein Doppel-Score)
+
+    # M-03: Keine Abtretung trotz Versicherer (ANOMALIE)
+    cur2 = con.cursor()
+    cur2.execute('''
+        SELECT DISTINCT projekt_nr
+        FROM personen_projekte
+        WHERE flags LIKE '%KEINE_ABTRETUNG%'
+    ''')
+    keine_abtretung = {r['projekt_nr'] for r in cur2.fetchall()}
+    for pnr in keine_abtretung:
+        if pnr in projekte:
+            p = projekte[pnr]
+            vers = p['versicherung'].strip().lower()
+            # Nur wenn Versicherer vorhanden (sonst ist M-01 zustaendig)
+            if vers and vers not in ('keine versicherung', 'keine', '-', 'none', ''):
+                _add_signal(p, 'M-03')
+
+    # M-04: Unterprovision + kein Kontrollkanal (ALARM, Kombi-Signal)
+    # Feuert wenn (M-01 oder M-03) UND Provision < 10%
+    for pnr, p in projekte.items():
+        has_no_control = 'M-01' in p['signals'] or 'M-03' in p['signals']
+        has_low_prov = 'H-03' in p['signals']  # H-03 = 4.5-5.5%
+        if has_no_control and has_low_prov:
+            _add_signal(p, 'M-04')
+
+    # M-05: Self-Forward + kein Kontrollkanal (ALARM, Kombi-Signal)
+    # Feuert wenn (M-01 oder M-03) UND H-05 (Self-Forward)
+    for pnr, p in projekte.items():
+        has_no_control = 'M-01' in p['signals'] or 'M-03' in p['signals']
+        has_self_fwd = 'H-05' in p['signals']
+        if has_no_control and has_self_fwd:
+            _add_signal(p, 'M-05')
 
     con.close()
 

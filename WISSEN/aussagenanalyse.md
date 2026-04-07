@@ -1,6 +1,7 @@
 # Aussagenanalyse + Forensische Befragung
 > Quelle: NBL R8b (LV_S13), destilliert aus CBCA-Literatur, ACFE Interviewing, IACRC 10-Steps
 > [Q-56] bis [Q-67] (NBL R8b Quellen)
+> SCAnR-Modell: Gemini-Recherche (LV_S15), EIA Group [E-08]
 
 ## CBCA — 19 Glaubhaftigkeitskriterien
 
@@ -42,6 +43,75 @@
 | # | Kriterium | Bedeutung |
 |---|-----------|-----------|
 | 19 | Deliktspezifische Aussageelemente | Kriminologisch typische Muster |
+
+## SCAnR — Six Channel Analysis in Realtime
+
+> EIA Group (Emotional Intelligence Academy). Ergaenzt CBCA um Echtzeit-Verhaltensbeobachtung.
+> CBCA = WAS wurde gesagt (Inhalt). SCAnR = WIE wurde es gesagt (Verhalten).
+
+### Die 6 Kanaele
+
+| # | Kanal | Was beobachten | Lena-Relevanz |
+|---|-------|----------------|---------------|
+| 1 | Gesichtsausdruck | Mikroexpressionen, Asymmetrien | Video-Verhoer, Zeugengespraeche |
+| 2 | Koerpersprache | Gestik, Haltung, Bewegungen | Video-Verhoer |
+| 3 | Stimme | Tonhoehe, Tempo, Lautstaerke | Audio/Video |
+| 4 | Interaktionsstil | Antwortlatenz, Unterbrechungen, Detailgrad | **Auch schriftlich auswertbar** (Email-Tonfall) |
+| 5 | Verbaler Inhalt | Wortwahl, Grammatik, Widersprueche | **Kern-Kanal fuer Lena** (Emails, Rapporte) |
+| 6 | Psychophysiologie | Schwitzen, Atemfrequenz, Erroeten | Nur live/Video |
+
+### Kernmechanismen
+
+| Konzept | Erklaerung | Parallele in Lena |
+|---------|------------|-------------------|
+| **27 Kriterien** | Forschungsgestuetzte Indikatoren ueber 6 Kanaele | Signal-Katalog (101 Signale ueber 12 Kategorien) |
+| **PIns (Points of Interest)** | Abweichung von Baseline, Kontext oder Inhalt | = Signal-Treffer (Abweichung von Normalverhalten) |
+| **Baseline** | Normales Verhalten der Person als Referenz | Projekt-Baseline (soll_ist Durchschnitt, Akteur-Normalverhalten) |
+| **3-2-7 Cluster-Regel** | 3 PIns in 2 Kanaelen innerhalb 7 Sekunden nach Stimulus | Kombi-Score (3+ Signale aus 2+ Kategorien = ROT) |
+
+### 3-2-7 Cluster-Regel (Detail)
+
+Einzelsignale sind wertlos. Erst das **Cluster** zaehlt:
+- **3** PIns minimum
+- In **2** verschiedenen Kanaelen
+- Innerhalb **7 Sekunden** nach dem Stimulus (Frage, Konfrontation)
+
+**Transfer auf Lenas Daten-Forensik:**
+- 3 Signal-Treffer minimum (→ Kombi-Score)
+- Aus 2+ verschiedenen Kategorien (→ Kat-Diversitaet)
+- Zeitlich korreliert auf demselben Projekt (→ Projekt als "Stimulus-Fenster")
+
+### SCAnR vs. SCAnS
+
+| Variante | Einsatz |
+|----------|---------|
+| SCAnR (Realtime) | Live-Gespraech, Verhoer, Verhandlung |
+| SCAnS (System) | Nachtraegliche Video-Codierung, detaillierter |
+
+### Anwendung in WSM-Kontext
+
+| Situation | Methode | Kanaele |
+|-----------|---------|---------|
+| **Bierau-Befragung** | SCAnR live | Alle 6 |
+| **Caspari-Emails** | Kanal 4+5 (Interaktionsstil + Inhalt) | 2 von 6 |
+| **Zeugengespraech Zippel** | SCAnR live, Baseline aus Normalgespraech | Alle 6 |
+| **Rapport-Analyse** | Kanal 5 (Inhalt: Detailgrad, Widersprueche) | 1 von 6 |
+
+### CBCA + SCAnR = Komplett-Framework
+
+| Dimension | CBCA | SCAnR |
+|-----------|------|-------|
+| **Fokus** | Inhalt der Aussage | Verhalten waehrend der Aussage |
+| **Material** | Text, Transkript, Email | Video, Audio, Live |
+| **Kriterien** | 19 | 27 (ueber 6 Kanaele) |
+| **Staerke** | Schriftliche Analyse | Echtzeit-Beobachtung |
+| **Schwaeche** | Blind fuer nonverbales | Braucht Video/Live-Zugang |
+| **Kombination** | WAS gesagt wird pruefen | WIE es gesagt wird pruefen |
+
+> **Lena-Prinzip:** CBCA fuer alles was schon da ist (Emails, Rapporte, Schriftsaetze).
+> SCAnR fuer alles was noch kommt (Befragungen, Zeugengespraeche, Verhandlungen).
+
+---
 
 ## Anwendung auf Emails/Schriftliches
 

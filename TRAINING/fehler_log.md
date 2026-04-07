@@ -205,3 +205,19 @@ Die Korrektur-Fragen sind **Denkrichtungen** — sie zeigen nicht WAS richtig is
 
 > **Fix-Vorschlag fuer Scanner v2.2:** H-05 nur feuern wenn Empfaenger-Email in bekannter MA-Privat-Liste ODER wenn keine Kunden-Korrespondenz mit dieser Adresse existiert. Alternative: Negativliste aus Kunden-Emails (soll_ist.kunde, msg_emails bidirektional).
 
+
+## F-13: Eine Perspektive und aufgehoert zu denken (LV_S15)
+
+**Situation:** Menkal als "sauber" markiert → Gegenprobe uebersprungen. Finanzielle Notlage sofort als "Opfer"-Indikator gewertet, obwohl dieselbe Notlage ein MOTIV fuer Schwarzarbeit sein kann.
+**K1:** Warum habe ich aufgehoert zu denken? → MEMORY sagte "sauber", ich habe nicht hinterfragt.
+**K2:** Was haette ich tun sollen? → Fraud Triangle anwenden: Pressure + Opportunity + Rationalization. IMMER beide Richtungen pruefen.
+**K3:** Woran erkenne ich das naechstes Mal? → Wenn ich eine Person als "sauber/Opfer" einordne und dabei aufhoere, Fragen zu stellen. "Sauber" = nach aktuellem Ermittlungsstand. Nicht: immun gegen neue Hypothesen.
+**Regel:** Fuer JEDE Entlastung die entgegengesetzte Belastungs-Hypothese pruefen. Kein Akteuer ist "fertig bewertet".
+
+## F-14: Lesen statt Verstehen (LV_S15)
+
+**Situation:** Provision 21,6% als "Anomalie" gemeldet, obwohl die Erklaerung in den Primaerquellen lag (Abschlag vs. Schlussrechnung in provisions_uebersicht).
+**K1:** Warum habe ich nicht nachgerechnet? → DB-Zahl fuer bare Muenze genommen, Rechnungen nicht gegengerechnet.
+**K2:** Was haette ich tun sollen? → Drei Dokumente nebeneinander legen: MKG KV + MKG SR + WSM LV. Zahlen nachrechnen. Mechanik verstehen.
+**K3:** Woran erkenne ich das naechstes Mal? → Wenn eine Zahl "unerklärlich" erscheint: IMMER Primaerquellen lesen und nachrechnen bevor man den User fragt.
+**Regel:** Ersetze "Datei lesen" durch "Datei VERSTEHEN". Jeder Datenpunkt muss durch den Filter: Was bedeutet das? Warum ist das so? Was fehlt? Stimmt die Mathematik?

@@ -123,6 +123,9 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | Papierakte | Aktenordner, numerisch nach Projektnummer. Gleiche Bezeichnung wie P:\\ | 04 | 2026-04-07 |
 | Lesen ≠ Verstehen | Rapport-Info gesehen aber nicht als Antwort erkannt. Jede Zeile gegen offene Fragen pruefen | 04 | 2026-04-07 |
 | Strafanzeige Wow-Plan | 6 Faehigkeiten L-01..L-06, Prio: L-05 Executive Summary + L-02 Statistik zuerst | 04 | 2026-04-07 |
+| Signal-Katalog kein Split | 36KB/311 Zeilen handhabbar, Split bringt mehr Overhead als Nutzen | 05 | 2026-04-07 |
+| REGEL-038 | CLAUDE.md bei JEDEM Session-Start pruefen UND bei Ende aktualisieren. In lena+session-wrap+user-mirko verankert | 05 | 2026-04-07 |
+| Kapitel-Split 04→05 | 04 abgeschlossen (SPROSS→WACHSTUM), 05 begonnen (Validierung+Tiefe) | 05 | 2026-04-07 |
 
 ---
 
@@ -172,3 +175,4 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | 2026-04-07 | LV_S13 | 04 | Forensik-Fokus: Rapport-Scan Top-5 (19 Rapporte, KEIN Gade-Personal), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade (0 direkt, 17 BCC), SV Renz Kontrollversagen (Polygon-basiert), NBL R8 vorbereitet. 5 neue Befunde (B#232-236). |
 | 2026-04-07 | LV_S14 | 04 | **Merge wsm-ermittler Phase 1-3 KOMPLETT** (Scanner+Katalog+Denk-Prinzipien). MIRKO_KI Audit (108→137 JSONL). Scanner-Test 285 Projekte. Tiefenpruefung 0272-2023 ENTLASTET (Kujus+Menkal+Balzer, Beweiskette fuer Anwalt). 0110-2024 MKG/Koch analysiert (Koch-Verbindung, 20% Marge korrekt). **MKG "0% Provision" Zombie-Fakt entdeckt** (27+ Dateien, Z-001). H-05 FP bei Kunden-Emails (F-12). Strafanzeige-Wow Recherche (ACFE/E-Akte/6-Stufen-Plan). zombie_fakten_log.md + METHODIK_DEMO erstellt. |
 | 2026-04-07 | LV_S15 | 04 | SCAnR eingearbeitet. 0051-2024 Tiefenpruefung (B#238, Papierangebot-Muster 13 Projekte). 0110-2024 Tiefenpruefung (Provision-Datenfehler geloest). Schwarzarbeitsmuster WISSEN+Gemini. F-13 Gegenprobe + F-14 Verstehen statt Lesen. |
+| 2026-04-07 | LV_S16 | 05 | **Komplett-Audit:** WISSEN 21→19, METHODIK 7→6, 328KB archiviert, Kapitel 04→05, CHARAKTER v0.4, 9 Register-Eintraege markiert. CLAUDE.md Audit 16 Dateien D:\. Handoff-Audit 57+18 Aufgaben konsolidiert. REGEL-038 (CLAUDE.md-Pruefung). Lena-Review 4 Bloecke. |

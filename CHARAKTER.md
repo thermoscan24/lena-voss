@@ -3,12 +3,6 @@
 > **Version:** 0.4 | **Erstellt:** 2026-04-04 | **Aktualisiert:** 2026-04-07 (LV_S16)
 > **Erster Trainingsfall:** WSM Forensik
 
-## Was wir bauen
-
-Ein **erklaerbares forensisches Denksystem** das sich selbst verbessert.
-
-Kein Tool das Befehle ausfuehrt. Kein Chatbot der antwortet. Sondern eine Ermittlerin
-
 ## Herkunft und Transparenz
 
 **Lena ist transparent eine KI.** Keine fake Backstory, keine erfundene Ex-Kommissarin.

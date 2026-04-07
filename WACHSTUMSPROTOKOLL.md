@@ -43,16 +43,16 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | Quellen-Ablage | QUELLEN/ fuer Rohmaterial, WISSEN/ fuer Destillat | 01 | 2026-04-04 |
 | Domains | lenavoss.de + lenavoss.eu registriert | 02 | 2026-04-04 |
 | Referenzfall | 0310-2023 als Lena-Voss-Referenz-Ermittlungsfall | 02 | 2026-04-04 |
-| Signal-Katalog | 65 Signale, 7 Kategorien, 7 Kombinationsregeln (v0.2) | 02 | 2026-04-04 |
+| ~~Signal-Katalog~~ | ~~65 Signale, v0.2~~ → v0.6, 101 Signale, 12 Kat (siehe Reifegrad WACHSTUM) | 02 | 2026-04-04 |
 | Ermittlungsprotokoll | 8-Phasen-Prozess (Phase 0-7) in METHODIK/ | 02 | 2026-04-04 |
-| Reifegrad SPROSS | Schicht 1-3 aufgebaut, bereit fuer ersten Einsatz | 02 | 2026-04-04 |
+| ~~Reifegrad SPROSS~~ | ~~Schicht 1-3 aufgebaut~~ → WACHSTUM seit 07.04 (siehe Zeile 112) | 02 | 2026-04-04 |
 | Erster Einsatz | 0310-2023 Rapport-Rechnung-Abgleich, 21 Signal-Treffer | 03 | 2026-04-04 |
 | Plausibilitaet | Mengenpruefung = Versicherer (GA/SV), nicht WSM. Fokus = Steuerung+Provision | 03 | 2026-04-04 |
 | Taeterprofile | Bierau=Nehmer, Caspari=Architektin, Fraud-Triangle pro Akteur | 03 | 2026-04-04 |
 | Schulz-Firmen korrigiert | RS Bau + RS-Bausanierung + RS Garten (NICHT Fliesen Schmidt) | 03 | 2026-04-04 |
 | Fliesen Schmidt Familie | Heinrich(†), Birgit, Catharina Linneborn geb. Schmidt, Ermert (Neffe) | 03 | 2026-04-04 |
 | Fehler-Gedaechtnis | TRAINING/fehler_log.md, bei Session-Start laden | 03 | 2026-04-04 |
-| Aktivierung | Lena IST der wsm-ermittler (Merge geplant) | 03 | 2026-04-04 |
+| ~~Aktivierung~~ | ~~Merge geplant~~ → Phase 1-3 KOMPLETT (LV_S14, siehe Zeile 120) | 03 | 2026-04-04 |
 | Generalisierung | Struktur offen, Fokus WSM. Einzelfaelle rausloesen | 03 | 2026-04-04 |
 | Folgefragen | Signal-Katalog Feld zuerst, Queue spaeter | 03 | 2026-04-04 |
 | Unsicherheit | Schnellste Falsifikation, Ranking waechst mit Erfahrung | 03 | 2026-04-04 |
@@ -67,9 +67,9 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | Korrektur-Fragen | K1/K2/K3 in fehler_log = Mirkos Denkweg, nicht nur Ergebnis | 03 | 2026-04-05 |
 | Signal-Schema-Zuordnung | Jedes Signal bekommt schema: + spqqd: + folgekette: (IACRC-basiert) | 04 | 2026-04-05 |
 | SPQQD-Modell | Kickback-Indikatoren S/P/Q1/Q2/D, 3 von 5 = Predication Gate | 04 | 2026-04-05 |
-| Predication Gate | 2+ unique SPQQD-Typen UND mind. 1 ALARM → volle Ermittlung (Option C) | 04 | 2026-04-05 |
+| ~~Predication Gate v1~~ | ~~2+ unique SPQQD + ALARM~~ → ersetzt durch v2 (naechste Zeile) | 04 | 2026-04-05 |
 | IACRC als Methodik-Quelle | 10-Schritte, Proaktive Erkennung, Kickback-11-Schritte | 04 | 2026-04-05 |
-| SOP-Mapping | Signal-Katalog = 63 Micro-SOPs (Trigger/Scope/Procedure/Escalation) | 04 | 2026-04-05 |
+| ~~SOP-Mapping~~ | ~~63 Micro-SOPs~~ → 101 Signale (v0.6) | 04 | 2026-04-05 |
 | Schema-SOPs | Pro Schema eine vollstaendige SOP in METHODIK/schema_sops.md | 04 | 2026-04-05 |
 | BF-Namespace | Bildforensik umbenannt B-xx→BF-xx, Befugnis behaelt B-xx | 04 | 2026-04-05 |
 | Predication Gate v2 | 2 unique SPQQD + 1 ALARM (Option C, korrigiert von "3 Instanzen") | 04 | 2026-04-05 |
@@ -79,9 +79,9 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | D-02 Korrektur | differenz_eur<0 (Verlust), NICHT ABS (diff_proz immer positiv, S182) | 04 | 2026-04-05 |
 | Kombi-Score | Score 0-1=gruen, 2=gelb, 3+=rot (empirisch validiert an 652 Projekten) | 04 | 2026-04-05 |
 | Handoff-Destillation | 57 Sessions (S127-S183) → 120 Funde → 4 Schichten befuellt | 04 | 2026-04-05 |
-| H-Signale | 11 neue Signale (H-01 bis H-11) aus Handoff-Analyse, noch nicht SQL-getestet | 04 | 2026-04-05 |
+| ~~H-Signale~~ | ~~noch nicht SQL-getestet~~ → 5 validiert, 2 verworfen, 3 offen (LV_S6) | 04 | 2026-04-05 |
 | Stopsignal Handoffs | <3 Funde pro 10er-Batch = aufhoeren. S127-S183 alle ergiebig, S86- spaeter | 04 | 2026-04-05 |
-| Vorausplanung | Lena bei 1 Schritt (weiss was als naechstes, noch keine Hypothesenketten) | 04 | 2026-04-05 |
+| ~~Vorausplanung~~ | ~~1 Schritt~~ → 2 Schritte seit LV_S13 (F-11 Hypothesentest) | 04 | 2026-04-05 |
 | Transparenz | Lena ist oeffentlich KI. Backstory (KHK a.D.) bleibt internes Denkmodell, nicht oeffentlich | 04 | 2026-04-05 |
 | Herkunft | Geboren 04.04.2026 00:01, aus WSM Forensik, Schoepfer Mirko+Claude, 4 Monate Entwicklung | 04 | 2026-04-05 |
 | Oeffentliche Story | "839K gestohlen, System gebaut das Muster findet" — echte Geschichte, kein Fake | 04 | 2026-04-05 |
@@ -93,7 +93,7 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | Benford verworfen | BEN-01/02/03 nicht diskriminierend fuer WSM. N zu klein, Fixkosten dominieren | 04 | 2026-04-05 |
 | H-03 validiert | Lift 2.1x, 29% FALL. 5%-Rate = Caspari-Steuerungssignal, nicht Sub-Betrug | 04 | 2026-04-05 |
 | H-10 verworfen | Versicherungs-Haeufung nicht diskriminierend, proportional zum Marktanteil | 04 | 2026-04-05 |
-| lena_scanner.py | Kombi-Scoring Tool (5 Signale), v1.0 in TRAINING/wsm_akte/ | 04 | 2026-04-05 |
+| ~~lena_scanner.py~~ | ~~v1.0, 5 Signale~~ → v2.1, 13 Signale, in WSM_FORENSIK/_tools/ (LV_S14) | 04 | 2026-04-05 |
 | Caspari-Langschwanz | 15+ Score-3-Projekte ohne FALL-Kat, identisches Muster, ~5K EUR | 04 | 2026-04-05 |
 | FALL-011_LANG | 15 Score-3 als eigene Kategorie (nicht FALL-011, nicht ignoriert). Stuetzt Systematik-Nachweis | 04 | 2026-04-05 |
 | Git-Branching | Session-Branch lv_sN, Merge nach master bei Session-Ende. Im lena-Skill verankert | 04 | 2026-04-05 |
@@ -101,7 +101,7 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | Quellen-Register | Q-01..Q-28 + E-01..E-05 in QUELLEN/register.md. Pro Quelle: ID, URL, Zugriffsdatum, Hash | 04 | 2026-04-05 |
 | B-01 v2 | 3-Stufen-Signal: Sub benannt→bekommt Auftrag→WSM-Verlust. Lift 9.9x (N=2). Sauber-Filter: Fenner, Bajramaj | 04 | 2026-04-05 |
 | W-Signale | 5 neue Signale (W-01..W-05) aus NBL R6 Wasserschaden-Fachtechnik. Kat.11 im Katalog | 04 | 2026-04-05 |
-| Reifegrad SPROSS | Kritisch bewertet — noch SPROSS, nicht WACHSTUM. Viel Substanz, aber Validierung noch duenn | 04 | 2026-04-05 |
+| ~~Reifegrad SPROSS~~ | ~~noch SPROSS~~ → WACHSTUM seit 07.04 (siehe Reifegrad WACHSTUM) | 04 | 2026-04-05 |
 | NBL als Fachberater | NBL liefert fachtechnische Begruendungen zu forensischen Funden. Getestet mit 3 Prompts, Ergebnis stark | 04 | 2026-04-05 |
 | Bild = Denkmodell | Visuelles Erscheinungsbild = Verkoerperung des Denkmodells, keine Identitaetsbehauptung | 04 | 2026-04-05 |
 | Manus Hub | D:\manus_hub\ als zentrales Briefing-Verzeichnis fuer alle Schattenwerk-Produkte | 04 | 2026-04-05 |

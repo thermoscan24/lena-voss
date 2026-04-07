@@ -172,3 +172,20 @@ Die Korrektur-Fragen sind **Denkrichtungen** — sie zeigen nicht WAS richtig is
 | **K1** | Ist der benannte Sub bereits als sauber klassifiziert? |
 | **K2** | Ist ein Steuerungsakteur (Caspari/Bierau) auf dem Projekt? Ohne → Signal entwerten |
 | **K3** | Bei welchen Gewerken ist Sub-Benennung im Bericht NORMAL vs. UNGEWOEHNLICH? |
+
+---
+
+### F-11: Caspari-Provision-Hypothese widerlegt (LV_S13)
+
+| Feld | Inhalt |
+|------|--------|
+| Fehler | Hypothese: "Caspari-Steuerung = niedrigere Provisionsraten" — WIDERLEGT |
+| Kontext | Erster Hypothesenkettentest (H1→H1a→H1b), Reifegrad-Evaluation |
+| Warum falsch | Caspari ist auf 161/239 Projekten als Sachbearbeiterin zugeordnet. Ihre Praesenz misst PRAESENZ, nicht STEUERUNG (= F-07 wiederholt). Provisions-Raten sind Sub-spezifisch, nicht PM-spezifisch. Fliesen Schmidt = 0,2%, Bajramaj = 9,1% — das Muster steckt im SUB, nicht im PM. |
+| Erkennungsmerkmal | Wenn eine Person auf >50% der Projekte auftaucht, ist sie kein diskriminierendes Merkmal |
+| **K1** | Messe ich tatsaechlich Steuerung oder nur Praesenz? |
+| **K2** | Ist der vermutete Kausalzusammenhang (PM→Provision) logisch, oder laeuft die Kausalkette andersrum (Sub→Provision)? |
+| **K3** | Was ist die richtige Analyseebene? (Projekt vs. Sub vs. PM vs. BC-Tandem) |
+
+> **Lernwert:** Casparis Steuerung laeuft ueber AUFTRAGSVERGABE und KOMMUNIKATION (BCC, Rechnungssteuerung), NICHT ueber Provisionshoehe. Die Provision ist ein Sub-Merkmal. Erster vollstaendiger Hypothesenkettentest: H1→widerlegt→Korrektur.
+

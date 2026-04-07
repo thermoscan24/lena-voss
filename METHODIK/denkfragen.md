@@ -163,6 +163,45 @@ Rechnung eingetroffen
 
 ---
 
+### KICKBACK-PRUEFUNG (NBL R8, LV_S13)
+> **Trigger:** Mitarbeiter vergibt Auftraege wiederholt an denselben Sub / Provision weicht ab / Sub und MA haben persoenliche Beziehung
+
+| # | Frage | Was die Antwort zeigt |
+|---|-------|----------------------|
+| KB-01 | Gibt es eine nicht offengelegte Beziehung zwischen MA und Sub? (Familie, Freundschaft, gemeinsame Firma) | Conflict of Interest — Red Flag #1 (IACRC) |
+| KB-02 | Hat der MA die Sub-Auswahl allein getroffen? Gab es Wettbewerb/Alternativangebote? | Bevorzugung ohne Wettbewerb = Selection (SPQQD-S) |
+| KB-03 | Kontrolliert dieselbe Person Vergabe UND Leistungsempfang UND Rechnungsfreigabe? | Aufgabentrennung verletzt → Kontrollversagen |
+| KB-04 | Haette der Kick-back-Betrag als Rabatt gewaehrt werden koennen? (BGH-Regelfall) | Vermoegensnachteil §266 = ja, ausser Gegenbeweis |
+| KB-05 | Fliessen Zahlungen verdeckt? (BCC, private Email, Barleistungen, Naturalien) | Verschleierungsvorsatz — hochrelevant fuer Untreue |
+| KB-06 | Ist die Provision transparent vereinbart und firmenintern bekannt? | Legal vs. illegal: Transparenz = Schluessel |
+
+> **Herkunft:** NBL R8 Kickback-Rechtsprechung (BGH 2018, Koelner Muellskandal), IACRC Red Flags
+
+---
+
+### Kette K-KICKBACK (komplett, NBL R8)
+
+```
+Sub wird wiederholt beauftragt
+  → KB-01: Beziehung MA↔Sub?
+    → JA: Conflict of Interest → KB-02
+    → NEIN: Nur Bevorzugung → KB-02
+  → KB-02: Gab es Wettbewerb?
+    → NEIN: Alleinvergabe → ALARM (Selection)
+    → JA: War der Wettbewerb echt? (Courtesy Bids pruefen)
+  → KB-03: Aufgabentrennung?
+    → Verletzt: Kontrollversagen dokumentieren
+    → Intakt: Wer hat freigegeben? → Befugnis-Kette (B-01ff)
+  → KB-05: Verdeckte Kommunikation?
+    → JA: Verschleierung → §266 Vorsatz wahrscheinlich
+    → NEIN: Moegliche offene Bevorzugung → §299 pruefen
+  → KB-04: Haette Rabatt gewaehrt werden koennen?
+    → JA: Vermoegensnachteil = Kick-back-Betrag (BGH Regelfall)
+    → NEIN (Gegenbeweis): Kein Schaden → Dokumentieren warum
+```
+
+---
+
 ## Wachstumsregeln
 
 1. **Neue Fragen kommen aus 4 Quellen:** Mirko-Korrekturen, erfolgreiche Funde, Literatur, Falltransfer

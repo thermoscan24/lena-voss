@@ -1,7 +1,7 @@
 # Aussagenanalyse + Forensische Befragung
-> Quelle: NBL R8b (LV_S13), destilliert aus CBCA-Literatur, ACFE Interviewing, IACRC 10-Steps
-> [Q-56] bis [Q-67] (NBL R8b Quellen)
-> SCAnR-Modell: Gemini-Recherche (LV_S15), EIA Group [E-08]
+> Quelle: NBL R8b (LV_S13), Gemini E-03 (Interview-Methodik), CBCA-Literatur, ACFE, IACRC 10-Steps
+> [Q-56] bis [Q-67] (NBL R8b Quellen), SCAnR: EIA Group [E-08]
+> Merge: interview_methodik.md integriert (LV_S16 Audit)
 
 ## CBCA — 19 Glaubhaftigkeitskriterien
 
@@ -133,6 +133,43 @@ Erfundene oder verschleiernde Schriften greifen auf **Schemawissen (Scripts)** z
 | **Grenze** | Kann NICHT zwischen echter Erinnerung und Pseudoerinnerung unterscheiden |
 | **Grenze** | Confirmation Bias bei Vorabinformationen |
 
+## Outside-In Prinzip (konzentrische Kreise)
+
+> Quelle: Gemini-Recherche (E-03), IACRC, ACFE
+
+IMMER von aussen nach innen. Nie den Hauptbeschuldigten zuerst befragen.
+
+| Phase | Ziel | Wer |
+|-------|------|-----|
+| 1. NEUTRAL | Fakten sammeln, Ablaeufe verstehen, Dokumente sichern | IT, Buchhaltung, Prozess-Verantwortliche |
+| 2. KORROBORATIV | Indizien erhaerten, Alibis pruefen, Netzwerk identifizieren | Peripherie-Zeugen, Kollegen |
+| 3. MITWISSER | Kooperation gewinnen, Belastungsmaterial gegen Haupttaeter | Insider mit Wissen/Bauchschmerzen |
+| 4. ZIELPERSON | Konfrontation, Gestaendnis oder verwertbare Aussage | Hauptbeschuldigter(e) |
+
+## Fragetechniken
+
+### Kooperative Zeugen
+- **Trichter-Technik:** Offene Fragen → W-Fragen → Details
+- **Kein "Warum"** (macht defensiv) → stattdessen "Wie kam es dazu?"
+- **Echo-Technik:** Letzten Satz wiederholen, animiert zum Weitersprechen
+
+### Blockierende Zeugen
+- **Geschlossene Fragen:** Auf Version festnageln die spaeter widerlegbar ist
+- **Korrektur-Technik:** Bewusst falsche Behauptung → Zeuge korrigiert (gibt echte Details preis)
+- **Umgekehrte Chronologie:** Erhoehte kognitive Last bei Luegnern
+
+### Insider-Gewinnung
+1. **Rationalisierung:** "Der Druck war zu gross, oder?"
+2. **Minimierung:** Moralische Schuld runter (nicht rechtliche!)
+3. **Keil:** "Der Haupttaeter benutzt dich als Suendenbock. Kooperation = Schadensbegrenzung"
+4. **Sofort fixieren:** Schriftliche Aussage bevor Meinung sich aendert
+
+## Mittelstand-Regeln
+- **Neutraler Ort** — nicht im GF-Buero
+- **Dokumentation** — alles protokollieren
+- **Kein Zwang** — Gestaendnis unter Druck = nicht verwertbar
+- **Anwalt informiert** — Interview-Strategie mit RA abstimmen
+
 ## Interview-Strategien nach Rolle
 
 ### Verdaechtiger der kooperiert (Inside Witness)
@@ -173,9 +210,13 @@ Erfundene oder verschleiernde Schriften greifen auf **Schemawissen (Scripts)** z
 
 ## Befragungsreihenfolge WSM (Up the Ladder)
 
-| # | Person | Rolle | Strategie | Eroeffnung |
-|---|--------|-------|-----------|------------|
-| 1 | **Maage** | Unbeteiligter Zeuge | Fachexpertise nutzen, neutral | "Objektiver Blick auf alte Projekte" |
-| 2 | **Zippel/Eierdanz** | Externe Mitwisser | Formelle Hebel (Audit-Rechte) | Kooperationspflicht aus Vertraegen |
-| 3 | **Caspari** | Ermoglicherin | Kronzeugin gewinnen | "Gelegenheit Ihre Rolle zu klaeren" |
-| 4 | **Bierau** | Hauptverdaechtiger | Admission-Seeking, volle Aktenlage | "Ueber das WARUM sprechen" |
+| # | Phase | Person | Rolle | Strategie | Eroeffnung |
+|---|-------|--------|-------|-----------|------------|
+| 1 | NEUTRAL | **Jascha Kauert** | Azubi, Sohn GF | Prozesse beobachtet, neutral | Beobachtungen schildern |
+| 2a | KORROBORATIV | **Menkal** | Entlastet, Zeuge | Gegen Caspari aussagebereit (Mobbing) | Erfahrungen im Team |
+| 2b | KORROBORATIV | **Likic** | Loyalster MA, Opfer | Caspari-Mobbing bezeugen, Prozess-Wissen | Arbeitsalltag beschreiben |
+| 3a | MITWISSER | **Maage** | Mitgeschliffen | **Keil:** "Caspari wird dich als Suendenbock benutzen" | "Objektiver Blick auf alte Projekte" |
+| 3b | MITWISSER | **Ducree** | Selbstschutz-Modus | HR-Wissen, 94% Loeschquote — unter Druck kooperativ? | Dokumentations-Prozesse |
+| 3c | MITWISSER | **Zippel/Eierdanz** | Externe Mitwisser | Formelle Hebel (Audit-Rechte) | Kooperationspflicht aus Vertraegen |
+| 4a | ZIELPERSON | **Bierau** | Nehmer, opportunistisch | **Zwei-Szenarien:** Gier vs. Notfall. Profil: waehlt Notfall | "Ueber das WARUM sprechen" |
+| 4b | ZIELPERSON | **Caspari** | Architektin, strategisch | ZULETZT. Alle Fakten gesammelt. Direkte Konfrontation | "Gelegenheit Ihre Rolle zu klaeren" |

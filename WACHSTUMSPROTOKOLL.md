@@ -23,7 +23,8 @@ Dieses Dokument ist der Einstiegspunkt. Details stehen in den Kapiteln.
 | 01 | Entstehung | 2026-04-04 | abgeschlossen | 01_entstehung.md |
 | 02 | Wissen + Sensorik + Methodik | 2026-04-04 | abgeschlossen | 02_wissen_sensorik.md |
 | 03 | Erster Einsatz (0310-2023) | 2026-04-04 | abgeschlossen | 03_erster_einsatz.md |
-| 04 | Lena wird lebendig | 2026-04-05 | aktiv | 04_lena_wird_lebendig.md |
+| 04 | Lena wird lebendig | 2026-04-05 bis 2026-04-07 | abgeschlossen | 04_lena_wird_lebendig.md |
+| 05 | Validierung und Ermittlungstiefe | 2026-04-07 | aktiv | 05_validierung_und_tiefe.md |
 
 ---
 
@@ -141,20 +142,26 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | LV_S10 | 2026-04-05 | 04 | lena_scanner.py v1→v2 (13 Signale, gewichtetes Scoring, Predication Gate, SPQQD). 0020-2023 False Positive (Fenner→Sauber-Filter, F-10). manus_hub GitHub Repo. Briefing v2 (Kernbotschaft, Mini-Case, Copy-Bausteine). Manus Landing Page v2 Review (9/10). MIRKO_KI RULE-031/032. |
 | LV_S13 | 2026-04-07 | 04 | Forensik-Fokus: Rapport-Scan Top-5 (19 Rapporte, KEIN Gade-Personal), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade (0 direkt, 17 BCC), SV Renz Kontrollversagen (Polygon-basiert), NBL R8 vorbereitet. 5 neue Befunde (B#232-236). |
 
-## Naechster Schritt
+## Naechster Schritt (Stand LV_S16, Audit 07.04.2026)
 
-1. **0051-2024 Tiefenpruefung** — Primaerquellen lesen (Rapport, Ordner, RE)
-2. **0110-2024 offene Fragen** — Rueckbau-Trennung T/W, soll_ist Angebot-Import pruefen
+### Lena-Entwicklung
+1. **Gemini-Schwarzarbeit destillieren** — QUELLEN/Gemini_Schwarzarbeit.md → WISSEN integrieren
+2. **Scanner v2→v3** — H-05 FP-Fix (Kunden-Emails ausschliessen), Komplett-Rescan
 3. **Strafanzeige L-05 Executive Summary** — 1-Seiter fuer Dezernenten
-4. **Strafanzeige L-02 Statistische Beweisfuehrung** — Lift, Precision, Score als Methodik-Kapitel
-5. **Landing Page Feedback an Manus** — Hintergrund-Opacity, Signal-IDs korrigieren
-6. **kontakt@lenavoss.de einrichten** — Domain aktiv, Email fehlt (Mirko-Aktion)
-7. ~~**lena-wsm-ermittler Merge**~~ — erledigt (LV_S14, Phase 1-3)
-8. ~~**Reifegrad evaluieren**~~ — erledigt (WACHSTUM seit 07.04.)
+4. **Strafanzeige L-02 Statistische Beweisfuehrung** — Lift, Precision, Score
 
-> Erledigt (LV_S12): Q-Tags 6 WISSEN-Dateien, EUR-Benchmarks Datei, 0230-2024 geprueft (braucht VN-Befragung), 0134-2025 entlastet, Scan-Berichte S186 ausgewertet
+### Ermittlung (braucht WSM-DB)
+5. **0110-2024 Rueckbau-Doppelabrechnung** — WSM T-Phase vs. MKG Pos.2
+6. **MKG Zombie-Korrektur** — Anwalts-Uebergabeprotokolle (3x)
+7. **0270-2023 personen_projekte nachpflegen** — Caspari-Zuordnung
 
-> Erledigt (LV_S13): Rapport-Scan Top-5 (KEIN Gade), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade, SV Renz Angebotspruefung
+### Mirko-Aktionen
+8. **kontakt@lenavoss.de einrichten** — seit LV_S10, 6+ Sessions offen
+9. **Landing Page Feedback an Manus** — Opacity, Signal-IDs
+
+### Langfristig (REIFE-Kriterien)
+10. **EU Anti-Fraud Case Study** — Transfer-Test auf Nicht-WSM-Fall
+11. **Big-Player-Analyse** — Von KPMG/Palantir/ACFE lernen
 
 ### Session-Log
 

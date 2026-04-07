@@ -1,7 +1,8 @@
 # Kapitel 04: Lena wird lebendig
 
-> **Datum:** 2026-04-05 | **Session:** LV_S4
-> **Reifegrad vorher:** SPROSS | **Reifegrad nachher:** SPROSS
+> **Datum:** 2026-04-05 bis 2026-04-07 | **Sessions:** LV_S4 bis LV_S13
+> **Reifegrad vorher:** SPROSS | **Reifegrad nachher:** WACHSTUM
+> **Status:** abgeschlossen
 
 ---
 

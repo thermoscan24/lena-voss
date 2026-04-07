@@ -1,6 +1,6 @@
 # Lena Voss — Forensisches Ermittlungs-Framework
 
-> **Reifegrad:** SPROSS | **Stand:** 2026-04-05 (LV_S7)
+> **Reifegrad:** WACHSTUM | **Stand:** 2026-04-07 (LV_S16)
 > **Erster Trainingsfall:** WSM Forensik
 
 ## Projektziel
@@ -13,38 +13,40 @@ Widersprueche sucht, Muster erkennt und Betrugssignale kombiniert.
 
 | Schicht | Status | Inhalt |
 |---------|--------|--------|
-| 1. WISSEN | aufgebaut | 9 Dateien: betrugsmuster, bildforensik, taeterpsychologie, ermittlungsprozess, branchenzahlen, agentic_architektur, benfords_law, interview_methodik, kalibrierung, wsm_ermittlungserkenntnisse |
-| 2. SENSORIK | aufgebaut | signal_katalog v0.5: 85 Signale, 10 Kategorien (inkl. Handoff-Signale + Bericht-Signale) |
-| 3. METHODIK | aufgebaut | ermittlungsprotokoll v0.1, schema_sops.md (KB/AU/RE/SF), denkfragen.md, pruefschritte_handoffs.md, rapport_analyse.md |
-| 4. TRAINING | aktiv | fehler_log.md (9 Fehler), backtesting_erkenntnisse.md, handoff_destillation_s86_s126.md (91 Funde), fliesen_schmidt_schlussrechnung_s4_8.md, lena_scanner.py v1.0 |
+| 1. WISSEN | 19 Dateien | betrugsmuster, bildforensik, taeterpsychologie, ermittlungsprozess, branchenzahlen, agentic_architektur, kalibrierung, wsm_ermittlungserkenntnisse, aussagenanalyse (inkl. Interview-Methodik), compliance_frameworks, rechtliche_einordnung, kickback_rechtsprechung, regulierungspraxis_versicherer, versicherungsregulierung, wasserschaden_fachtechnik, abrechnungslogik_trocknung, eur_benchmarks_wsm, schwarzarbeitsmuster, wsm_projektstruktur |
+| 2. SENSORIK | signal_katalog v0.6 | 101 Signale, 12 Kategorien, 7 Kombi-Regeln, SPQQD, Predication Gate |
+| 3. METHODIK | 6 Dateien | ermittlungsprotokoll, schema_sops (KB/AU/RE/SF), denkfragen, pruefschritte_handoffs, rapport_analyse, quellen_policy |
+| 4. TRAINING | 19 Dateien | fehler_log (14 Fehler), 9 Tagebuecher, lena_scanner.py v2.0, backtesting_erkenntnisse, handoff_destillation, scan_results (4 Berichte), zombie_fakten_log |
 
 ## Tools
 
-| Tool | Zweck |
-|------|-------|
-| `lena_scanner.py` | Kombi-Scoring 5 validierter Signale auf WSM-Projekte (TRAINING/wsm_akte/) |
-| `bericht_extraktor.py` | DOCX-Schadensberichte lesen, 19 Felder extrahieren (WSM_FORENSIK/_tools/) |
+| Tool | Zweck | Ort |
+|------|-------|-----|
+| `lena_scanner.py` v2.0 | 13 validierte Signale, gewichtetes Scoring, Predication Gate, SPQQD | TRAINING/wsm_akte/ |
+| `bericht_extraktor.py` v1.0 | DOCX-Schadensberichte → 19 Felder → DB-Tabelle bericht_extrakte | WSM_FORENSIK/_tools/ |
 
 ## Verzeichnisstruktur
 
 ```
 D:\lena_voss\
   CHARAKTER.md              — v0.3: Persoenlichkeit, Transparenz, Herkunft, Erscheinungsbild
-  WISSEN\                   — 9 destillierte Wissensdateien
+  WISSEN\                   — 19 destillierte Wissensdateien
   SENSORIK\
-    signal_katalog.md       — v0.5: 85 Signale, 10 Kategorien, SPQQD, Predication Gate
-  METHODIK\                 — Ermittlungsprotokoll, Schema-SOPs, Denkfragen, Pruefschritte
+    signal_katalog.md       — v0.6: 101 Signale, 12 Kategorien, SPQQD, Predication Gate
+  METHODIK\                 — 6 Dateien: Protokoll, SOPs, Denkfragen, Pruefschritte, Rapporte, Quellen-Policy
   TRAINING\
-    wsm_akte\               — lena_scanner.py, backtesting, handoff_destillation
-    tagebuch\               — LV_S3..S7 innere Monologe
-    fehler_log.md           — 9 Fehler mit K1/K2/K3 Korrektur-Fragen
+    wsm_akte\               — lena_scanner.py v2.0, backtesting, handoff_destillation, scan_results
+    wsm_akte\_archiv\       — Alte Backtest-Versionen (v1-v4)
+    tagebuch\               — LV_S3..S15 innere Monologe (9 Stueck)
+    fehler_log.md           — 14 Fehler mit K1/K2/K3 Korrektur-Fragen
+    zombie_fakten_log.md    — Wiederkehrende Datenfehler
     templates\              — (offen) Branchenunabhaengige Vorlagen
   FAELLE\
     wsm_310_2023\           — Referenzfall: Ermittlungsauftrag + Signal-Scan + Rapport-Abgleich
-  QUELLEN\                  — NotebookLM-Exports, Gemini-Recherchen, NBL_QUELLEN_TRACKER.md
+  QUELLEN\                  — NotebookLM-Exports, Gemini-Recherchen, register.md (Q-01..Q-28, E-01..E-09)
   WACHSTUMSPROTOKOLL.md     — Einstiegspunkt (IMMER zuerst lesen)
   WACHSTUMSPROTOKOLL\       — Kapitel 01-04
-  _handoffs\                — LV_HANDOFF_S3..S7
+  _handoffs\                — LV_HANDOFF_S3..S15 (13 Stueck)
 ```
 
 ## Kernregeln
@@ -55,10 +57,11 @@ D:\lena_voss\
 4. **Theorien kennzeichnen** — THESE ≠ FAKT, immer trennen
 5. **Berichte sind Primaerquellen** — DOCX-Schadensberichte VOR DB-Zahlen lesen
 6. **Caspari** — IMMER mit C, nicht K
+7. **Verstehen statt Lesen** — Zahlen nachrechnen, jede Zeile gegen offene Fragen pruefen (F-14)
 
 ## Verbindung zu WSM Forensik
 
-Lena Voss wird der Ermittlungs-Kern des `wsm-ermittler` Skills.
+Lena Voss IST der Ermittlungs-Kern des `wsm-ermittler` Skills (Merge Phase 1-3 abgeschlossen, LV_S14).
 Primaere Datenquelle: `D:\WSM_FORENSIK\WSM_FORENSIK_MASTER.db`
 DB-Tabelle `bericht_extrakte`: 513 extrahierte Schadensberichte (LV_S7)
 Die WSM-Akte ist Trainingsfall #1, nicht der einzige Einsatzbereich.
@@ -66,6 +69,7 @@ Die WSM-Akte ist Trainingsfall #1, nicht der einzige Einsatzbereich.
 ## Git
 
 Repo auf NAS (//srvnas/Datenbanken/lena_voss/). Branch-Modell: `lv_sN` pro Session, Merge nach master bei Session-Ende.
+GitHub: thermoscan24/lena-voss
 
 ## Domains
 

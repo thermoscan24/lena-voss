@@ -192,7 +192,7 @@ Einzelne Signale koennen harmlos sein. Diese Kombinationen sind es NICHT:
 
 > **VALIDIERUNG S6:** Benford fuer WSM nicht diskriminierend. N pro Lieferant zu klein (max 399, meist 20-100), Preisstrukturen (Abos, Tankbelege, Pauschalen) dominieren. Bekannte Betrugs-Subs tarnen sich mit regulaer kalkulierten RE.
 > **BEN-02 auf ZURUECKGESTELLT:** Braeuchte N>500 pro Lieferant. Evtl. spaeter auf aggregierter Ebene (Branche statt Einzelfirma).
-> **Detail:** WISSEN/benfords_law.md (Schwellenwerte, SQL-Templates, Nigrini-Skala)
+> **Detail:** WISSEN-Datei geloescht (LV_S16 Audit). Rohdaten: QUELLEN/Gemini_Benford.md
 
 ## Kategorie 9: Handoff-Signale (aus S127-S183 destilliert, LV_S5)
 

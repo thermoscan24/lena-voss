@@ -43,8 +43,8 @@
 | E-01a | Gemin_info1_Ai.docx | Gemini | 2026-04-05 | Agentic AI im Finanzsektor: Verafin, McKinsey, EY, Prozesskette Alert→Investigation→Narrativ→Filing |
 | E-01b | Gemin_info1_Ai.md | Gemini | 2026-04-05 | MAIS-Masterbaum: 4-Ebenen Multi-Agent Investigation (Orchestrator→Akquisition→Analyse→Synthese). **Destilliert nach WISSEN/agentic_architektur.md** |
 | E-01c | Gemini_SOP1.md | Gemini | 2026-04-05 | SOP-Definition fuer KI-Agenten: 4 Saeulen (Trigger/Scope/Procedure/Escalation), "The SOP is the Code". **Mapping auf Signal-Katalog v0.3** |
-| E-02 | Gemini_Benford.md | Gemini | 2026-04-05 | Benford's Law auf Rechnungsdaten: Eignung, MAD/Chi2 Schwellenwerte, FP-Rate Bau 15-25%, SQL. **→ WISSEN/benfords_law.md + 3 neue Signale BEN-01..03** |
-| E-03 | Gemini_Interview.md | Gemini | 2026-04-05 | Forensische Interview-Methodik: Outside-In, Trichter, Keil, Zwei-Szenarien, Admission-Seeking. **→ WISSEN/interview_methodik.md** |
+| E-02 | Gemini_Benford.md | Gemini | 2026-04-05 | Benford's Law auf Rechnungsdaten: Eignung, MAD/Chi2 Schwellenwerte, FP-Rate Bau 15-25%, SQL. **WISSEN-Datei geloescht (LV_S16): BEN nicht diskriminierend fuer WSM** |
+| E-03 | Gemini_Interview.md | Gemini | 2026-04-05 | Forensische Interview-Methodik: Outside-In, Trichter, Keil, Zwei-Szenarien, Admission-Seeking. **→ gemerged in WISSEN/aussagenanalyse.md (LV_S16)** |
 | E-04 | Gemini_Kalibrierung.md | Gemini | 2026-04-05 | Red-Flag-Kalibrierung: SNR statt FPR, Bayes-Faktor pro Signal, Scoring-Modell, Backtesting. **→ WISSEN/kalibrierung.md** |
 | E-02 | — (Web-Recherche Claude) | IACRC | 2026-04-05 | 10-Schritte-Methodik, Proaktive Erkennung, SPQQD-Kickback-Modell, 11 Ermittlungsschritte Kickbacks. **Direkt verwertbar fuer Signal-Katalog Schema-Zuordnung** |
 

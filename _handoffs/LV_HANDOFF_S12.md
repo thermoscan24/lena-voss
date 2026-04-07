@@ -16,11 +16,21 @@
 - Git: lv_s12 committed + nach master gemerged
 
 ## Offen
-- lena-wsm-ermittler Merge Phase 1 (Symlink Scanner+Extraktor)
-- Manus LP v5 reviewen
-- Reifegrad SPROSS→WACHSTUM evaluieren
-- kontakt@lenavoss.de (Hostinger, spaeter)
-- Rapporte Gade Top-5 scannen
+### HOCH
+- [ ] Manus LP v5 reviewen (Echt-Namen-Fix, D-02, Dark BG)
+- [ ] fatmamelisa95@gmail.com identifizieren (0051-2024, BC-Tandem)
+- [ ] 0270-2023 personen_projekte nachpflegen (Caspari-Zuordnung)
+- [ ] NBL-Ergebnis Manus-Qualitaetssteuerung einarbeiten
+
+### MITTEL
+- [ ] lena-wsm-ermittler Merge Phase 1 (Symlink Scanner+Extraktor)
+- [ ] Reifegrad SPROSS→WACHSTUM evaluieren
+- [ ] kontakt@lenavoss.de (Hostinger, spaeter)
+- [ ] Rapporte Gade Top-5 scannen
+
+## Neue Befunde (WSM)
+- **B#230:** 0270-2024 RS Bau 47.048 EUR = 94,9% Umsatz, FALL-014, Caspari+Schulz
+- **B#231:** 0270-2023 Hengst 5%, -3.254 W-Verlust, personen_projekte leer
 
 ## Entscheidungen
 | Thema | Entscheidung |

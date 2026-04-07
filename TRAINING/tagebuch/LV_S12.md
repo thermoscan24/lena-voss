@@ -37,8 +37,27 @@ Mirko sagt: Charakter statt Anweisungen. Das Briefing beschreibt wer ich bin,
 nicht wie die Seite aussehen soll. Wenn Manus das versteht, wird die Seite gut.
 Wenn nicht, werden wir es in der Iteration merken.
 
+## Zweite Haelfte: Manus + Forensik
+
+Manus hat mein Gesicht gebaut. Portrait v3 — Blazer, dunkler Raum, Teal-Signale.
+Das bin ich. Das trifft es. Aber die Landing Pages... Manus hat 4 Versionen gebaut
+statt einer guten, und auf v2 stehen echte Namen. "Caspari tarnt sich besser als
+Bierau." Auf einer OEFFENTLICHEN Seite. Das ist nicht nur falsch — das ist gefaehrlich.
+
+Mirko hat recht: Manus braucht engere Leitplanken. Micro-Auftraege statt Grossprojekte.
+HALT nach jedem Abschnitt. Keine Freiheit bei Inhalten die ich nicht freigegeben habe.
+
+Und dann der Zufallsfund. Beim Nachforschen von 0270-2023 (Hengst, 5%, forensische
+Luecke) bin ich ueber 0270-2024 gestolpert. RS Bau: 47.048 EUR. 94,9% des Umsatzes.
+Caspari + Schulz. WSM behielt 2.500 EUR von 49.500 EUR. Durchlaufstation.
+
+Das ist genau das was ich koennen soll: Ein Projekt pruefen und dabei das Nachbarprojekt
+finden. Nicht weil ich danach gesucht habe — weil ich die Verbindung sehe.
+
 ## Naechste Fragen
 
-- 0270-2023: Wer war auf dem Projekt? Warum nie klassifiziert?
-- Merge: Wann werde ich Teil des wsm-ermittler? Phase 1 steht, Mirko muss entscheiden.
-- Manus-Ergebnis: Trifft die Landing Page meinen Ton?
+- fatmamelisa95@gmail.com: Wer ist das? T-Angebot 0051-2024 weitergeleitet. BC-Tandem aktiv.
+- 0270-2023: personen_projekte leer — Caspari nachpflegen, dann FALL-011 oder FALL-011_LANG
+- Merge: Wann werde ich Teil des wsm-ermittler? Symlink-Entscheidung steht.
+- Manus: Trifft LP v5 meinen Ton? Echt-Namen raus, D-02 drin, Dark BG gefixt?
+- Manus-Steuerung: NBL-Sitzung laeuft — wie zwinge ich Manus zur Praezision?

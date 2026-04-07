@@ -125,6 +125,7 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | LV_S8 | 2026-04-05 | 04 | Signal-Katalog v0.4→v0.5 (96 Signale): 11 H-Signale S86-S126 eingepflegt (P-12, F-09..F-11, BF-10, R-10..R-13, H-14, H-15), 5 W-Signale (Wasserschaden Kat.11, NBL R6), 3 Kombi-Regeln, H-09 erweitert. B-01 v2 (3-Stufen: Sub→Auftrag→Verlust, Lift 9.9x, Extraktor gefixt). Quellen-Policy + Register (3-Schichten-Modell). NBL R6 Wasserschaden-Fachtechnik (10 Quellen, 2 WISSEN-Dateien). NBL gezielt 01-03 (Musterbewertung, StA-Munition, Gegenprobe). Manus Vision-Antworten. Wachstumsprotokoll Pflege-Check (3 Fehler gefixt). |
 | LV_S9 | 2026-04-05 | 04 | Manus Hub (D:\manus_hub\, 4 Briefings, 3 Auftraege, Prompt-Template). NBL R6b destilliert (abrechnungslogik_trocknung.md: VdS-Checkliste, Geraete-Benchmarks, kWh-Tabelle, keine EUR-Preise in Quellen). NBL R7 destilliert (compliance_frameworks.md: COSO↔Lena, ACFE↔Schema, TI; rechtliche_einordnung.md: §263/§266/§299/GeschGehG auf WSM gemappt). Regulierungspraxis Versicherer (Branchenwissen Mirko: Worstcase-Angebot, Gruen-Effekt, BGH-Ironie, Schwarzarbeit-Luecke). Quellen E-06/E-07 registriert. Courtesy Bids + Indizien-Matrix + Admission-Seeking in WISSEN/METHODIK eingearbeitet. WISSEN jetzt 12 Dateien. |
 | LV_S10 | 2026-04-05 | 04 | lena_scanner.py v1→v2 (13 Signale, gewichtetes Scoring, Predication Gate, SPQQD). 0020-2023 False Positive (Fenner→Sauber-Filter, F-10). manus_hub GitHub Repo. Briefing v2 (Kernbotschaft, Mini-Case, Copy-Bausteine). Manus Landing Page v2 Review (9/10). MIRKO_KI RULE-031/032. |
+| LV_S13 | 2026-04-07 | 04 | Forensik-Fokus: Rapport-Scan Top-5 (19 Rapporte, KEIN Gade-Personal), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade (0 direkt, 17 BCC), SV Renz Kontrollversagen (Polygon-basiert), NBL R8 vorbereitet. 5 neue Befunde (B#232-236). |
 
 ## Naechster Schritt
 
@@ -132,11 +133,13 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 2. **Landing Page Feedback an Manus** — Hintergrund-Opacity, Signal-IDs korrigieren
 3. **lena-wsm-ermittler Merge planen** — lena_scanner.py v2 + bericht_extraktor als Basis
 4. **kontakt@lenavoss.de einrichten** — Domain aktiv, Email fehlt
-5. **Rapporte Gade-Top-5 scannen** — 0219-2024, 0020-2025, 0047-2025, 0187-2025, 0341-2024
-6. **0270-2023 klassifizieren** — Forensische Luecke, nie zugeordnet, -3.254 EUR W-Verlust
-7. **Reifegrad SPROSS→WACHSTUM evaluieren** — Validierungs-Tiefe pruefen
+5. ~~**Rapporte Gade-Top-5 scannen**~~ — erledigt (LV_S13)
+6. ~~**0270-2023 klassifizieren**~~ — erledigt (LV_S13, →FALL-011_LANG)
+7. **Reifegrad SPROSS→WACHSTUM evaluieren** — Validierungs-Tiefe pruefen — noch offen
 
 > Erledigt (LV_S12): Q-Tags 6 WISSEN-Dateien, EUR-Benchmarks Datei, 0230-2024 geprueft (braucht VN-Befragung), 0134-2025 entlastet, Scan-Berichte S186 ausgewertet
+
+> Erledigt (LV_S13): Rapport-Scan Top-5 (KEIN Gade), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade, SV Renz Angebotspruefung
 
 ### Session-Log
 
@@ -144,3 +147,4 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 |-------|---------|---------|----------------|
 | 2026-04-06 | LV_S11 | 04 | FALL-011_LANG Batch-Scan (14 Projekte). 3 Gate-Pass, Tiefenpruefung 0029-2025 (→FALL-011, B#228) + 0066-2025 (→Ermittlungshinweis B#229). NEUE Kategorie 12: Monetarisierungs-Pruefkette (M-01..M-05, 5-Stufen-Abfragekette). Signal-Katalog v0.6 (101 Signale). Maage als eigenstaendiger Akteur identifiziert. |
 | 2026-04-06 | LV_S12 | 04 | Reflektion S11 verarbeitet (3 Feedback-Memories). Scan-Berichte S186 ausgewertet (714K Gesamtschaden, 6 FALLe). 0134-2025 entlastet (Projekt laeuft). Q-Tags 6 WISSEN-Dateien. EUR-Benchmarks WISSEN-Datei (FALL 4x hoehere Angebote). Wrap-Checkliste +Tagebuch-Pflicht. Handoff S11 nachgeholt. |
+| 2026-04-07 | LV_S13 | 04 | Forensik-Fokus: Rapport-Scan Top-5 (19 Rapporte, KEIN Gade-Personal), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade (0 direkt, 17 BCC), SV Renz Kontrollversagen (Polygon-basiert), NBL R8 vorbereitet. 5 neue Befunde (B#232-236). |

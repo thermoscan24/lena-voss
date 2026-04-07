@@ -1,0 +1,31 @@
+{
+  "project_id": "lena_voss",
+  "display_name": "Lena Voss (Forensisches Ermittlungs-Framework)",
+  "maturity": "active",
+  "session_prefix": "LV_S",
+  "has_git": true,
+  "databases": [],
+  "tools": [
+    "lena_scanner.py",
+    "bericht_extraktor.py (in WSM_FORENSIK/_tools/)"
+  ],
+  "skills": [
+    "lena (Skill: lena-session)",
+    "wsm-ermittler (geplant)"
+  ],
+  "handoff_pattern": null,
+  "memory_file": "WACHSTUMSPROTOKOLL.md",
+  "protected_dirs": [
+    "WISSEN/",
+    "SENSORIK/",
+    "METHODIK/"
+  ],
+  "entry_points": {
+    "session_start": "WACHSTUMSPROTOKOLL.md lesen",
+    "quick_status": "WACHSTUMSPROTOKOLL.md → Aktueller Reifegrad + letzte Session"
+  },
+  "connections": {
+    "wsm_forensik": "Primaere Datenquelle (WSM_FORENSIK_MASTER.db)",
+    "manus_hub": "Landing Pages + Briefing"
+  }
+}

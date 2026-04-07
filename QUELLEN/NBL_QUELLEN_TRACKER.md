@@ -96,6 +96,25 @@ Notebook: Dasselbe wie R6. Keine neue Quelle (SVBS-URL tot).
 
 **Ergebnis:** WISSEN/compliance_frameworks.md (COSO↔Lena, ACFE↔Schema, TI) + WISSEN/rechtliche_einordnung.md (§263, §266, §299, GeschGehG auf WSM gemappt)
 
+## Runde 8 (LV_S13, 2026-04-07) — VORBEREITET
+
+| # | Anzeigename | URL | Prio |
+|---|-------------|-----|------|
+| 44 | IACRC Procurement Fraud Red Flags | https://iacrc.org/fraud-and-corruption/the-most-common-procurement-fraud-schemes-and-their-primary-red-flags/ | R8 |
+| 45 | IACRC Red Flags Corruption | https://guide.iacrc.org/the-red-flags-of-corruption-bid-rigging-collusive-bidding-and-fraud/ | R8 |
+| 46 | Rechtslupe Kick-back Untreue | https://www.rechtslupe.de/strafrecht/wirtschaftsstrafrecht/schmiergeldzahlungen-kick-back-zahlungen-und-die-untreue-des-finanzvorstandes-3142354 | R8 |
+| 47 | IWW Kick-back Provisionen | https://www.iww.de/pstr/archiv/steuerhinterziehung-steuerhinterziehung-und-untreue-bei-kick-backs-aus-provisionszahlungen-f10418 | R8 |
+| 48 | Sittig Kick-back Untreue | https://sittig.law/en/kick-back-payments-infidelity/ | R8 |
+| 49 | HRRS Kick-back §299 | https://www.hrr-strafrecht.de/hrr/archiv/07-02/index.php?sz=7 | R8 |
+| 50 | Uni Mainz Glaubhaftigkeitsbeurteilung PDF | https://openscience.ub.uni-mainz.de/bitstream/20.500.12030/3904/1/312.pdf | R8 |
+| 51 | MSH Masterarbeit Aussagenanalyse | https://opus.bsz-bw.de/msh/files/160/MSH_MA_Heidenreich_01082022.pdf | R8 |
+| 52 | CaseIQ Accounts Payable Fraud | https://www.caseiq.com/resources/accounts-payable-fraud | R8 |
+| 53 | Alliant Construction Fraud Top 5 | https://alliant.com/news-resources/article-how-to-fight-these-top-5-common-frauds-in-construction/ | R8 |
+| 54 | ACFE Kickback Case Study | https://www.acfe.com/acfe-insights-blog/blog-detail?s=automobile-industry-fraud-case-study | R8 |
+| 55 | Strafrecht-Online Untreue §266 | https://strafrecht-online.org/documents/109822/_5_-_Schutz_des_Verm%C3%B6gens_-_Teil_3_Untreue_KK_146-176.pdf | R8 |
+
+**Prompt:** D:\lena_voss\QUELLEN\NBL_PROMPT_R8.md (3 Prompts: Kickback Cases, Aussagenanalyse, Transfer)
+
 ## Noch nicht geladen (16 Quellen)
 
 | Kat | Anzeigename | URL | Prio |

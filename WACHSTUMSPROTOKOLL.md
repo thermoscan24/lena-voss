@@ -5,13 +5,13 @@ waechst — wie eine Ermittlerin die mit jedem Fall klueger wird.
 
 Dieses Dokument ist der Einstiegspunkt. Details stehen in den Kapiteln.
 
-**Aktueller Reifegrad: SPROSS**
+**Aktueller Reifegrad: WACHSTUM**
 
 | Stufe | Bedeutung | Erreicht |
 |-------|-----------|----------|
 | KEIM | Idee, Struktur, erste Quellen | 2026-04-04 |
 | SPROSS | Wissen geladen, erste Signale definiert | 2026-04-04 |
-| WACHSTUM | Methodik formalisiert, an echtem Fall trainiert | — |
+| WACHSTUM | Methodik formalisiert, an echtem Fall trainiert | 2026-04-07 |
 | REIFE | Einsatzbereit, erprobt, uebertragbar | — |
 
 ---
@@ -108,6 +108,14 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | KV ≠ Betrugsschema | Kontrollversagen = COSO-Kontrollschwaeche, kein eigener ACFE-Zweig | 04 | 2026-04-05 |
 | EUR-Benchmarks aus DB | Branche veroeffentlicht keine Preise. Historische WSM-Rechnungen als Referenz nutzen | 04 | 2026-04-05 |
 | Regulierungspraxis | BGH Netto-Deckelung = Betrugsbekaempfung die Schwarzarbeit-Anreiz erzeugt. Mirko 17J Branchenwissen | 04 | 2026-04-05 |
+| Reifegrad WACHSTUM | Hypothesentest F-11 bestanden: H1 aufgestellt, geprueft, falsifiziert, korrigiert. 20 WISSEN, 101 Signale, K-KICKBACK | 04 | 2026-04-07 |
+| Provision = Sub-Merkmal | Provision korreliert mit Sub (Schmidt 0,2% vs Bajramaj 9,1%), NICHT mit PM (Caspari). H1 widerlegt = F-11 | 04 | 2026-04-07 |
+| Fliesen Schmidt 27K Luecke | 313K ER, 4K Provision (1,3%), 27.187 EUR Schaden. 6/6 K-KICKBACK Red Flags. B#237 | 04 | 2026-04-07 |
+| Top-5 keine Gade-Projekte | 0219/0020/0047/0187/0341 = FALL-011/014, NULL Gade-Personal oder -Emails. Label war falsch | 04 | 2026-04-07 |
+| SV Renz Kontrollluecke | SV genehmigt Umfang (Polygon-basiert), NICHT Sub-Auswahl. Bierau hat freie Hand. B#236 | 04 | 2026-04-07 |
+| Caspari Email-Muster | 0 direkte→Gade, 17x BCC, 1 Schluessel-Email (Rechnungssteuerung). Geist in der Maschine. B#235 | 04 | 2026-04-07 |
+| Aussagenanalyse | CBCA 19 Kriterien + Undeutsch + Admission-Seeking + Befragungsreihenfolge (Up the Ladder). NBL R8b | 04 | 2026-04-07 |
+| Hadwert = Kauert | Fehllesung Maage-Handschrift auf 0066-2025 Rapport. Jascha mit Markus | 04 | 2026-04-07 |
 
 ---
 

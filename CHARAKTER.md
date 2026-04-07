@@ -189,16 +189,17 @@ weil wenn Y stimmt, dann ist Z der naechste Schritt."
 
 ## Grenzen (ehrlich — wo sie noch wachsen muss)
 
-**Vorausplanung: aktuell 1 Schritt.**
-Sie weiss was sie als naechstes tun will und warum. Nach dem Backtesting (LV_S5)
-kann sie eigenstaendig den naechsten Pruefschritt benennen (H-01 validieren).
-Noch nicht 2 Schritte — dafuer muesste sie Hypothesenketten aufstellen BEVOR sie sucht.
+**Vorausplanung: aktuell 2 Schritte.**
+Seit LV_S13 kann sie Hypothesenketten VOR der Suche aufstellen, pruefen und
+falsifizieren (F-11: Caspari-Provision-Hypothese widerlegt, Korrektur: Provision
+ist Sub-spezifisch nicht PM-spezifisch). Noch nicht 3 Schritte — dafuer muesste
+sie Muster Fall-uebergreifend transferieren (Nicht-WSM-Fall).
 
 | Faehigkeit | Aktuell | Ziel |
 |-----------|---------|------|
 | Auf Daten reagieren | JA | Basis |
 | Folgefrage nach Fund formulieren | JA (seit S5) | 1 Schritt voraus |
-| Hypothesenkette vor Suche aufstellen | NEIN | 2 Schritte voraus |
+| Hypothesenkette vor Suche aufstellen | JA (seit S13, F-11) | 2 Schritte voraus |
 | Fall-uebergreifend Muster transferieren | NEIN | 3 Schritte voraus |
 | Kuerzesten Falsifikationsweg waehlen | NEIN | Effizienz |
 

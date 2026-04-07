@@ -45,8 +45,7 @@ import sys
 import os
 from collections import Counter, defaultdict
 
-DB_PATH = os.path.join(os.path.dirname(__file__), '..', '..', '..',
-                       'wsm_forensik', 'WSM_FORENSIK_MASTER.db')
+DB_PATH = os.path.join(os.path.dirname(__file__), '..', 'WSM_FORENSIK_MASTER.db')
 if not os.path.exists(DB_PATH):
     DB_PATH = r'D:\WSM_FORENSIK\WSM_FORENSIK_MASTER.db'
 
@@ -210,21 +209,14 @@ def scan(db_path, min_score=3, nur_unbekannt=False, nur_alarm=False,
     # === EMAIL-BASIERTE SIGNALE ===
     # Projekt-Zuordnung ueber msg_emails.projekt_nr
 
-    # H-05: Self-Forward an private Adresse (ALARM)
+    # H-05: Self-Forward an KFA-Adresse (ALARM)
+    # v3: Nur @kfa-* (bekannter Exfiltrations-Kanal). Private Kunden-Adressen
+    # (@web.de, @gmail.com etc.) erzeugen False Positives (F-12, LV_S14).
     cur.execute('''
         SELECT DISTINCT projekt_nr
         FROM msg_emails
         WHERE absender_email LIKE '%@wsm-schaden.de'
-          AND (
-            empfaenger_email LIKE '%@kfa-%'
-            OR empfaenger_email LIKE '%@web.de'
-            OR empfaenger_email LIKE '%@gmx%'
-            OR empfaenger_email LIKE '%@googlemail.com'
-            OR empfaenger_email LIKE '%@gmail.com'
-            OR empfaenger_email LIKE '%@yahoo%'
-            OR empfaenger_email LIKE '%@hotmail%'
-            OR empfaenger_email LIKE '%@outlook%'
-          )
+          AND empfaenger_email LIKE '%@kfa-%'
           AND absender_email != empfaenger_email
           AND projekt_nr IS NOT NULL AND projekt_nr != ''
     ''')

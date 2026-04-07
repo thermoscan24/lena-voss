@@ -37,7 +37,7 @@
 | wsm-ermittler/SKILL.md:89 | **KRITISCH** | KORRIGIEREN — aktiver Skill |
 | INDEX.md:126 | **KRITISCH** | KORRIGIEREN — KI-Einstiegspunkt |
 | Bierau_Konfrontation_S96.md | MEDIUM | Konfrontationsfragen anpassen |
-| 3x Anwalt_Uebergabeprotokoll | MEDIUM | VOR naechster Uebergabe korrigieren |
+| 6x Anwalt-DOCX + 2x JS-Generator + B#48 DB | **KORRIGIERT LV_S17** | Backups _BACKUP_LV_S17.docx |
 | S97_MKG_70034_FalsePositive.md | NIEDRIG | Historisch, aber irrefuehrend |
 | 15+ Handoffs (S27-S106) | HISTORISCH | Alt, aber bei Rueckblick verwirrend |
 | B48_DB_Export.md (FALL-015) | MEDIUM | Befund-Text falsch |

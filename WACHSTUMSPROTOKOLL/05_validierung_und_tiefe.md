@@ -102,3 +102,29 @@ Wissensbasis bereinigt:
 - Signal-Katalog: Benford-Verweis aktualisiert (36KB, 311 Zeilen — kein Split noetig)
 - CLAUDE.md komplett aktualisiert (Stand LV_S7→LV_S16)
 - Kapitel 04 abgeschlossen, Kapitel 05 begonnen
+
+### LV_S17 — 2026-04-07
+
+**Housekeeping + Strafanzeige-Dokumente**
+
+MKG Zombie Z-001 komplett bereinigt: 6 DOCX (WSM_01/02/04/10/11, FORENSIK_MKG) + 2 JS-Generatoren
++ B#48 in DB. "0% Provision" → "8,8%, Caspari-Familien-Steuerung".
+
+T-Phase in Gutachten eingearbeitet: P150 mit DB-Zahlen (363K, 212 Projekte ab 2023), 3-Stufen-
+Ermittlungslogik (VN-Befragung→Barabhebungen→OTS-Rechnungen) in Empfehlungen.
+
+656 Uebersicht-Artefakte aus personen_projekte geloescht (1537→881 Zeilen).
+
+Scanner v2→v3: H-05 nur noch @kfa-* (52→5 Treffer, F-12 FP-Fix).
+
+B#239 0110-2024: Primaerquellen gelesen (WSM T-Phase RE + MKG R-24-288). Ueberlappung moeglich
+aber T-Phase 24h inkl. Trocknungsaufbau — VERDACHT, offene Fragen fuer StA.
+
+B#240 0310-2023: 18 Rapporte komplett gescannt. Schluessel-Fund 17.05.2024: Bierau bringt RS Bau +
+Fliesen Schmidt + SV Roth + GA Klein an einen Tisch. Sub-Auswahl VOR Vergabe gesteuert. GESICHERT.
+
+**L-05 Executive Summary** erstellt (1-Seiter fuer Dezernenten, alle Kernzahlen DB-verifiziert).
+**L-02 Statistische Beweisfuehrung** erstellt (Score-Precision-Tabelle, Score>=8=100% FALL).
+
+Session-Log konsolidiert (S11-S16 im Hauptlog). MEMORY.md bereinigt (222→~180 Zeilen).
+CHARAKTER.md v0.4 bestaetigt (aktuell). Lena project_memory aktualisiert (KEIM→WACHSTUM).

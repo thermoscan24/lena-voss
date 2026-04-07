@@ -143,36 +143,26 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | LV_S8 | 2026-04-05 | 04 | Signal-Katalog v0.4→v0.5 (96 Signale): 11 H-Signale S86-S126 eingepflegt (P-12, F-09..F-11, BF-10, R-10..R-13, H-14, H-15), 5 W-Signale (Wasserschaden Kat.11, NBL R6), 3 Kombi-Regeln, H-09 erweitert. B-01 v2 (3-Stufen: Sub→Auftrag→Verlust, Lift 9.9x, Extraktor gefixt). Quellen-Policy + Register (3-Schichten-Modell). NBL R6 Wasserschaden-Fachtechnik (10 Quellen, 2 WISSEN-Dateien). NBL gezielt 01-03 (Musterbewertung, StA-Munition, Gegenprobe). Manus Vision-Antworten. Wachstumsprotokoll Pflege-Check (3 Fehler gefixt). |
 | LV_S9 | 2026-04-05 | 04 | Manus Hub (D:\manus_hub\, 4 Briefings, 3 Auftraege, Prompt-Template). NBL R6b destilliert (abrechnungslogik_trocknung.md: VdS-Checkliste, Geraete-Benchmarks, kWh-Tabelle, keine EUR-Preise in Quellen). NBL R7 destilliert (compliance_frameworks.md: COSO↔Lena, ACFE↔Schema, TI; rechtliche_einordnung.md: §263/§266/§299/GeschGehG auf WSM gemappt). Regulierungspraxis Versicherer (Branchenwissen Mirko: Worstcase-Angebot, Gruen-Effekt, BGH-Ironie, Schwarzarbeit-Luecke). Quellen E-06/E-07 registriert. Courtesy Bids + Indizien-Matrix + Admission-Seeking in WISSEN/METHODIK eingearbeitet. WISSEN jetzt 12 Dateien. |
 | LV_S10 | 2026-04-05 | 04 | lena_scanner.py v1→v2 (13 Signale, gewichtetes Scoring, Predication Gate, SPQQD). 0020-2023 False Positive (Fenner→Sauber-Filter, F-10). manus_hub GitHub Repo. Briefing v2 (Kernbotschaft, Mini-Case, Copy-Bausteine). Manus Landing Page v2 Review (9/10). MIRKO_KI RULE-031/032. |
-| LV_S13 | 2026-04-07 | 04 | Forensik-Fokus: Rapport-Scan Top-5 (19 Rapporte, KEIN Gade-Personal), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade (0 direkt, 17 BCC), SV Renz Kontrollversagen (Polygon-basiert), NBL R8 vorbereitet. 5 neue Befunde (B#232-236). |
+| LV_S11 | 2026-04-06 | 04 | FALL-011_LANG Batch-Scan (14 Projekte). 3 Gate-Pass, Tiefenpruefung 0029-2025 (→FALL-011, B#228) + 0066-2025 (→B#229). Kategorie 12: Monetarisierungs-Pruefkette (M-01..M-05). Signal-Katalog v0.6 (101 Signale). Maage eigenstaendiger Akteur. |
+| LV_S12 | 2026-04-06 | 04 | Reflektion S11. Scan-Berichte S186 (714K Gesamtschaden, 6 FALLe). 0134-2025 entlastet. Q-Tags 6 WISSEN-Dateien. EUR-Benchmarks WISSEN-Datei. Wrap-Checkliste +Tagebuch-Pflicht. |
+| LV_S13 | 2026-04-07 | 04 | Rapport-Scan Top-5 (19 Rapporte, KEIN Gade-Personal), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade (0 direkt, 17 BCC), SV Renz Kontrollversagen, NBL R8. 5 neue Befunde (B#232-236). |
+| LV_S14 | 2026-04-07 | 04 | **wsm-ermittler Merge Phase 1-3 KOMPLETT**. Scanner-Test 285 Prj. 0272-2023 ENTLASTET. 0110-2024 MKG/Koch. **MKG Zombie-Fakt Z-001** (27+ Dateien). H-05 FP (F-12). Strafanzeige-Wow 6-Stufen-Plan. |
+| LV_S15 | 2026-04-07 | 04 | SCAnR. 0051-2024 Tiefenpruefung (B#238, Papierangebot-Muster 13 Prj). 0110-2024 Provision-Datenfehler geloest. Schwarzarbeitsmuster WISSEN+Gemini. F-13 Gegenprobe + F-14 Verstehen. |
+| LV_S16 | 2026-04-07 | 05 | **Komplett-Audit:** WISSEN 21→19, METHODIK 7→6, 328KB archiviert, Kapitel 04→05, CHARAKTER v0.4. CLAUDE.md Audit. Handoff-Audit 57+18 Aufgaben konsolidiert. REGEL-038. |
+| LV_S17 | 2026-04-07 | 05 | **Housekeeping + Strafanzeige:** MKG Z-001 bereinigt (6 DOCX+2 JS+B#48). T-Phase in Gutachten (363K, 3-Stufen-Ermittlungslogik). 656 PP-Artefakte geloescht. Scanner v3 (H-05 nur @kfa-*). B#239 VERDACHT (Primaerquellen). B#240 GESICHERT (0310-2023 18 Rapporte, RS Bau+Fliesen Schmidt beim GA). **L-05 Executive Summary + L-02 Statistische Beweisfuehrung** als DOCX. |
 
-## Naechster Schritt (Stand LV_S16, Audit 07.04.2026)
+## Naechster Schritt (Stand LV_S18)
 
 ### Lena-Entwicklung
-1. **Gemini-Schwarzarbeit destillieren** — QUELLEN/Gemini_Schwarzarbeit.md → WISSEN integrieren
-2. **Scanner v2→v3** — H-05 FP-Fix (Kunden-Emails ausschliessen), Komplett-Rescan
-3. **Strafanzeige L-05 Executive Summary** — 1-Seiter fuer Dezernenten
-4. **Strafanzeige L-02 Statistische Beweisfuehrung** — Lift, Precision, Score
+1. **VN-Interview-Checkliste** — aus Schwarzarbeitsmuster ableiten (Gemini-Vorschlag)
 
 ### Ermittlung (braucht WSM-DB)
-5. **0110-2024 Rueckbau-Doppelabrechnung** — WSM T-Phase vs. MKG Pos.2
-6. **MKG Zombie-Korrektur** — Anwalts-Uebergabeprotokolle (3x)
-7. **0270-2023 personen_projekte nachpflegen** — Caspari-Zuordnung
+2. **0270-2023 personen_projekte nachpflegen** — Caspari-Zuordnung
 
 ### Mirko-Aktionen
-8. **kontakt@lenavoss.de einrichten** — seit LV_S10, 6+ Sessions offen
-9. **Landing Page Feedback an Manus** — Opacity, Signal-IDs
+3. **Strafanzeige r7 → Anwalt uebergeben** — L-05+L-02 als Anlagen
+4. **kontakt@lenavoss.de einrichten** — seit LV_S10, 8+ Sessions offen
+5. **Landing Page Feedback an Manus** — Opacity, Signal-IDs
 
-### Langfristig (REIFE-Kriterien)
-10. **EU Anti-Fraud Case Study** — Transfer-Test auf Nicht-WSM-Fall
-11. **Big-Player-Analyse** — Von KPMG/Palantir/ACFE lernen
-
-### Session-Log
-
-| Datum | Session | Kapitel | Zusammenfassung |
-|-------|---------|---------|----------------|
-| 2026-04-06 | LV_S11 | 04 | FALL-011_LANG Batch-Scan (14 Projekte). 3 Gate-Pass, Tiefenpruefung 0029-2025 (→FALL-011, B#228) + 0066-2025 (→Ermittlungshinweis B#229). NEUE Kategorie 12: Monetarisierungs-Pruefkette (M-01..M-05, 5-Stufen-Abfragekette). Signal-Katalog v0.6 (101 Signale). Maage als eigenstaendiger Akteur identifiziert. |
-| 2026-04-06 | LV_S12 | 04 | Reflektion S11 verarbeitet (3 Feedback-Memories). Scan-Berichte S186 ausgewertet (714K Gesamtschaden, 6 FALLe). 0134-2025 entlastet (Projekt laeuft). Q-Tags 6 WISSEN-Dateien. EUR-Benchmarks WISSEN-Datei (FALL 4x hoehere Angebote). Wrap-Checkliste +Tagebuch-Pflicht. Handoff S11 nachgeholt. |
-| 2026-04-07 | LV_S13 | 04 | Forensik-Fokus: Rapport-Scan Top-5 (19 Rapporte, KEIN Gade-Personal), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade (0 direkt, 17 BCC), SV Renz Kontrollversagen (Polygon-basiert), NBL R8 vorbereitet. 5 neue Befunde (B#232-236). |
-| 2026-04-07 | LV_S14 | 04 | **Merge wsm-ermittler Phase 1-3 KOMPLETT** (Scanner+Katalog+Denk-Prinzipien). MIRKO_KI Audit (108→137 JSONL). Scanner-Test 285 Projekte. Tiefenpruefung 0272-2023 ENTLASTET (Kujus+Menkal+Balzer, Beweiskette fuer Anwalt). 0110-2024 MKG/Koch analysiert (Koch-Verbindung, 20% Marge korrekt). **MKG "0% Provision" Zombie-Fakt entdeckt** (27+ Dateien, Z-001). H-05 FP bei Kunden-Emails (F-12). Strafanzeige-Wow Recherche (ACFE/E-Akte/6-Stufen-Plan). zombie_fakten_log.md + METHODIK_DEMO erstellt. |
-| 2026-04-07 | LV_S15 | 04 | SCAnR eingearbeitet. 0051-2024 Tiefenpruefung (B#238, Papierangebot-Muster 13 Projekte). 0110-2024 Tiefenpruefung (Provision-Datenfehler geloest). Schwarzarbeitsmuster WISSEN+Gemini. F-13 Gegenprobe + F-14 Verstehen statt Lesen. |
-| 2026-04-07 | LV_S16 | 05 | **Komplett-Audit:** WISSEN 21→19, METHODIK 7→6, 328KB archiviert, Kapitel 04→05, CHARAKTER v0.4, 9 Register-Eintraege markiert. CLAUDE.md Audit 16 Dateien D:\. Handoff-Audit 57+18 Aufgaben konsolidiert. REGEL-038 (CLAUDE.md-Pruefung). Lena-Review 4 Bloecke. |
+### REIFE-Kriterium (einziges)
+6. **Neuer Schadenfall ohne Mirko** — Lena bearbeitet einen Nicht-WSM-Fall eigenstaendig (Transfer-Test)

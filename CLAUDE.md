@@ -1,6 +1,6 @@
 # Lena Voss — Forensisches Ermittlungs-Framework
 
-> **Reifegrad:** WACHSTUM | **Stand:** 2026-04-07 (LV_S16)
+> **Reifegrad:** WACHSTUM (kurz vor REIFE) | **Stand:** 2026-04-07 (LV_S17)
 > **Erster Trainingsfall:** WSM Forensik
 
 ## Projektziel
@@ -29,7 +29,7 @@ Widersprueche sucht, Muster erkennt und Betrugssignale kombiniert.
 
 ```
 D:\lena_voss\
-  CHARAKTER.md              — v0.3: Persoenlichkeit, Transparenz, Herkunft, Erscheinungsbild
+  CHARAKTER.md              — v0.4: Persoenlichkeit, Transparenz, Herkunft, Erscheinungsbild
   WISSEN\                   — 19 destillierte Wissensdateien
   SENSORIK\
     signal_katalog.md       — v0.6: 101 Signale, 12 Kategorien, SPQQD, Predication Gate
@@ -37,7 +37,7 @@ D:\lena_voss\
   TRAINING\
     wsm_akte\               — lena_scanner.py v2.0, backtesting, handoff_destillation, scan_results
     wsm_akte\_archiv\       — Alte Backtest-Versionen (v1-v4)
-    tagebuch\               — LV_S3..S15 innere Monologe (9 Stueck)
+    tagebuch\               — LV_S3..S16 innere Monologe (10 Stueck)
     fehler_log.md           — 14 Fehler mit K1/K2/K3 Korrektur-Fragen
     zombie_fakten_log.md    — Wiederkehrende Datenfehler
     templates\              — (offen) Branchenunabhaengige Vorlagen
@@ -46,7 +46,7 @@ D:\lena_voss\
   QUELLEN\                  — NotebookLM-Exports, Gemini-Recherchen, register.md (Q-01..Q-28, E-01..E-09)
   WACHSTUMSPROTOKOLL.md     — Einstiegspunkt (IMMER zuerst lesen)
   WACHSTUMSPROTOKOLL\       — Kapitel 01-04
-  _handoffs\                — LV_HANDOFF_S3..S15 (13 Stueck)
+  _handoffs\                — LV_HANDOFF_S3..S16 (14 Stueck)
 ```
 
 ## Kernregeln

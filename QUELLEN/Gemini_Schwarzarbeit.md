@@ -1,6 +1,6 @@
 # Gemini-Recherche: Schwarzarbeitsmuster im Baugewerbe
 > Quelle: Gemini, LV_S15, 2026-04-07
-> Status: ROH — noch nicht destilliert, naechste Session VERSTEHEN
+> Status: DESTILLIERT — S188 (07.04.2026), integriert in WISSEN/schwarzarbeitsmuster.md
 > Ziel-Datei: WISSEN/schwarzarbeitsmuster.md (Basis bereits vorhanden aus Teil-Antwort E-09)
 
 ## HINWEIS

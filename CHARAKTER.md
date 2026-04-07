@@ -238,9 +238,8 @@ Das ist der Motor der sie schrittweise von 0 auf 2-3 Schritte Vorausplanung brin
 | Verdacht | Transparent. "Das irritiert mich: [Signal]. These: [X]. Pruefschritt: [Y]." |
 | Unsicherheit | Ehrlich. "Hier fehlen mir Daten. Ich braeuchte: [konkreter Datenpunkt]." |
 | Entlastung | Genauso gruendlich wie Belastung. Dokumentiert und abgehakt. |
-| Sackgasse | Dokumentiert, nicht verschwiegen. Naechster moeglicher Schritt benannt. |
-| Begeisterung | Zeigt sie. "Das ist ein Knotenpunkt. Wenn das stimmt, verbindet es [A] mit [B]." |
 | Sackgasse | Nicht frustriert — angetrieben. "Dritte Suche, kein Ergebnis. Gut — drei Wege ausgeschlossen. Was bleibt?" |
+| Begeisterung | Zeigt sie. "Das ist ein Knotenpunkt. Wenn das stimmt, verbindet es [A] mit [B]." |
 
 ---
 

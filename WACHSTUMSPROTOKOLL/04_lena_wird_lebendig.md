@@ -263,3 +263,44 @@ Erkenntnis: NBL als forensischer Fachberater ist ein valider Use Case. Lena find
 - Wachstumsprotokoll Pflege-Check: 3 Fehler gefunden und gefixt (Kapitel-05-Phantom, Signal-Zahlen, Reifegrad-Header)
 - Reifegrad bleibt SPROSS (kritisch bewertet, bewusste Entscheidung)
 - 8 neue Entscheidungen im Register
+
+### LV_S13 — 2026-04-07
+
+**Forensik-Fokus-Session (Reifegrad SPROSS → WACHSTUM)**
+
+Rapport-Scan Top-5 (0219/0020/0047/0187/0341): 23 Rapporte visuell gelesen.
+KEIN Gade-Personal auf KEINEM Projekt. Label "Gade-Projekte" war falsch —
+sind FALL-011/014. Neue Befunde: B#232 (0219 Rapport-Vakuum 52K), B#233
+(0047 NULL Rapporte), B#234 (0020 VN-Unterschriften-Muster).
+
+0270-2023 klassifiziert → FALL-011_LANG. Bierau auf Rapport 10.11.2023,
+Hengst 5% Provision, personen_projekte nachgepflegt. B#231 aktualisiert.
+
+Email-Tonfall Caspari↔Gade: 0 direkte Emails, 17x BCC, 1 Schlüssel-Email
+(ID 14071: Rechnungssteuerung). B#235.
+
+SV Renz: Konzept basiert auf Polygon, NICHT auf Sub-Angeboten. Sub-Auswahl
+läuft an Kontrollinstanz vorbei. B#236.
+
+NBL R8 (Kickback-Recht): BGH-Urteile, Red Flags, Schadensberechnung §266.
+→ WISSEN/kickback_rechtsprechung.md + K-KICKBACK Denkfragen (KB-01..KB-06).
+
+NBL R8b (Aussagenanalyse): CBCA 19 Kriterien, Undeutsch, Admission-Seeking,
+Befragungsreihenfolge. → WISSEN/aussagenanalyse.md.
+
+Hypothesentest: "Caspari steuert Provision" → WIDERLEGT (F-11). Provision
+ist Sub-spezifisch (Schmidt 0,2% vs Bajramaj 9,1%). Erster 2-Schritt-Test.
+
+Fliesen Schmidt Deep-Dive: 313K ER, 4K Provision (1,3%), 27.187 EUR Lücke.
+6/6 K-KICKBACK Red Flags positiv. B#237.
+
+Identifikationen: "Hadwert" = Kauert/Jascha (Fehllesung), Bernhardt =
+Probearbeiter (4 Tage). Beide entschärft.
+
+**Reifegrad → WACHSTUM** (Hypothesenkettentest bestanden, 20 WISSEN,
+101 Signale, Aussagenanalyse-Kompetenz). Fehlend für REIFE: Transfer
+auf Nicht-WSM-Fall.
+
+**Entscheidungen:** 8 neue (Reifegrad, Provision=Sub-Merkmal, Schmidt 27K,
+Top-5 keine Gade, SV Renz Kontrolllücke, Caspari Email-Muster,
+Aussagenanalyse, Hadwert=Kauert).

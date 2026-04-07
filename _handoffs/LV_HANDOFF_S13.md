@@ -40,10 +40,11 @@ Forensik-Fokus-Session. 4 grosse Analysen + NBL-Vorbereitung.
 - B#232-236 NEU (5 Befunde)
 - personen_projekte: Bierau + Maage fuer 0270-2023 eingefuegt
 
-## Offene Punkte fuer naechste Session
-1. NBL R8 durchfuehren (Quellen laden + Prompts abfeuern)
-2. Hadwert identifizieren (0066-2025 Rapport)
-3. 0310-2023 Ermittlungsauftrag vertiefen (Betrugsmuster noch nicht erkannt)
-4. Reifegrad SPROSS→WACHSTUM evaluieren
-5. Lena-wsm-ermittler Merge planen
-6. Top-5 Label korrigieren (waren keine Gade-Projekte)
+## Offene Punkte fuer naechste Session (priorisiert)
+1. **Scanner v2→v3 + Komplett-Rescan** — M-01..M-05 auf ALLE FALLe mit neuem Wissen (F-11, K-KICKBACK, BCC-Signal, SV-Kontrolle)
+2. **EU Anti-Fraud Case Study** — Transfer-Test fuer REIFE
+3. **Strafanzeige r7 → Anwalt** — ERSTE PROBE (professionelles Feedback auf Lenas Output)
+4. **Anwalt→StA→Kripo** — Aufbereitung so dass Ermittler staunen = Lenas Visitenkarte
+5. **Big-Player-Analyse** — Von KPMG/Palantir/ACFE lernen + wann werden WIR interessant
+6. **lena-wsm-ermittler Merge** — Scanner v3 + bericht_extraktor
+7. ~~Hadwert~~ = Kauert, ~~Reifegrad~~ = WACHSTUM, ~~NBL R8/R8b~~ = destilliert

@@ -189,3 +189,19 @@ Die Korrektur-Fragen sind **Denkrichtungen** — sie zeigen nicht WAS richtig is
 
 > **Lernwert:** Casparis Steuerung laeuft ueber AUFTRAGSVERGABE und KOMMUNIKATION (BCC, Rechnungssteuerung), NICHT ueber Provisionshoehe. Die Provision ist ein Sub-Merkmal. Erster vollstaendiger Hypothesenkettentest: H1→widerlegt→Korrektur.
 
+---
+
+### F-12: H-05 Self-Forward False Positives bei Kunden-Emails (LV_S14)
+
+| Feld | Inhalt |
+|------|--------|
+| Fehler | Scanner H-05 (Self-Forward an privat) feuert auf Kunden-Emails mit @web.de/@gmail.com/@gmx.de |
+| Kontext | Tiefenpruefung 0051-2024 (Score 9) + 0272-2023 (Score 8), beide UNBEKANNT |
+| Warum falsch | H-05 prueft nur: WSM-Absender → private Domain. Unterscheidet NICHT ob Empfaenger = MA-Privat-Email (verdaechtig) oder Kunden-Email (normal). 0051-2024: robertino.schempp@web.de = Kunde. 0272-2023: vogelv@gmail.com = Kunden-Kontakt (auch Zahlungserinnerung erhalten). |
+| Erkennungsmerkmal | Wenn derselbe Empfaenger auch in Kunden-Korrespondenz vorkommt (Antworten, Zahlungserinnerungen), ist es KEIN Self-Forward |
+| **K1** | Ist der Empfaenger ein BEKANNTER MA (Bierau, Caspari, Maage) oder ein Unbekannter? |
+| **K2** | Gibt es Korrespondenz in BEIDE Richtungen? (Kunde antwortet = normal, MA-Privat antwortet nie = verdaechtig) |
+| **K3** | Wie viele der 0272-2023-artigen Score-8+ UNBEKANNT sind H-05-FP? Batch-Pruefung noetig. |
+
+> **Fix-Vorschlag fuer Scanner v2.2:** H-05 nur feuern wenn Empfaenger-Email in bekannter MA-Privat-Liste ODER wenn keine Kunden-Korrespondenz mit dieser Adresse existiert. Alternative: Negativliste aus Kunden-Emails (soll_ist.kunde, msg_emails bidirektional).
+

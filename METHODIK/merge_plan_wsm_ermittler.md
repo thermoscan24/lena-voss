@@ -1,7 +1,7 @@
 # Merge-Plan: Lena → wsm-ermittler
 
-> Stand: 2026-04-06 (LV_S12)
-> Status: ENTWURF — Mirko-Freigabe noetig
+> Stand: 2026-04-07 (LV_S14)
+> Status: UMGESETZT — Phase 1-3 in LV_S14 ausgefuehrt
 
 ## Ist-Zustand
 

@@ -116,6 +116,12 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | Caspari Email-Muster | 0 direkte→Gade, 17x BCC, 1 Schluessel-Email (Rechnungssteuerung). Geist in der Maschine. B#235 | 04 | 2026-04-07 |
 | Aussagenanalyse | CBCA 19 Kriterien + Undeutsch + Admission-Seeking + Befragungsreihenfolge (Up the Ladder). NBL R8b | 04 | 2026-04-07 |
 | Hadwert = Kauert | Fehllesung Maage-Handschrift auf 0066-2025 Rapport. Jascha mit Markus | 04 | 2026-04-07 |
+| wsm-ermittler Merge | Phase 1-3 komplett: Scanner + SIGNAL_KATALOG + Denk-Prinzipien + EUR-Benchmarks | 04 | 2026-04-07 |
+| Zombie-Fakten-Prozess | REGEL-035: Bei Faktenkorrektur Grep + Einzelpruefung aller Referenzen. zombie_fakten_log.md | 04 | 2026-04-07 |
+| MKG Provision korrigiert | 9,1% (NICHT 0%), Z-001. 27+ Dateien betroffen. FALL-015 = Caspari-Steuerung, nicht Provisions-Luecke | 04 | 2026-04-07 |
+| Papierakte | Aktenordner, numerisch nach Projektnummer. Gleiche Bezeichnung wie P:\\ | 04 | 2026-04-07 |
+| Lesen ≠ Verstehen | Rapport-Info gesehen aber nicht als Antwort erkannt. Jede Zeile gegen offene Fragen pruefen | 04 | 2026-04-07 |
+| Strafanzeige Wow-Plan | 6 Faehigkeiten L-01..L-06, Prio: L-05 Executive Summary + L-02 Statistik zuerst | 04 | 2026-04-07 |
 
 ---
 
@@ -137,13 +143,14 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 
 ## Naechster Schritt
 
-1. **Landing Page v2 sichern** — HTML manuell speichern oder Manus→GitHub
-2. **Landing Page Feedback an Manus** — Hintergrund-Opacity, Signal-IDs korrigieren
-3. **lena-wsm-ermittler Merge planen** — lena_scanner.py v2 + bericht_extraktor als Basis
-4. **kontakt@lenavoss.de einrichten** — Domain aktiv, Email fehlt
-5. ~~**Rapporte Gade-Top-5 scannen**~~ — erledigt (LV_S13)
-6. ~~**0270-2023 klassifizieren**~~ — erledigt (LV_S13, →FALL-011_LANG)
-7. **Reifegrad SPROSS→WACHSTUM evaluieren** — Validierungs-Tiefe pruefen — noch offen
+1. **0051-2024 Tiefenpruefung** — Primaerquellen lesen (Rapport, Ordner, RE)
+2. **0110-2024 offene Fragen** — Rueckbau-Trennung T/W, soll_ist Angebot-Import pruefen
+3. **Strafanzeige L-05 Executive Summary** — 1-Seiter fuer Dezernenten
+4. **Strafanzeige L-02 Statistische Beweisfuehrung** — Lift, Precision, Score als Methodik-Kapitel
+5. **Landing Page Feedback an Manus** — Hintergrund-Opacity, Signal-IDs korrigieren
+6. **kontakt@lenavoss.de einrichten** — Domain aktiv, Email fehlt (Mirko-Aktion)
+7. ~~**lena-wsm-ermittler Merge**~~ — erledigt (LV_S14, Phase 1-3)
+8. ~~**Reifegrad evaluieren**~~ — erledigt (WACHSTUM seit 07.04.)
 
 > Erledigt (LV_S12): Q-Tags 6 WISSEN-Dateien, EUR-Benchmarks Datei, 0230-2024 geprueft (braucht VN-Befragung), 0134-2025 entlastet, Scan-Berichte S186 ausgewertet
 
@@ -156,3 +163,4 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | 2026-04-06 | LV_S11 | 04 | FALL-011_LANG Batch-Scan (14 Projekte). 3 Gate-Pass, Tiefenpruefung 0029-2025 (→FALL-011, B#228) + 0066-2025 (→Ermittlungshinweis B#229). NEUE Kategorie 12: Monetarisierungs-Pruefkette (M-01..M-05, 5-Stufen-Abfragekette). Signal-Katalog v0.6 (101 Signale). Maage als eigenstaendiger Akteur identifiziert. |
 | 2026-04-06 | LV_S12 | 04 | Reflektion S11 verarbeitet (3 Feedback-Memories). Scan-Berichte S186 ausgewertet (714K Gesamtschaden, 6 FALLe). 0134-2025 entlastet (Projekt laeuft). Q-Tags 6 WISSEN-Dateien. EUR-Benchmarks WISSEN-Datei (FALL 4x hoehere Angebote). Wrap-Checkliste +Tagebuch-Pflicht. Handoff S11 nachgeholt. |
 | 2026-04-07 | LV_S13 | 04 | Forensik-Fokus: Rapport-Scan Top-5 (19 Rapporte, KEIN Gade-Personal), 0270-2023→FALL-011_LANG, Email-Tonfall Caspari↔Gade (0 direkt, 17 BCC), SV Renz Kontrollversagen (Polygon-basiert), NBL R8 vorbereitet. 5 neue Befunde (B#232-236). |
+| 2026-04-07 | LV_S14 | 04 | **Merge wsm-ermittler Phase 1-3 KOMPLETT** (Scanner+Katalog+Denk-Prinzipien). MIRKO_KI Audit (108→137 JSONL). Scanner-Test 285 Projekte. Tiefenpruefung 0272-2023 ENTLASTET (Kujus+Menkal+Balzer, Beweiskette fuer Anwalt). 0110-2024 MKG/Koch analysiert (Koch-Verbindung, 20% Marge korrekt). **MKG "0% Provision" Zombie-Fakt entdeckt** (27+ Dateien, Z-001). H-05 FP bei Kunden-Emails (F-12). Strafanzeige-Wow Recherche (ACFE/E-Akte/6-Stufen-Plan). zombie_fakten_log.md + METHODIK_DEMO erstellt. |

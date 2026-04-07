@@ -1,6 +1,6 @@
 # Schema-SOPs — Ermittlungsablauf pro Betrugsmuster
 
-> Stand: 2026-04-05 | Signal-Katalog v0.3
+> Stand: 2026-04-07 | Signal-Katalog v0.6 (101 Signale)
 > Struktur: Trigger → Scope → Procedure → Escalation (Gemini SOP-Modell)
 > Quelle: IACRC 10-Schritte + SPQQD-Kickback-Modell + WSM-Erfahrung
 >

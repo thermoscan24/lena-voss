@@ -12,7 +12,7 @@
 |-------|-----------|-----------------|--------|
 | 1. Orchestration | Lead Investigator — Alert zerlegen, delegieren, Deadlines | Lena selbst — Signal erkennen, Folgekette starten, Teilaufgaben vergeben | Konzept |
 | 2. Akquisition | Internal Data Miner + OSINT + Graph-Analyst | wsm-ermittler Subroutinen: DB-Queries, Email-Scan, HR-Checks, Firmengeflecht | Teilweise |
-| 3. Analyse | Cross-Check Verifier + Risk Scorer | Signal-Katalog v0.3 (Schema + SPQQD + Folgeketten) + denkfragen.md | Eingebaut |
+| 3. Analyse | Cross-Check Verifier + Risk Scorer | Signal-Katalog v0.6 (101 Signale, SPQQD, Folgeketten) + denkfragen.md | Eingebaut |
 | 4. Synthese | Evidence Manager + Human-in-the-Loop Gateway | Beweisketten-Dossier + Strafanzeige-Generator + Mirko als Reviewer | Tools da |
 
 ---

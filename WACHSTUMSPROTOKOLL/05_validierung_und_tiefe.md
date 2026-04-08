@@ -128,3 +128,32 @@ Fliesen Schmidt + SV Roth + GA Klein an einen Tisch. Sub-Auswahl VOR Vergabe ges
 
 Session-Log konsolidiert (S11-S16 im Hauptlog). MEMORY.md bereinigt (222→~180 Zeilen).
 CHARAKTER.md v0.4 bestaetigt (aktuell). Lena project_memory aktualisiert (KEIM→WACHSTUM).
+
+### LV_S18 — 2026-04-08
+
+**Landing Page Relaunch + Portrait-Generierung**
+
+kontakt@lenavoss.de bei Hostinger eingerichtet. Landing Page v5 komplett reviewed:
+7 Feedback-Punkte, "WSM Forensik" durch "Lena fragen" ersetzt, Signal-IDs als Easter Egg,
+Teal-Farbkorrektur (#00b4a6 → offiziell #2dd4bf), DB-Zahlen verifiziert (soll_ist=1770,
+"652" war Backtesting-Universum, "8 Personen" nicht korrekt).
+
+LP v6 Prototyp gebaut: Hero (Glassmorphism-Panel, Mouse-Follow-Tilt, Text-Scramble-Loop),
+Gedankenwelt (6 Glass-Cards mit 3D-Tilt, SVG-Sketch-Animationen, Sequential Queue),
+i18n DE/EN/ES/FR, offizielles Farbsystem.
+
+LP v7 Briefing fuer Manus: Cinematic Trailer-Design. Scroll-Architektur 6 Sektionen
+(VOID→REVEAL→GEDANKENWELT→METHODE→CTA→FOOTER). Stack: Lenis+GSAP ScrollTrigger+Three.js.
+Lena Body-Reveal per CSS clip-path scroll-driven. Glass-Cards organisch im 3D-Raum.
+Marvel-Style SVG-Sketch-Animationen. Schattenwerk COLOR_SYSTEM.md als verbindliche Referenz.
+
+4 DALL-E 3 Portraits generiert (Bing Image Creator): lena_voss_1-1.jpg = Hero (stehend,
+Blazer ueber Schulter, analytischer Blick), lena_voss_3.jpg = Gedankenwelt (sitzend,
+nachdenklich). Alles auf GitHub gepusht (thermoscan24/lena-voss).
+
+REGEL-040: VN-Vernehmungsstrategie ist StA-Kompetenz, nicht Lena.
+
+**Fehler + Lernpunkte**
+
+Dual-Monitor-Steuerung ueber Windows MCP: Koordinaten-Mapping unzuverlaessig.
+Clipboard-Methode (Ctrl+V) ist zuverlaessiger als direkte Texteingabe.

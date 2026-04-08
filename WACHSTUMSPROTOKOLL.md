@@ -126,6 +126,11 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | Signal-Katalog kein Split | 36KB/311 Zeilen handhabbar, Split bringt mehr Overhead als Nutzen | 05 | 2026-04-07 |
 | REGEL-038 | CLAUDE.md bei JEDEM Session-Start pruefen UND bei Ende aktualisieren. In lena+session-wrap+user-mirko verankert | 05 | 2026-04-07 |
 | Kapitel-Split 04→05 | 04 abgeschlossen (SPROSS→WACHSTUM), 05 begonnen (Validierung+Tiefe) | 05 | 2026-04-07 |
+| LP v7 Trailer-Design | Cinematic Single-Page mit Lenis+GSAP+Three.js. Scroll-Reveal, organische 3D-Glass-Cards, Marvel-Sketches | 05 | 2026-04-08 |
+| Portrait-Auswahl | lena_voss_1-1.jpg=Hero (stehend), lena_voss_3.jpg=Gedankenwelt (sitzend). DALL-E 3 via Bing | 05 | 2026-04-08 |
+| VN=StA (REGEL-040) | Vernehmungsstrategie ist Ermittlungsbehoerde. Lena liefert Signale, nicht Befragungsleitfaeden | 05 | 2026-04-08 |
+| LP Sprach-Toggle | DE/EN/ES/FR, data-i18n Attribute + JSON-Locale-Files | 05 | 2026-04-08 |
+| kontakt@lenavoss.de | Eingerichtet bei Hostinger (seit LV_S10 offen, jetzt erledigt) | 05 | 2026-04-08 |
 
 ---
 
@@ -150,6 +155,7 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 | LV_S15 | 2026-04-07 | 04 | SCAnR. 0051-2024 Tiefenpruefung (B#238, Papierangebot-Muster 13 Prj). 0110-2024 Provision-Datenfehler geloest. Schwarzarbeitsmuster WISSEN+Gemini. F-13 Gegenprobe + F-14 Verstehen. |
 | LV_S16 | 2026-04-07 | 05 | **Komplett-Audit:** WISSEN 21→19, METHODIK 7→6, 328KB archiviert, Kapitel 04→05, CHARAKTER v0.4. CLAUDE.md Audit. Handoff-Audit 57+18 Aufgaben konsolidiert. REGEL-038. |
 | LV_S17 | 2026-04-07 | 05 | **Housekeeping + Strafanzeige:** MKG Z-001 bereinigt (6 DOCX+2 JS+B#48). T-Phase in Gutachten (363K, 3-Stufen-Ermittlungslogik). 656 PP-Artefakte geloescht. Scanner v3 (H-05 nur @kfa-*). B#239 VERDACHT (Primaerquellen). B#240 GESICHERT (0310-2023 18 Rapporte, RS Bau+Fliesen Schmidt beim GA). **L-05 Executive Summary + L-02 Statistische Beweisfuehrung** als DOCX. |
+| LV_S18 | 2026-04-08 | 05 | **Landing Page Relaunch + Portrait:** kontakt@lenavoss.de eingerichtet (Hostinger). LP v5 Review (7 Punkte). LP v6 Prototyp (Glassmorphism, Scramble, i18n). **LP v7 Briefing** cinematic Trailer-Design (Lenis+GSAP+Three.js). 4 DALL-E 3 Portraits generiert. Alles auf GitHub gepusht. Manus-Task gestartet. REGEL-040 VN=StA. Schattenwerk COLOR_SYSTEM.md komplett dokumentiert. |
 
 ## Naechster Schritt (Stand LV_S18)
 

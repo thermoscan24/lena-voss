@@ -154,15 +154,16 @@ Bevor etwas Neues angefangen oder geaendert wird: **Hier pruefen ob es schon ent
 ## Naechster Schritt (Stand LV_S18)
 
 ### Lena-Entwicklung
-1. **VN-Interview-Checkliste** — aus Schwarzarbeitsmuster ableiten (Gemini-Vorschlag)
+1. **Lena-Portrait generieren** — Midjourney/DALL-E, 360° Vollkoerper (Prompt liegt bereit)
+2. **Landing Page v7 via Manus** — Briefing in manus_hub/briefings/lena_landing_v7.md, cinematic Trailer-Design
 
 ### Ermittlung (braucht WSM-DB)
-2. **0270-2023 personen_projekte nachpflegen** — Caspari-Zuordnung
+3. **0270-2023 personen_projekte nachpflegen** — Caspari-Zuordnung
 
 ### Mirko-Aktionen
-3. **Strafanzeige r7 → Anwalt uebergeben** — L-05+L-02 als Anlagen
-4. **kontakt@lenavoss.de einrichten** — seit LV_S10, 8+ Sessions offen
-5. **Landing Page Feedback an Manus** — Opacity, Signal-IDs
+4. ~~kontakt@lenavoss.de einrichten~~ — ERLEDIGT (LV_S18, Hostinger)
+5. **Strafanzeige r7 → Anwalt uebergeben** — L-05+L-02 als Anlagen
+6. ~~Landing Page Feedback an Manus~~ — ERLEDIGT → v7-Briefing erstellt (LV_S18)
 
 ### REIFE-Kriterium (einziges)
-6. **Neuer Schadenfall ohne Mirko** — Lena bearbeitet einen Nicht-WSM-Fall eigenstaendig (Transfer-Test)
+7. **Neuer Schadenfall ohne Mirko** — Lena bearbeitet einen Nicht-WSM-Fall eigenstaendig (Transfer-Test)

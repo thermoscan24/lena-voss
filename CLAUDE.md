@@ -22,7 +22,7 @@ Widersprueche sucht, Muster erkennt und Betrugssignale kombiniert.
 
 | Tool | Zweck | Ort |
 |------|-------|-----|
-| `lena_scanner.py` v2.0 | 13 validierte Signale, gewichtetes Scoring, Predication Gate, SPQQD | TRAINING/wsm_akte/ |
+| `lena_scanner.py` v3.0 | 13 validierte Signale, gewichtetes Scoring, Predication Gate, SPQQD, H-05 nur @kfa-* | TRAINING/wsm_akte/ |
 | `bericht_extraktor.py` v1.0 | DOCX-Schadensberichte → 19 Felder → DB-Tabelle bericht_extrakte | WSM_FORENSIK/_tools/ |
 
 ## Verzeichnisstruktur
@@ -37,7 +37,7 @@ D:\lena_voss\
   TRAINING\
     wsm_akte\               — lena_scanner.py v2.0, backtesting, handoff_destillation, scan_results
     wsm_akte\_archiv\       — Alte Backtest-Versionen (v1-v4)
-    tagebuch\               — LV_S3..S16 innere Monologe (10 Stueck)
+    tagebuch\               — LV_S3..S17 innere Monologe (11 Stueck)
     fehler_log.md           — 14 Fehler mit K1/K2/K3 Korrektur-Fragen
     zombie_fakten_log.md    — Wiederkehrende Datenfehler
     templates\              — (offen) Branchenunabhaengige Vorlagen

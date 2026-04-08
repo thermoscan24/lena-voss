@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lena Voss — Forensische Intelligenz</title>
+  <meta name="description" content="KI-gestützte Wirtschaftsforensik. Lena Voss findet systematischen Betrug in Unternehmensdaten.">
+  <meta property="og:title" content="Lena Voss — Forensische Intelligenz">
+  <meta property="og:description" content="839.000 EUR. Systematisch. Über Jahre. Von den eigenen Leuten.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lenavoss.de">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;360;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Three.js particle canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Marvel-Style Background Sketches Stage -->
+  <div id="sketch-stage" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;overflow:hidden;"></div>
+
+  <!-- Language Toggle -->
+  <nav class="lang-toggle" aria-label="Sprachauswahl">
+    <button class="lang-btn active" data-lang="de">DE</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SECTION 1: VOID
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-void" id="void">
+    <div class="void-content">
+      <h1 class="scramble-title" id="scramble-title">Lena Voss</h1>
+      <p class="void-subtitle" data-i18n="void.subtitle">FORENSISCHE INTELLIGENZ</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SECTION 2: REVEAL
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-reveal" id="reveal">
+    <div class="reveal-inner" id="reveal-inner">
+      <div class="lena-portrait-wrapper">
+        <img 
+          src="assets/lena_voss_1.jpg" 
+          alt="Lena Voss — Forensische Ermittlerin" 
+          class="lena-portrait"
+          id="lena-portrait"
+        >
+      </div>
+
+      <!-- Glass fragments floating -->
+      <div class="glass-fragment frag-1" data-speed="0.6" data-z="-30">
+        <p data-i18n="reveal.frag1">„Jede Zahl lügt bis zum Gegenbeweis."</p>
+      </div>
+      <div class="glass-fragment frag-2" data-speed="1.4" data-z="50">
+        <p data-i18n="reveal.frag2">„Nicht was da ist — was da sein müsste."</p>
+      </div>
+      <div class="glass-fragment frag-3" data-speed="0.8" data-z="20">
+        <p class="frag-symbol">?</p>
+      </div>
+      <div class="glass-fragment frag-4" data-speed="1.1" data-z="-10">
+        <p data-i18n="reveal.frag4">„Wer hat den Auftrag erteilt?"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SECTION 3: GEDANKENWELT
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-gedanken" id="gedanken">
+    <div class="gedanken-inner">
+      <!-- Section label -->
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text" data-i18n="gedanken.label">WIE SIE DENKT</span>
+      </div>
+
+      <!-- Lena background presence -->
+      <div class="lena-bg-presence">
+        <img src="assets/lena_voss_1.jpg" alt="" class="lena-ghost" aria-hidden="true">
+      </div>
+
+      <!-- SVG Sketch Lines -->
+      <svg class="sketch-lines" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="sketch-path" d="M150,200 C250,180 350,350 500,300" stroke="#2dd4bf" stroke-width="1" opacity="0.2"/>
+        <path class="sketch-path" d="M500,300 C600,270 650,450 800,400" stroke="#2dd4bf" stroke-width="1" opacity="0.15"/>
+        <path class="sketch-path" d="M800,400 C900,380 950,250 1050,300" stroke="#2dd4bf" stroke-width="1" opacity="0.2"/>
+        <path class="sketch-path" d="M300,500 C400,480 450,350 550,400" stroke="#2dd4bf" stroke-width="1" opacity="0.15"/>
+        <path class="sketch-path" d="M700,150 C750,200 800,350 850,300" stroke="#2dd4bf" stroke-width="1" opacity="0.18"/>
+        <!-- Handdrawn annotations -->
+        <circle class="sketch-annotation" cx="500" cy="300" r="25" stroke="#2dd4bf" stroke-width="0.8" fill="none" opacity="0.12"/>
+        <circle class="sketch-annotation" cx="800" cy="400" r="18" stroke="#2dd4bf" stroke-width="0.8" fill="none" opacity="0.1"/>
+        <!-- Arrow -->
+        <path class="sketch-path sketch-arrow" d="M520,310 L540,320 M540,320 L530,310 M540,320 L535,330" stroke="#2dd4bf" stroke-width="1" opacity="0.2"/>
+        <!-- Question marks -->
+        <text class="sketch-annotation-text" x="460" y="270" fill="#2dd4bf" font-family="JetBrains Mono" font-size="14" opacity="0.12">?</text>
+        <text class="sketch-annotation-text" x="830" y="370" fill="#2dd4bf" font-family="JetBrains Mono" font-size="12" opacity="0.1">!</text>
+      </svg>
+
+      <!-- 6 Gedanken Cards -->
+      <div class="gedanken-card card-1" data-tilt>
+        <div class="card-icon">MUSTER</div>
+        <p class="card-thought" data-i18n="gedanken.card1.thought">„Einzeln betrachtet ist jede Rechnung sauber. <strong>Das ist das Design.</strong>"</p>
+        <p class="card-follow" data-i18n="gedanken.card1.follow">→ Was passiert wenn man alle gleichzeitig betrachtet?</p>
+      </div>
+
+      <div class="gedanken-card card-2" data-tilt>
+        <div class="card-icon">LÜCKE</div>
+        <p class="card-thought" data-i18n="gedanken.card2.thought">„Die DB zeigt nichts. Aber die DB wurde von jemandem gefüllt der etwas zu verbergen hat. Was <strong>FEHLT</strong>?"</p>
+        <p class="card-follow" data-i18n="gedanken.card2.follow">→ Nicht was da ist — was da sein müsste.</p>
+      </div>
+
+      <div class="gedanken-card card-3" data-tilt>
+        <div class="card-icon">GEGENPROBE</div>
+        <p class="card-thought" data-i18n="gedanken.card3.thought">„Für jeden belastenden Fund sucht sie die entlastende Erklärung."</p>
+        <p class="card-follow" data-i18n="gedanken.card3.follow">→ Was spricht dagegen?</p>
+      </div>
+
+      <div class="gedanken-card card-4" data-tilt>
+        <div class="card-icon">FADEN</div>
+        <p class="card-thought" data-i18n="gedanken.card4.thought">„Nichts wird abgehakt — es wird <strong>zurückgestellt</strong>."</p>
+        <p class="card-follow" data-i18n="gedanken.card4.follow">→ Welcher Faden führt weiter?</p>
+      </div>
+
+      <div class="gedanken-card card-5" data-tilt>
+        <div class="card-icon">NETZ</div>
+        <p class="card-thought" data-i18n="gedanken.card5.thought">„Wer hat sie geschrieben? Wer hat sie freigegeben? Wer profitiert?"</p>
+        <p class="card-follow" data-i18n="gedanken.card5.follow">→ Jede Rechnung ist ein Knoten.</p>
+      </div>
+
+      <div class="gedanken-card card-6" data-tilt>
+        <div class="card-icon">THESE</div>
+        <p class="card-thought" data-i18n="gedanken.card6.thought">„Wenn das Betrug wäre — was müsste ich dann <strong>noch</strong> finden?"</p>
+        <p class="card-follow" data-i18n="gedanken.card6.follow">→ Ihre Kernmethode.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SECTION 4: METHODE
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-methode" id="methode">
+    <div class="methode-inner">
+      <h2 class="methode-question scramble-text" id="methode-scramble" data-i18n="methode.question">
+        „Wenn das Betrug wäre — was müsste ich noch finden?"
+      </h2>
+
+      <div class="methode-panels">
+        <div class="methode-panel">
+          <svg class="panel-icon" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="18" stroke="#2dd4bf" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="18" cy="20" r="3" stroke="#2dd4bf" stroke-width="1"/>
+            <circle cx="30" cy="18" r="3" stroke="#2dd4bf" stroke-width="1"/>
+            <circle cx="26" cy="30" r="3" stroke="#2dd4bf" stroke-width="1"/>
+            <line x1="20" y1="21" x2="28" y2="19" stroke="#2dd4bf" stroke-width="0.8" opacity="0.5"/>
+            <line x1="29" y1="20" x2="27" y2="28" stroke="#2dd4bf" stroke-width="0.8" opacity="0.5"/>
+          </svg>
+          <h3 data-i18n="methode.panel1.title">Muster</h3>
+          <p data-i18n="methode.panel1.text">Signale kombinieren die einzeln harmlos sind.</p>
+        </div>
+
+        <div class="methode-panel">
+          <svg class="panel-icon" viewBox="0 0 48 48" fill="none">
+            <rect x="8" y="12" width="32" height="24" rx="2" stroke="#2dd4bf" stroke-width="1.5" opacity="0.6"/>
+            <line x1="14" y1="20" x2="34" y2="20" stroke="#2dd4bf" stroke-width="0.8" opacity="0.4"/>
+            <line x1="14" y1="26" x2="28" y2="26" stroke="#2dd4bf" stroke-width="0.8" opacity="0.4"/>
+            <line x1="14" y1="30" x2="22" y2="30" stroke="#2dd4bf" stroke-width="0.8" opacity="0.3"/>
+            <text x="30" y="31" fill="#2dd4bf" font-size="10" opacity="0.5">?</text>
+          </svg>
+          <h3 data-i18n="methode.panel2.title">Lücke</h3>
+          <p data-i18n="methode.panel2.text">Finden was fehlt, nicht was auffällt.</p>
+        </div>
+
+        <div class="methode-panel">
+          <svg class="panel-icon" viewBox="0 0 48 48" fill="none">
+            <path d="M12,24 L24,12 L36,24 L24,36 Z" stroke="#2dd4bf" stroke-width="1.5" opacity="0.6" fill="none"/>
+            <line x1="24" y1="18" x2="24" y2="30" stroke="#2dd4bf" stroke-width="1" opacity="0.4"/>
+            <line x1="18" y1="24" x2="30" y2="24" stroke="#2dd4bf" stroke-width="1" opacity="0.4"/>
+          </svg>
+          <h3 data-i18n="methode.panel3.title">Gegenprobe</h3>
+          <p data-i18n="methode.panel3.text">Jeden Fund gegen die harmlose Erklärung prüfen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SECTION 5: CTA
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-cta" id="cta">
+    <div class="cta-inner">
+      <a href="mailto:kontakt@lenavoss.de" class="cta-button" data-i18n="cta.button">
+        Lena fragen
+      </a>
+      <p class="cta-email">kontakt@lenavoss.de</p>
+      <p class="cta-domain">lenavoss.de</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SECTION 6: FOOTER
+       ═══════════════════════════════════════════════════════════════ -->
+  <footer class="section-footer" id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Lena Voss</p>
+      <a href="/entstehung.html" class="footer-link" data-i18n="footer.origin">Wie ich entstanden bin</a>
+      <a href="mailto:kontakt@lenavoss.de" class="footer-link">kontakt@lenavoss.de</a>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
+  <script src="sketches.js"></script>
+</body>
+</html>

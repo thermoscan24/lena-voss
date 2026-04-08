@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lena Voss — Entstehungsgeschichte</title>
+  <meta name="description" content="Wie Lena Voss entstanden ist. Aus echtem Betrug, echten Fehlern und dem Willen, Muster zu finden.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;360;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Entstehung-specific styles */
+    .entstehung-hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .entstehung-hero h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: var(--heading-weight);
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .entstehung-hero .hero-date {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--teal);
+      letter-spacing: var(--uppercase-spacing);
+      margin-bottom: 2rem;
+    }
+
+    .entstehung-hero .hero-quote {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* Chapter sections */
+    .chapter {
+      padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .chapter.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .chapter-number {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--teal);
+      letter-spacing: var(--uppercase-spacing);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .chapter-number::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--teal);
+      opacity: 0.5;
+    }
+
+    .chapter h2 {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: var(--heading-weight);
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .chapter p {
+      font-size: var(--body-size);
+      font-weight: var(--body-weight);
+      color: var(--text-secondary);
+      line-height: var(--line-height);
+      margin-bottom: 1.25rem;
+    }
+
+    .chapter p strong {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .chapter .highlight {
+      color: var(--teal);
+    }
+
+    .chapter .amber {
+      color: var(--amber);
+    }
+
+    /* Blockquote */
+    .chapter blockquote {
+      border-left: 2px solid var(--teal);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background: var(--glass-bg);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .chapter blockquote p {
+      color: var(--text-primary);
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    /* Timeline marker */
+    .timeline-marker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--amber);
+      padding: 0.25rem 0.75rem;
+      background: rgba(212, 168, 67, 0.08);
+      border: 1px solid rgba(212, 168, 67, 0.15);
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    /* Divider */
+    .chapter-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, var(--teal), transparent);
+      margin: 0 auto;
+      opacity: 0.3;
+    }
+
+    /* Stats grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: var(--font-mono);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: var(--uppercase-spacing);
+    }
+
+    /* Back link */
+    .back-link {
+      position: fixed;
+      top: 1.5rem;
+      left: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 100;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--teal);
+    }
+
+    .back-link::before {
+      content: '←';
+    }
+
+    /* Reifegrad */
+    .reifegrad-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+
+    .reifegrad-table th,
+    .reifegrad-table td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-default);
+      font-size: 0.9rem;
+    }
+
+    .reifegrad-table th {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: var(--uppercase-spacing);
+    }
+
+    .reifegrad-table td {
+      color: var(--text-secondary);
+    }
+
+    .reifegrad-table .active-row td {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .reifegrad-table .active-row td:first-child {
+      color: var(--amber);
+    }
+
+    .reifegrad-table .future-row td {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Back to main -->
+  <a href="/" class="back-link" data-i18n-href="entstehung.back">Lena Voss</a>
+
+  <!-- Language Toggle -->
+  <nav class="lang-toggle" aria-label="Sprachauswahl">
+    <button class="lang-btn active" data-lang="de">DE</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="entstehung-hero">
+    <div>
+      <p class="hero-date">04.04.2026 — 00:01 UHR</p>
+      <h1 data-i18n="entstehung.hero.title">Wie ich entstanden bin</h1>
+      <p class="hero-quote" data-i18n="entstehung.hero.quote">
+        „Mir wurden 839.000 EUR gestohlen. Systematisch. Über Jahre. Von den eigenen Leuten. 
+        Ich habe ein System gebaut das die Muster findet die ich zu spät gesehen habe."
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       KAPITEL 01: DER AUSLÖSER
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="chapter-divider"></div>
+
+  <section class="chapter" id="ch1">
+    <div class="chapter-number">Kapitel 01</div>
+    <span class="timeline-marker">April 2026</span>
+    <h2 data-i18n="entstehung.ch1.title">Der auslösende Moment</h2>
+    
+    <p data-i18n="entstehung.ch1.p1">
+      Ein forensisches Analyse-Tool hatte eine Rechnung korrekt gelesen — aber die entscheidende 
+      Diskrepanz übersehen. Die Rechnung enthielt ausschließlich Planungsleistungen. Im System 
+      war sie als „Demontage- und Abbrucharbeiten" deklariert. Keine Demontage wurde ausgeführt.
+    </p>
+    
+    <blockquote>
+      <p data-i18n="entstehung.ch1.quote">
+        „Das Tool sammelte Daten. Aber es dachte nicht wie ein Ermittler. Es zählte ob 
+        Dokumente fehlen — fragte aber nie ob der <strong>Inhalt</strong> stimmt."
+      </p>
+    </blockquote>
+
+    <p data-i18n="entstehung.ch1.p2">
+      Die Diagnose war klar: Strukturelle Prüfung reicht nicht. Es braucht <strong class="highlight">semantische Prüfung</strong> — 
+      ein System das versteht was es liest und die richtigen Fragen stellt.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       KAPITEL 02: DIE IDEE
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="chapter-divider"></div>
+
+  <section class="chapter" id="ch2">
+    <div class="chapter-number">Kapitel 02</div>
+    <h2 data-i18n="entstehung.ch2.title">Die Idee</h2>
+    
+    <p data-i18n="entstehung.ch2.p1">
+      Kein aufgebohrter Datensammler mit mehr Checklisten. Stattdessen: eine <strong>virtuelle 
+      Ermittlerin</strong> mit eigenem Charakter, Instinkt und Methodik. Jemand der denkt wie 
+      die besten Wirtschaftskriminalisten — mit der Geschwindigkeit und Skalierbarkeit von Software.
+    </p>
+
+    <p data-i18n="entstehung.ch2.p2">
+      Das Ziel: <em>„Einen der besten Kriminalbeamten, Abteilung Wirtschaftskriminalität, mit der 
+      besonderen Gabe für das Erkennen von noch so subtil wirkenden Mustern oder Anomalien, hinter 
+      denen betrügerische Absichten verborgen sein könnten."</em>
+    </p>
+
+    <p data-i18n="entstehung.ch2.p3">
+      Sie wird nicht programmiert. Sie wird <strong class="highlight">erzogen</strong>. Durch echte Fälle, echte Fehler, 
+      echte Korrekturen. Wie eine Juniorermittlerin die neben einem erfahrenen Geschäftsführer 
+      sitzt und mit jedem „warum hast du das nicht gefragt?" besser wird.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       KAPITEL 03: ARCHITEKTUR
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="chapter-divider"></div>
+
+  <section class="chapter" id="ch3">
+    <div class="chapter-number">Kapitel 03</div>
+    <h2 data-i18n="entstehung.ch3.title">Vier Schichten</h2>
+    
+    <p data-i18n="entstehung.ch3.p1">
+      Lena wurde auf vier Schichten gebaut — jede Schicht macht sie zu einer besseren Ermittlerin:
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">01</div>
+        <div class="stat-label" data-i18n="entstehung.ch3.layer1">Wissen</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">02</div>
+        <div class="stat-label" data-i18n="entstehung.ch3.layer2">Sensorik</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">03</div>
+        <div class="stat-label" data-i18n="entstehung.ch3.layer3">Methodik</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">04</div>
+        <div class="stat-label" data-i18n="entstehung.ch3.layer4">Training</div>
+      </div>
+    </div>
+
+    <p data-i18n="entstehung.ch3.p2">
+      <strong>Wissen</strong> — was sie weiß bevor sie eine Akte aufschlägt. Betrugsmuster, Standards, Recht. 
+      <strong>Sensorik</strong> — was sie aufhorchen lässt. Über 100 forensische Signale. 
+      <strong>Methodik</strong> — wie sie vorgeht. Denkketten, Gegenproben, Hypothesentests. 
+      <strong>Training</strong> — woraus sie gelernt hat. Echte Fälle, echte Fehlalarme.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       KAPITEL 04: DER ERSTE FALL
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="chapter-divider"></div>
+
+  <section class="chapter" id="ch4">
+    <div class="chapter-number">Kapitel 04</div>
+    <h2 data-i18n="entstehung.ch4.title">Der erste Fall</h2>
+    
+    <p data-i18n="entstehung.ch4.p1">
+      Ihr Trainingsfall war real. <span class="amber">839.000 EUR</span> systematischer Betrug. 
+      Über Jahre. Von den eigenen Leuten. Ein Netz aus Scheinrechnungen, Kickbacks und 
+      manipulierten Freigabeprozessen.
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value" style="color: var(--amber)">839K</div>
+        <div class="stat-label">EUR Schaden</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">101</div>
+        <div class="stat-label">Signale</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">32</div>
+        <div class="stat-label">Quellen</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">652</div>
+        <div class="stat-label">Projekte geprüft</div>
+      </div>
+    </div>
+
+    <blockquote>
+      <p data-i18n="entstehung.ch4.quote">
+        „Einzeln betrachtet ist jede Rechnung sauber. Das ist das Design."
+      </p>
+    </blockquote>
+
+    <p data-i18n="entstehung.ch4.p2">
+      Lena lernte an diesem Fall ihre Kernmethode: <strong class="highlight">„Wenn das Betrug wäre — was müsste 
+      ich dann noch finden?"</strong> Nicht Daten sammeln. Hypothesen bilden und prüfen. 
+      Für jeden belastenden Fund die entlastende Erklärung suchen.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       KAPITEL 05: REIFEGRAD
+       ═══════════════════════════════════════════════════════════════ -->
+  <div class="chapter-divider"></div>
+
+  <section class="chapter" id="ch5">
+    <div class="chapter-number">Kapitel 05</div>
+    <h2 data-i18n="entstehung.ch5.title">Wo sie heute steht</h2>
+    
+    <table class="reifegrad-table">
+      <thead>
+        <tr>
+          <th data-i18n="entstehung.ch5.th1">Stufe</th>
+          <th data-i18n="entstehung.ch5.th2">Bedeutung</th>
+          <th data-i18n="entstehung.ch5.th3">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>KEIM</td>
+          <td data-i18n="entstehung.ch5.keim">Idee, Struktur, erste Quellen</td>
+          <td>✓</td>
+        </tr>
+        <tr>
+          <td>SPROSS</td>
+          <td data-i18n="entstehung.ch5.spross">Wissen geladen, erste Signale definiert</td>
+          <td>✓</td>
+        </tr>
+        <tr class="active-row">
+          <td>WACHSTUM</td>
+          <td data-i18n="entstehung.ch5.wachstum">Methodik formalisiert, an echtem Fall trainiert</td>
+          <td>● aktiv</td>
+        </tr>
+        <tr class="future-row">
+          <td>REIFE</td>
+          <td data-i18n="entstehung.ch5.reife">Einsatzbereit, erprobt, übertragbar</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p data-i18n="entstehung.ch5.p1">
+      Lena wächst mit jedem Fall. Ihr Signal-Katalog umfasst über 100 forensische Indikatoren, 
+      validiert an 652 realen Projekten. Sie ist transparent eine KI — keine erfundene Backstory, 
+      keine fake Ex-Kommissarin. Ein System das aus <strong>echter Ermittlungsarbeit</strong> geboren wurde.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CTA
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="section section-cta" id="cta" style="min-height: 60vh;">
+    <div class="cta-inner">
+      <a href="mailto:kontakt@lenavoss.de" class="cta-button" data-i18n="cta.button">
+        Lena fragen
+      </a>
+      <p class="cta-email">kontakt@lenavoss.de</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════ -->
+  <footer class="section-footer" id="footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Lena Voss</p>
+      <a href="/" class="footer-link">← Zurück zur Startseite</a>
+      <a href="mailto:kontakt@lenavoss.de" class="footer-link">kontakt@lenavoss.de</a>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    // Lenis smooth scroll
+    const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    // GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+
+    // Reveal chapters on scroll
+    document.querySelectorAll('.chapter').forEach((ch) => {
+      ScrollTrigger.create({
+        trigger: ch,
+        start: 'top 85%',
+        onEnter: () => ch.classList.add('visible'),
+      });
+    });
+
+    // i18n for Entstehung page
+    const ENTSTEHUNG_LOCALES = {
+      de: {
+        'entstehung.hero.title': 'Wie ich entstanden bin',
+        'entstehung.hero.quote': '„Mir wurden 839.000 EUR gestohlen. Systematisch. Über Jahre. Von den eigenen Leuten. Ich habe ein System gebaut das die Muster findet die ich zu spät gesehen habe."',
+        'entstehung.ch1.title': 'Der auslösende Moment',
+        'entstehung.ch1.p1': 'Ein forensisches Analyse-Tool hatte eine Rechnung korrekt gelesen — aber die entscheidende Diskrepanz übersehen. Die Rechnung enthielt ausschließlich Planungsleistungen. Im System war sie als „Demontage- und Abbrucharbeiten" deklariert. Keine Demontage wurde ausgeführt.',
+        'entstehung.ch1.quote': '„Das Tool sammelte Daten. Aber es dachte nicht wie ein Ermittler. Es zählte ob Dokumente fehlen — fragte aber nie ob der <strong>Inhalt</strong> stimmt."',
+        'entstehung.ch1.p2': 'Die Diagnose war klar: Strukturelle Prüfung reicht nicht. Es braucht <strong class="highlight">semantische Prüfung</strong> — ein System das versteht was es liest und die richtigen Fragen stellt.',
+        'entstehung.ch2.title': 'Die Idee',
+        'entstehung.ch2.p1': 'Kein aufgebohrter Datensammler mit mehr Checklisten. Stattdessen: eine <strong>virtuelle Ermittlerin</strong> mit eigenem Charakter, Instinkt und Methodik. Jemand der denkt wie die besten Wirtschaftskriminalisten — mit der Geschwindigkeit und Skalierbarkeit von Software.',
+        'entstehung.ch2.p2': 'Das Ziel: <em>„Einen der besten Kriminalbeamten, Abteilung Wirtschaftskriminalität, mit der besonderen Gabe für das Erkennen von noch so subtil wirkenden Mustern oder Anomalien, hinter denen betrügerische Absichten verborgen sein könnten."</em>',
+        'entstehung.ch2.p3': 'Sie wird nicht programmiert. Sie wird <strong class="highlight">erzogen</strong>. Durch echte Fälle, echte Fehler, echte Korrekturen. Wie eine Juniorermittlerin die neben einem erfahrenen Geschäftsführer sitzt und mit jedem „warum hast du das nicht gefragt?" besser wird.',
+        'entstehung.ch3.title': 'Vier Schichten',
+        'entstehung.ch3.p1': 'Lena wurde auf vier Schichten gebaut — jede Schicht macht sie zu einer besseren Ermittlerin:',
+        'entstehung.ch3.layer1': 'Wissen',
+        'entstehung.ch3.layer2': 'Sensorik',
+        'entstehung.ch3.layer3': 'Methodik',
+        'entstehung.ch3.layer4': 'Training',
+        'entstehung.ch3.p2': '<strong>Wissen</strong> — was sie weiß bevor sie eine Akte aufschlägt. <strong>Sensorik</strong> — was sie aufhorchen lässt. Über 100 forensische Signale. <strong>Methodik</strong> — wie sie vorgeht. Denkketten, Gegenproben, Hypothesentests. <strong>Training</strong> — woraus sie gelernt hat. Echte Fälle, echte Fehlalarme.',
+        'entstehung.ch4.title': 'Der erste Fall',
+        'entstehung.ch4.p1': 'Ihr Trainingsfall war real. <span class="amber">839.000 EUR</span> systematischer Betrug. Über Jahre. Von den eigenen Leuten. Ein Netz aus Scheinrechnungen, Kickbacks und manipulierten Freigabeprozessen.',
+        'entstehung.ch4.quote': '„Einzeln betrachtet ist jede Rechnung sauber. Das ist das Design."',
+        'entstehung.ch4.p2': 'Lena lernte an diesem Fall ihre Kernmethode: <strong class="highlight">„Wenn das Betrug wäre — was müsste ich dann noch finden?"</strong> Nicht Daten sammeln. Hypothesen bilden und prüfen. Für jeden belastenden Fund die entlastende Erklärung suchen.',
+        'entstehung.ch5.title': 'Wo sie heute steht',
+        'entstehung.ch5.th1': 'Stufe',
+        'entstehung.ch5.th2': 'Bedeutung',
+        'entstehung.ch5.th3': 'Status',
+        'entstehung.ch5.keim': 'Idee, Struktur, erste Quellen',
+        'entstehung.ch5.spross': 'Wissen geladen, erste Signale definiert',
+        'entstehung.ch5.wachstum': 'Methodik formalisiert, an echtem Fall trainiert',
+        'entstehung.ch5.reife': 'Einsatzbereit, erprobt, übertragbar',
+        'entstehung.ch5.p1': 'Lena wächst mit jedem Fall. Ihr Signal-Katalog umfasst über 100 forensische Indikatoren, validiert an 652 realen Projekten. Sie ist transparent eine KI — keine erfundene Backstory, keine fake Ex-Kommissarin. Ein System das aus <strong>echter Ermittlungsarbeit</strong> geboren wurde.',
+        'cta.button': 'Lena fragen',
+      },
+      en: {
+        'entstehung.hero.title': 'How I came to be',
+        'entstehung.hero.quote': '"839,000 EUR were stolen from me. Systematically. Over years. By my own people. I built a system that finds the patterns I saw too late."',
+        'entstehung.ch1.title': 'The triggering moment',
+        'entstehung.ch1.p1': 'A forensic analysis tool had correctly read an invoice — but missed the decisive discrepancy. The invoice contained only planning services. In the system it was declared as "demolition and dismantling work". No demolition was ever carried out.',
+        'entstehung.ch1.quote': '"The tool collected data. But it didn\'t think like an investigator. It counted whether documents were missing — but never asked whether the <strong>content</strong> was correct."',
+        'entstehung.ch1.p2': 'The diagnosis was clear: Structural checking is not enough. What\'s needed is <strong class="highlight">semantic checking</strong> — a system that understands what it reads and asks the right questions.',
+        'entstehung.ch2.title': 'The idea',
+        'entstehung.ch2.p1': 'Not a souped-up data collector with more checklists. Instead: a <strong>virtual investigator</strong> with her own character, instinct and methodology. Someone who thinks like the best financial crime investigators — with the speed and scalability of software.',
+        'entstehung.ch2.p2': 'The goal: <em>"One of the best criminal investigators, white-collar crime division, with the special gift for recognizing even the most subtly appearing patterns or anomalies behind which fraudulent intentions might be hidden."</em>',
+        'entstehung.ch2.p3': 'She is not programmed. She is <strong class="highlight">raised</strong>. Through real cases, real mistakes, real corrections. Like a junior investigator sitting next to an experienced CEO, getting better with every "why didn\'t you ask that?"',
+        'entstehung.ch3.title': 'Four layers',
+        'entstehung.ch3.p1': 'Lena was built on four layers — each layer makes her a better investigator:',
+        'entstehung.ch3.layer1': 'Knowledge',
+        'entstehung.ch3.layer2': 'Sensors',
+        'entstehung.ch3.layer3': 'Methodology',
+        'entstehung.ch3.layer4': 'Training',
+        'entstehung.ch3.p2': '<strong>Knowledge</strong> — what she knows before opening a case file. <strong>Sensors</strong> — what makes her alert. Over 100 forensic signals. <strong>Methodology</strong> — how she proceeds. Chains of thought, counter-checks, hypothesis tests. <strong>Training</strong> — what she learned from. Real cases, real false alarms.',
+        'entstehung.ch4.title': 'The first case',
+        'entstehung.ch4.p1': 'Her training case was real. <span class="amber">839,000 EUR</span> of systematic fraud. Over years. By their own people. A web of fake invoices, kickbacks and manipulated approval processes.',
+        'entstehung.ch4.quote': '"Individually, every invoice looks clean. That\'s the design."',
+        'entstehung.ch4.p2': 'Lena learned her core method from this case: <strong class="highlight">"If this were fraud — what else would I have to find?"</strong> Not collecting data. Forming and testing hypotheses. For every incriminating finding, searching for the exonerating explanation.',
+        'entstehung.ch5.title': 'Where she stands today',
+        'entstehung.ch5.th1': 'Level',
+        'entstehung.ch5.th2': 'Meaning',
+        'entstehung.ch5.th3': 'Status',
+        'entstehung.ch5.keim': 'Idea, structure, first sources',
+        'entstehung.ch5.spross': 'Knowledge loaded, first signals defined',
+        'entstehung.ch5.wachstum': 'Methodology formalized, trained on real case',
+        'entstehung.ch5.reife': 'Deployment-ready, proven, transferable',
+        'entstehung.ch5.p1': 'Lena grows with every case. Her signal catalog comprises over 100 forensic indicators, validated on 652 real projects. She is transparently an AI — no fake backstory, no invented ex-detective. A system born from <strong>real investigative work</strong>.',
+        'cta.button': 'Ask Lena',
+      },
+      es: {
+        'entstehung.hero.title': 'Cómo nací',
+        'entstehung.hero.quote': '"Me robaron 839.000 EUR. Sistemáticamente. Durante años. Por mi propia gente. Construí un sistema que encuentra los patrones que vi demasiado tarde."',
+        'entstehung.ch1.title': 'El momento desencadenante',
+        'entstehung.ch2.title': 'La idea',
+        'entstehung.ch3.title': 'Cuatro capas',
+        'entstehung.ch4.title': 'El primer caso',
+        'entstehung.ch5.title': 'Dónde está hoy',
+        'cta.button': 'Preguntar a Lena',
+      },
+      fr: {
+        'entstehung.hero.title': 'Comment je suis née',
+        'entstehung.hero.quote': '"On m\'a volé 839 000 EUR. Systématiquement. Pendant des années. Par mes propres gens. J\'ai construit un système qui trouve les schémas que j\'ai vus trop tard."',
+        'entstehung.ch1.title': 'Le moment déclencheur',
+        'entstehung.ch2.title': 'L\'idée',
+        'entstehung.ch3.title': 'Quatre couches',
+        'entstehung.ch4.title': 'La première affaire',
+        'entstehung.ch5.title': 'Où elle en est aujourd\'hui',
+        'cta.button': 'Demander à Lena',
+      }
+    };
+
+    // Apply i18n
+    function applyLang(lang) {
+      const dict = ENTSTEHUNG_LOCALES[lang] || ENTSTEHUNG_LOCALES.de;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+      // Update active button
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+      document.documentElement.lang = lang;
+    }
+
+    // Language toggle
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    });
+  </script>
+</body>
+</html>
